@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-aia-red: #D31145;
+  --color-aia-white: #FFFFFF;
+  --color-aia-grey: #F4F4F4;
+  --color-aia-charcoal: #333D47;
+
+  /* Secondary Palette */
+  --color-aia-salmon: #FF7A85;
+  --color-aia-cerise: #BA0361;
+  --color-aia-orange: #FF754D;
+  --color-aia-yellow: #F7C926;
+  --color-aia-purple: #4C4794;
+  --color-aia-lavender: #A199BA;
+  --color-aia-blue: #1F78AD;
+  --color-aia-green: #88B943;
+  --color-aia-silver: #D3CAC3;
+  --color-aia-gold: #CAAF78;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-condensed: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .font-condensed {
+    font-stretch: condensed;
+  }
+
+  /* Brand Typography Hierarchy */
+  .brand-headline {
+    font-size: 4.5rem;
+    /* Base X */
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .brand-subheading {
+    font-size: 1.5rem;
+    /* 1/3 of Headline */
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .brand-body {
+    font-size: 0.75rem;
+    /* 1/2 of Subheading (15pt equivalent roughly) */
+    line-height: 1.5;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-aia-white);
+  color: var(--color-aia-charcoal);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
