@@ -1,6 +1,8 @@
 import React from 'react';
+import useScrollSpy from '../../components/guide/useScrollSpy';
 
 const Personality = () => {
+  useScrollSpy(['why-a-mentor', 'why-a-persona', 'what-a-mentor-is', 'personality-traits', 'summary'], 'why-a-mentor');
   return (
     <main className="w-full bg-white">
       {/* Page 10: Hero */}
@@ -28,7 +30,7 @@ const Personality = () => {
       </section>
 
       {/* Page 11: Brand persona */}
-      <section className="border-t border-aia-red/10">
+      <section id="why-a-mentor" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <p className="text-aia-red font-bold uppercase">Our Brand Persona</p>
             <h2 className="mt-4 text-5xl md:text-6xl text-aia-red font-bold uppercase">Mentor</h2>
@@ -63,7 +65,7 @@ const Personality = () => {
       </section>
 
       {/* Page 12: Why a persona is important */}
-      <section className="border-t border-aia-red/10">
+      <section id="why-a-persona" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12">
               <div>
@@ -115,7 +117,7 @@ const Personality = () => {
       </section>
 
       {/* Page 13: AIA as a mentor */}
-      <section className="border-t border-aia-red/10">
+      <section id="what-a-mentor-is" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12">
               <div>
@@ -170,7 +172,7 @@ const Personality = () => {
       </section>
 
       {/* Page 14: Personality traits */}
-      <section className="border-t border-aia-red/10">
+      <section id="personality-traits" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <h3 className="text-aia-red font-bold uppercase">Our personality as a mentor</h3>
             <p className="mt-2 text-aia-charcoal/80">
@@ -232,7 +234,7 @@ const Personality = () => {
       </section>
 
       {/* Page 15: Summary */}
-      <section className="border-t border-aia-red/10">
+      <section id="summary" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <p className="text-aia-red font-bold uppercase">In summary: the AIA brand</p>
             <h3 className="mt-4 text-4xl md:text-5xl text-aia-midnight font-semibold">AIA is a mentor</h3>

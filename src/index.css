@@ -5,6 +5,8 @@
   --color-aia-white: #FFFFFF;
   --color-aia-grey: #F4F4F4;
   --color-aia-charcoal: #333D47;
+  --color-aia-midnight: #3b454f;
+  --color-aia-midnight: #3b454f;
 
   /* Secondary Palette */
   --color-aia-salmon: #FF7A85;
@@ -57,4 +59,16 @@ body {
   color: var(--color-aia-charcoal);
   margin: 0;
   -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .text-aia-midnight {
+    color: var(--color-aia-midnight);
+  }
+}
+
+@layer utilities {
+  .text-aia-midnight {
+    color: var(--color-aia-midnight);
+  }
 }

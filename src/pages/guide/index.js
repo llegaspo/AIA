@@ -1,5 +1,4 @@
-export { default as Welcome } from './Welcome';
-export { default as Contents } from './Contents';
+export { default as OurBrand } from './OurBrand';
 export { default as Purpose } from './Purpose';
 export { default as Personality } from './Personality';
 export { default as ToneOfVoice } from './ToneOfVoice';
@@ -15,3 +14,8 @@ export { default as ApplicationsOverview } from './ApplicationsOverview';
 export { default as Digital } from './Digital';
 export { default as Print } from './Print';
 export { default as Merchandise } from './Merchandise';
+export { default as AiaOneBillion } from './AiaOneBillion';
+export { default as AiaVitality } from './AiaVitality';
+export { default as HighNetWorth } from './HighNetWorth';
+export { default as BrandChecklist } from './BrandChecklist';
+export { default as Assets } from './Assets';

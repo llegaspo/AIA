@@ -1,6 +1,8 @@
 import React from 'react';
+import useScrollSpy from '../../components/guide/useScrollSpy';
 
 const Purpose = () => {
+  useScrollSpy(['why-our-purpose', 'active', 'customer-centric', 'personal', 'our-ambition'], 'why-our-purpose');
   return (
     <main className="w-full bg-white">
       {/* Page 4: Hero */}
@@ -28,7 +30,7 @@ const Purpose = () => {
       </section>
 
       {/* Page 5: Purpose statement */}
-      <section className="border-t border-aia-red/10">
+      <section id="why-our-purpose" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-start">
               <div>
@@ -78,7 +80,7 @@ const Purpose = () => {
       </section>
 
       {/* Page 6: Active */}
-      <section className="border-t border-aia-red/10">
+      <section id="active" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-start">
               <div>
@@ -97,7 +99,7 @@ const Purpose = () => {
       </section>
 
       {/* Page 7: Customer-centric */}
-      <section className="border-t border-aia-red/10">
+      <section id="customer-centric" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-start">
               <div>
@@ -116,7 +118,7 @@ const Purpose = () => {
       </section>
 
       {/* Page 8: Personal */}
-      <section className="border-t border-aia-red/10">
+      <section id="personal" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-start">
               <div>
@@ -165,7 +167,7 @@ const Purpose = () => {
       </section>
 
       {/* Page 9: Our ambition */}
-      <section className="border-t border-aia-red/10">
+      <section id="our-ambition" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <h3 className="text-aia-red font-bold uppercase">Our ambition</h3>
             <div className="mt-6 space-y-6 text-aia-charcoal/80 text-lg">

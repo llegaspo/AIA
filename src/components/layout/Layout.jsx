@@ -17,6 +17,10 @@ const Layout = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, [location.pathname]);
+
     // Show header if not home OR if scrolled on home
     const showHeader = !isHome || scrolled;
 

@@ -1,6 +1,8 @@
 import React from 'react';
+import useScrollSpy from '../../components/guide/useScrollSpy';
 
 const CulturalGuidance = () => {
+  useScrollSpy(['introduction', 'clusters', 'application', 'exploration', 'empowerment', 'expression', 'emancipation'], 'introduction');
   return (
     <main className="w-full bg-white">
       {/* Page 22: Hero */}
@@ -28,7 +30,7 @@ const CulturalGuidance = () => {
       </section>
 
       {/* Page 23: Introduction */}
-      <section className="border-t border-aia-red/10">
+      <section id="introduction" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12">
               <div>
@@ -61,7 +63,7 @@ const CulturalGuidance = () => {
       </section>
 
       {/* Page 24: Cultural clusters */}
-      <section className="border-t border-aia-red/10">
+      <section id="clusters" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <h3 className="text-aia-red font-bold uppercase">The cultural clusters</h3>
             <p className="mt-2 text-aia-charcoal/80">Each of our markets falls into one of the following cultural clusters.</p>
@@ -102,7 +104,7 @@ const CulturalGuidance = () => {
       </section>
 
       {/* Page 25: Cultural application */}
-      <section className="border-t border-aia-red/10">
+      <section id="application" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <h3 className="text-aia-red font-bold uppercase">The cultural application of our Purpose</h3>
             <p className="mt-2 text-aia-charcoal/80">How our Purpose applies across our markets…</p>
@@ -145,7 +147,7 @@ const CulturalGuidance = () => {
       </section>
 
       {/* Page 26: Exploration */}
-      <section className="border-t border-aia-red/10">
+      <section id="exploration" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <h3 className="text-aia-red font-bold uppercase">Exploration</h3>
             <p className="mt-2 text-aia-charcoal/80">
@@ -173,7 +175,7 @@ const CulturalGuidance = () => {
       </section>
 
       {/* Page 27: Empowerment */}
-      <section className="border-t border-aia-red/10">
+      <section id="empowerment" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <h3 className="text-aia-red font-bold uppercase">Empowerment</h3>
             <p className="mt-2 text-aia-charcoal/80">
@@ -200,7 +202,7 @@ const CulturalGuidance = () => {
       </section>
 
       {/* Page 28: Expression */}
-      <section className="border-t border-aia-red/10">
+      <section id="expression" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <h3 className="text-aia-red font-bold uppercase">Expression</h3>
             <p className="mt-2 text-aia-charcoal/80">
@@ -227,7 +229,7 @@ const CulturalGuidance = () => {
       </section>
 
       {/* Page 29: Emancipation */}
-      <section className="border-t border-aia-red/10">
+      <section id="emancipation" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
             <h3 className="text-aia-red font-bold uppercase">Emancipation</h3>
             <p className="mt-2 text-aia-charcoal/80">
