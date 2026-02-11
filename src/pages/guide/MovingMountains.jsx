@@ -22,24 +22,24 @@ const MountainsSample = ({ variant = 'core' }) => {
 
 const MovingMountains = () => {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white guide-page">
       {/* Hero */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] bg-gradient-to-br from-aia-red via-aia-red/90 to-aia-charcoal">
         <div className="absolute inset-0 opacity-20" aria-hidden="true">
           <div className="absolute right-10 top-10 h-72 w-72 rotate-12 rounded-3xl bg-white/20" />
           <div className="absolute right-52 bottom-6 h-64 w-64 -rotate-6 rounded-3xl bg-white/10" />
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-10">
+        <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo.png" alt="AIA" className="h-12 w-auto" />
+            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
             </div>
           </div>
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-16 md:pt-24">
-          <h1 className="text-white text-5xl md:text-7xl font-bold uppercase tracking-tight">Moving Mountains</h1>
+        <div className="relative z-10 px-12 md:px-20 pt-16 md:pt-24">
+          <h1 className="text-white text-4xl md:text-6xl font-bold uppercase tracking-tight">Moving Mountains</h1>
           <p className="mt-4 max-w-2xl text-white/80">
             A visual representation of Healthier, Longer, Better Lives. Use the system consistently and with restraint.
           </p>
@@ -48,7 +48,7 @@ const MovingMountains = () => {
 
       {/* Introduction */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12">
           <div className="text-aia-charcoal/80">
             <h2 className="text-aia-red font-bold uppercase">Introduction</h2>
             <p className="mt-4">
@@ -66,7 +66,7 @@ const MovingMountains = () => {
 
       {/* Core / Multicolour / Two-colour / Outline / Mirror */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Variants</h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
             <div className="rounded-lg border border-gray-100 p-6">
@@ -108,7 +108,7 @@ const MovingMountains = () => {
 
       {/* Photography integration */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Using with photography</h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-lg border border-gray-100 p-6">
@@ -126,7 +126,7 @@ const MovingMountains = () => {
               <h3 className="font-semibold">Cutout</h3>
               <p className="mt-2 text-sm text-aia-charcoal/70">Cutout photography can merge with the mountains for a minimal design.</p>
               <div className="mt-4 h-44 rounded-xl bg-aia-grey flex items-center justify-center">
-                <img src="/guide/assets/purpose/purpose-family.png" alt="Cutout" className="h-28" />
+                <img src="/guide/assets/purpose/purpose-family.png" alt="Cutout" className="h-28 cutout-clean" />
               </div>
             </div>
             <div className="rounded-lg border border-gray-100 p-6">
@@ -151,7 +151,7 @@ const MovingMountains = () => {
 
       {/* Don’ts */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Moving Mountains don’ts</h2>
           <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-aia-charcoal/70">
             <li>Don’t complicate designs with unnecessary graphics.</li>
@@ -166,7 +166,7 @@ const MovingMountains = () => {
 
       {/* Library & Creation */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Library & creation</h2>
           <p className="mt-4 text-aia-charcoal/80">
             Use the approved library whenever possible. New Moving Mountains should be created using the Illustrator template and grid.

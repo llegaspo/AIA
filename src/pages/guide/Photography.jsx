@@ -2,24 +2,24 @@ import React from 'react';
 
 const Photography = () => {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white guide-page">
       {/* Hero */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] bg-gradient-to-br from-aia-charcoal via-aia-charcoal/90 to-aia-red">
         <div className="absolute inset-0 opacity-20" aria-hidden="true">
           <div className="absolute left-10 top-10 h-64 w-64 rotate-6 rounded-3xl bg-white/10" />
           <div className="absolute right-10 bottom-10 h-72 w-72 -rotate-12 rounded-3xl bg-white/15" />
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-10">
+        <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo.png" alt="AIA" className="h-12 w-auto" />
+            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
             </div>
           </div>
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-16 md:pt-24">
-          <h1 className="text-white text-5xl md:text-7xl font-bold uppercase tracking-tight">Photography</h1>
+        <div className="relative z-10 px-12 md:px-20 pt-16 md:pt-24">
+          <h1 className="text-white text-4xl md:text-6xl font-bold uppercase tracking-tight">Photography</h1>
           <p className="mt-4 max-w-2xl text-white/80">
             Real people, real moments. Inclusive, vibrant, and emotionally close.
           </p>
@@ -28,7 +28,7 @@ const Photography = () => {
 
       {/* Principles */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Our photography principles</h2>
           <p className="mt-4 text-aia-charcoal/80">
             Brilliant photography helps customers see themselves in our brand. We are not interested in posing models or unobtainable lifestyles.
@@ -46,7 +46,7 @@ const Photography = () => {
 
       {/* Brief essentials */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Photography briefs</h2>
           <p className="mt-4 text-aia-charcoal/80">
             Photography should be people‑focused. Landscape shots or images without people should not be used.
@@ -74,7 +74,7 @@ const Photography = () => {
 
       {/* What works */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">What works and what doesn’t</h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-lg border border-gray-100 p-4">
@@ -95,7 +95,7 @@ const Photography = () => {
 
       {/* Don’ts */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Photography don’ts</h2>
           <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-aia-charcoal/70">
             <li>Don’t use landscape photography. Show people.</li>

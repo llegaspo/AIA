@@ -4,26 +4,26 @@ import useScrollSpy from '../../components/guide/useScrollSpy';
 const CulturalGuidance = () => {
   useScrollSpy(['introduction', 'clusters', 'application', 'exploration', 'empowerment', 'expression', 'emancipation'], 'introduction');
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white guide-page">
       {/* Page 22: Hero */}
-      <section className="relative min-h-[70vh] md:min-h-[85vh]">
+      <section className="relative min-h-[80vh] md:min-h-[90vh]">
         <img
           src="/guide/assets/cultural/cultural-hero.png"
           alt="Woman smiling"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
-        <div className="relative z-10 px-8 md:px-16 pt-10">
+        <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo.png" alt="AIA" className="h-12 w-auto" />
+            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
             </div>
           </div>
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-20 md:pt-32">
-          <h1 className="text-white/70 text-5xl md:text-7xl font-bold uppercase tracking-tight">
+        <div className="relative z-10 px-12 md:px-20 pt-20 md:pt-32">
+          <h1 className="text-white/70 text-4xl md:text-6xl font-bold uppercase tracking-tight">
             Cultural Guidance
           </h1>
         </div>
@@ -31,8 +31,8 @@ const CulturalGuidance = () => {
 
       {/* Page 23: Introduction */}
       <section id="introduction" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12">
               <div>
                 <h2 className="text-aia-red font-bold uppercase">Introducing our cultural insights</h2>
                 <p className="mt-3 text-aia-midnight font-semibold">One brand, 18 markets</p>
@@ -53,10 +53,10 @@ const CulturalGuidance = () => {
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <img src="/guide/assets/cultural/cultural-intro-000.png" alt="Portrait" className="w-full rounded-[18px]" />
-                <img src="/guide/assets/cultural/cultural-intro-001.png" alt="Portrait" className="w-full rounded-[18px]" />
-                <img src="/guide/assets/cultural/cultural-intro-002.png" alt="Portrait" className="w-full rounded-[18px]" />
-                <img src="/guide/assets/cultural/cultural-intro-003.png" alt="Portrait" className="w-full rounded-[18px]" />
+                <img src="/guide/assets/cultural/cultural-intro-000.png" alt="Portrait" className="w-full rounded-none" />
+                <img src="/guide/assets/cultural/cultural-intro-001.png" alt="Portrait" className="w-full rounded-none" />
+                <img src="/guide/assets/cultural/cultural-intro-002.png" alt="Portrait" className="w-full rounded-none" />
+                <img src="/guide/assets/cultural/cultural-intro-003.png" alt="Portrait" className="w-full rounded-none" />
               </div>
             </div>
         </div>
@@ -64,7 +64,7 @@ const CulturalGuidance = () => {
 
       {/* Page 24: Cultural clusters */}
       <section id="clusters" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">The cultural clusters</h3>
             <p className="mt-2 text-aia-charcoal/80">Each of our markets falls into one of the following cultural clusters.</p>
 
@@ -105,7 +105,7 @@ const CulturalGuidance = () => {
 
       {/* Page 25: Cultural application */}
       <section id="application" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">The cultural application of our Purpose</h3>
             <p className="mt-2 text-aia-charcoal/80">How our Purpose applies across our markets…</p>
             <p className="mt-4 text-aia-charcoal/80">
@@ -148,7 +148,7 @@ const CulturalGuidance = () => {
 
       {/* Page 26: Exploration */}
       <section id="exploration" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">Exploration</h3>
             <p className="mt-2 text-aia-charcoal/80">
               Healthier, Longer, Better Lives is about: <strong>Culture and community</strong>
@@ -176,7 +176,7 @@ const CulturalGuidance = () => {
 
       {/* Page 27: Empowerment */}
       <section id="empowerment" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">Empowerment</h3>
             <p className="mt-2 text-aia-charcoal/80">
               Healthier, Longer, Better Lives is about: <strong>Becoming independent</strong>
@@ -203,7 +203,7 @@ const CulturalGuidance = () => {
 
       {/* Page 28: Expression */}
       <section id="expression" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">Expression</h3>
             <p className="mt-2 text-aia-charcoal/80">
               Healthier, Longer, Better Lives is about: <strong>Self-expression and enjoyment</strong>
@@ -230,7 +230,7 @@ const CulturalGuidance = () => {
 
       {/* Page 29: Emancipation */}
       <section id="emancipation" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">Emancipation</h3>
             <p className="mt-2 text-aia-charcoal/80">
               Healthier, Longer, Better Lives is about: <strong>Self-confidence and rediscovery</strong>

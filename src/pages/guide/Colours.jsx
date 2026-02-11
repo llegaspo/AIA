@@ -1,25 +1,26 @@
 import React from 'react';
+import CopyButton from '../../components/ui/CopyButton';
 
 const Colours = () => {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white guide-page">
       {/* Page 50: Hero */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] bg-gradient-to-br from-aia-red via-aia-red/90 to-aia-charcoal">
         <div className="absolute inset-0 opacity-20" aria-hidden="true">
           <div className="absolute -right-20 top-10 h-72 w-72 rotate-12 rounded-3xl bg-white/20" />
           <div className="absolute right-40 bottom-10 h-64 w-64 -rotate-6 rounded-3xl bg-white/10" />
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-10">
+        <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo.png" alt="AIA" className="h-12 w-auto" />
+            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
             </div>
           </div>
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-16 md:pt-24">
-          <h1 className="text-white text-5xl md:text-7xl font-bold uppercase tracking-tight">
+        <div className="relative z-10 px-12 md:px-20 pt-16 md:pt-24">
+          <h1 className="text-white text-4xl md:text-6xl font-bold uppercase tracking-tight">
             Our Colours
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
@@ -30,7 +31,7 @@ const Colours = () => {
 
       {/* Page 51: Core colours */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Core colours</h2>
             <p className="mt-4 text-aia-charcoal/80">
               The use of strong core colours gives AIA instant brand recognition and differentiation in the marketplace. To build and maintain our brand recognition, we apply our colour palette consistently across a wide range of media.
@@ -40,16 +41,25 @@ const Colours = () => {
                 <div className="h-24 rounded bg-[#D31145]" />
                 <h3 className="mt-4 font-semibold">AIA Red</h3>
                 <p className="text-xs text-aia-charcoal/60">Pantone 200C · C0 M100 Y63 K12 · R211 G17 B69 · #D31145</p>
+                <div className="mt-3 flex items-center justify-center">
+                  <CopyButton value="#D31145" />
+                </div>
               </div>
               <div className="rounded-lg border border-gray-100 p-6 text-center">
                 <div className="h-24 rounded bg-white border" />
                 <h3 className="mt-4 font-semibold">White</h3>
                 <p className="text-xs text-aia-charcoal/60">C0 M0 Y0 K0 · R255 G255 B255 · #FFFFFF</p>
+                <div className="mt-3 flex items-center justify-center">
+                  <CopyButton value="#FFFFFF" />
+                </div>
               </div>
               <div className="rounded-lg border border-gray-100 p-6 text-center">
                 <div className="h-24 rounded bg-[#333D47]" />
                 <h3 className="mt-4 font-semibold">AIA Charcoal</h3>
                 <p className="text-xs text-aia-charcoal/60">Pantone 432C · C78 M62 Y49 K51 · R51 G61 B71 · #333D47</p>
+                <div className="mt-3 flex items-center justify-center">
+                  <CopyButton value="#333D47" />
+                </div>
               </div>
             </div>
             <p className="mt-6 text-aia-charcoal/80">
@@ -66,7 +76,7 @@ const Colours = () => {
 
       {/* Page 52: Secondary colours */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Secondary colours</h2>
             <p className="mt-4 text-aia-charcoal/80">
               AIA is a red brand first and foremost. There are certain cases, however, when a secondary colour palette is necessary, for example in wayfinding, to establish hierarchies or highlight information, to add more energy to a design, or to make it feel calm and reassuring.
@@ -88,6 +98,9 @@ const Colours = () => {
                   <div className="h-10 rounded" style={{ background: hex }} />
                   <p className="mt-2 font-semibold">{name}</p>
                   <p className="text-aia-charcoal/60">{hex}</p>
+                  <div className="mt-2 flex items-center justify-center">
+                    <CopyButton value={hex} size="xs" />
+                  </div>
                 </div>
               ))}
             </div>
@@ -96,7 +109,7 @@ const Colours = () => {
 
       {/* Page 53: Background colours */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Background colours</h2>
             <p className="mt-4 text-aia-charcoal/80">
               An approved set of background colours may be used sparingly in your designs to add interest, however AIA Red is our lead brand colour and must always be predominant.
@@ -112,7 +125,7 @@ const Colours = () => {
 
       {/* Page 54: Core colours in use */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Core colours in use</h2>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-lg overflow-hidden shadow-sm border border-gray-100">
@@ -133,7 +146,7 @@ const Colours = () => {
 
       {/* Page 55: Secondary colours in use */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Secondary colours in use</h2>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
               {['#FF7A85', '#BA0361', '#FF754D', '#F7C926', '#4C4794', '#A199BA', '#1F78AD', '#88B943'].map((hex) => (
@@ -148,7 +161,7 @@ const Colours = () => {
 
       {/* Page 56: Colours don’ts */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Colours don’ts</h2>
             <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-aia-charcoal/70">
               <li>Don’t use gradients; the palette should stay flat and bold.</li>

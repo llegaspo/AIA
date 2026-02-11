@@ -69,7 +69,7 @@ const GuideSidebar = ({ sections = defaultSections, activeLabel = null }) => {
   return (
     <aside className="w-[220px] shrink-0 border-r border-aia-red/20 pl-6 pr-4 pt-10 pb-8 text-[11px] leading-tight text-aia-charcoal">
       <div className="flex items-center gap-2 mb-6">
-        <img src="/assets/assets/logo.png" alt="AIA" className="h-10 w-auto" />
+        <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-10 w-auto logo-clean" />
         <div className="text-[10px] uppercase tracking-widest text-aia-red">
           <div>Healthier, Longer,</div>
           <div>Better Lives</div>

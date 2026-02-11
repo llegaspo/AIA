@@ -3,6 +3,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import { Download, Check, Info, Sparkles } from 'lucide-react';
 import CopyableText from '../components/ui/CopyableText';
 import Modal from '../components/ui/Modal';
+import LogoLockup from '../components/brand/LogoLockup';
 
 const CopyForAIButton = ({ prompt, label = "Copy for AI", className = "" }) => {
     const [copied, setCopied] = useState(false);
@@ -63,7 +64,11 @@ const LogoSpecSVG = ({ type = 'lockup' }) => {
         <div className="flex flex-col items-center">
             <div className="bg-white p-12 border border-gray-100 rounded-2xl relative mb-8 w-full max-w-2xl flex justify-center overflow-hidden">
                 <div className="relative border border-dashed border-gray-300 p-8 bg-aia-red/5">
-                    <img src={type === 'lockup' ? "/assets/logo_lockup.png" : "/assets/logo_std.png"} alt="AIA Logo" className="h-16 w-auto" />
+                    {type === 'lockup' ? (
+                        <LogoLockup logoClassName="h-10" />
+                    ) : (
+                        <img src="/assets/logo_std.png" alt="AIA Logo" className="h-16 w-auto logo-clean" />
+                    )}
                     <div className="absolute top-0 left-0 right-0 h-px border-t border-aia-red/30"></div>
                     <div className="absolute bottom-0 left-0 right-0 h-px border-b border-aia-red/30"></div>
                     <div className="absolute left-0 top-0 bottom-0 w-px border-l border-aia-red/30"></div>
@@ -313,7 +318,7 @@ const BrandSectionPage = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="bg-white border border-gray-100 rounded-2xl p-12 flex flex-col items-center justify-center group hover:bg-gray-50 transition-all relative overflow-hidden">
-                                <img src="/assets/logo_std.png" alt="Standard" className="h-20 object-contain mb-8 group-hover:scale-105 transition-transform" />
+                                <img src="/assets/logo_std.png" alt="Standard" className="h-20 object-contain mb-8 group-hover:scale-105 transition-transform logo-clean" />
                                 <DownloadButton assetPath="/assets/logo_std.png" className="text-aia-charcoal" />
                             </div>
                             <div className="bg-aia-charcoal rounded-2xl p-12 flex flex-col items-center justify-center group hover:bg-black transition-all relative overflow-hidden">

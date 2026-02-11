@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight } from 'lucide-react';
+import LogoLockup from '../brand/LogoLockup';
 
 const SidebarLink = ({ to, children, exact = false, variant = 'section' }) => {
     const location = useLocation();
@@ -73,14 +74,7 @@ const Sidebar = () => {
         <aside className="w-64 h-screen fixed left-0 top-0 bg-aia-grey border-r border-gray-200 overflow-y-auto z-50">
             <div className="p-8">
                 <NavLink to="/" className="block mb-10 transition-transform hover:scale-[1.02]">
-                    {/* Refined Horizontal Logo Lockup */}
-                    <div className="w-full">
-                        <img
-                            src="/assets/logo_lockup.png"
-                            alt="AIA Logo Lockup"
-                            className="w-full h-auto object-contain"
-                        />
-                    </div>
+                    <LogoLockup className="w-full" logoClassName="h-10" />
                 </NavLink>
 
                 <nav className="space-y-2">
@@ -114,6 +108,7 @@ const Sidebar = () => {
                                 <SidebarLink to="/personality#why-a-persona">Why a persona?</SidebarLink>
                                 <SidebarLink to="/personality#what-a-mentor-is">What a mentor is</SidebarLink>
                                 <SidebarLink to="/personality#personality-traits">Our personality traits</SidebarLink>
+                                <SidebarLink to="/personality#company-values">Company Values</SidebarLink>
                                 <SidebarLink to="/personality#summary">Summary</SidebarLink>
                             </div>
                         )}

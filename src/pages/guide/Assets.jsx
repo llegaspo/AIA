@@ -2,9 +2,9 @@ import React from 'react';
 
 const Assets = () => {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white guide-page">
       <section className="relative min-h-[40vh] bg-gradient-to-br from-aia-red via-aia-red/90 to-aia-charcoal">
-        <div className="relative z-10 px-10 md:px-16 pt-12 text-white">
+        <div className="relative z-10 px-12 md:px-20 pt-12 text-white">
           <h1 className="text-4xl md:text-6xl font-bold uppercase">Assets</h1>
           <p className="mt-4 max-w-2xl text-white/80">
             Asset links and brand contacts.
@@ -12,7 +12,7 @@ const Assets = () => {
         </div>
       </section>
 
-      <section id="links" className="px-10 md:px-16 py-12 border-t border-aia-red/10">
+      <section id="links" className="px-12 md:px-20 py-12 border-t border-aia-red/10">
         <h2 className="text-aia-red font-bold uppercase">Asset links and contacts</h2>
         <p className="mt-4 text-aia-charcoal/80">
           The AIA Brand Standards provide in‑depth instructions to enable everyone at AIA to uphold the integrity of our brand. They should be followed at all times and in all markets.

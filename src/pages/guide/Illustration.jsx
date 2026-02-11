@@ -3,24 +3,24 @@ import MovingMountainsOverlay from '../../components/ui/MovingMountains';
 
 const Illustration = () => {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white guide-page">
       {/* Hero */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] bg-gradient-to-br from-aia-red via-aia-red/90 to-aia-charcoal">
         <div className="absolute inset-0 opacity-20" aria-hidden="true">
           <div className="absolute right-10 top-10 h-72 w-72 rotate-12 rounded-3xl bg-white/20" />
           <div className="absolute right-52 bottom-6 h-64 w-64 -rotate-6 rounded-3xl bg-white/10" />
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-10">
+        <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo.png" alt="AIA" className="h-12 w-auto" />
+            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
             </div>
           </div>
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-16 md:pt-24">
-          <h1 className="text-white text-5xl md:text-7xl font-bold uppercase tracking-tight">Illustration</h1>
+        <div className="relative z-10 px-12 md:px-20 pt-16 md:pt-24">
+          <h1 className="text-white text-4xl md:text-6xl font-bold uppercase tracking-tight">Illustration</h1>
           <p className="mt-4 max-w-2xl text-white/80">
             Everyday surrealism: playful, bold, and unmistakably AIA.
           </p>
@@ -29,7 +29,7 @@ const Illustration = () => {
 
       {/* Style */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12">
           <div>
             <h2 className="text-aia-red font-bold uppercase">Our illustration style</h2>
             <p className="mt-4 text-aia-charcoal/80">
@@ -51,7 +51,7 @@ const Illustration = () => {
 
       {/* Examples */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Illustration examples</h2>
           <p className="mt-4 text-aia-charcoal/80">
             Use AIA Red prominently. Secondary colours can add energy but must stay within the palette.
@@ -68,7 +68,7 @@ const Illustration = () => {
 
       {/* Scene example */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Illustration scene example</h2>
           <p className="mt-4 text-aia-charcoal/80">
             When creating a scene, use muted grey backgrounds so characters and brand colours stand out.
@@ -85,7 +85,7 @@ const Illustration = () => {
 
       {/* Moving Mountains integration */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
           <div>
             <h2 className="text-aia-red font-bold uppercase">Moving Mountains integration</h2>
             <p className="mt-4 text-aia-charcoal/80">
@@ -104,7 +104,7 @@ const Illustration = () => {
 
       {/* Illustration in use */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Illustration in use</h2>
           <p className="mt-4 text-aia-charcoal/80">
             Illustrations should only be used where photography is not appropriate. Avoid above‑the‑line communications.

@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const FullGuideViewer = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 141;
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const pageParam = parseInt(params.get('page') || '', 10);
+        if (!Number.isNaN(pageParam) && pageParam >= 1 && pageParam <= totalPages) {
+            setCurrentPage(pageParam);
+        }
+    }, [location.search]);
 
     const goToNextPage = () => {
         if (currentPage < totalPages) setCurrentPage(currentPage + 1);

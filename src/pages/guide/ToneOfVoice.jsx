@@ -4,26 +4,26 @@ import useScrollSpy from '../../components/guide/useScrollSpy';
 const ToneOfVoice = () => {
   useScrollSpy(['introduction', 'principles', 'principles-in-use', 'spectrum', 'spectrum-in-use'], 'introduction');
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white guide-page">
       {/* Page 16: Hero */}
-      <section className="relative min-h-[70vh] md:min-h-[85vh]">
+      <section className="relative min-h-[80vh] md:min-h-[90vh]">
         <img
           src="/guide/assets/tone/tone-hero.png"
           alt="Woman outdoors"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
-        <div className="relative z-10 px-8 md:px-16 pt-10">
+        <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo.png" alt="AIA" className="h-12 w-auto" />
+            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
             </div>
           </div>
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-20 md:pt-32">
-          <h1 className="text-white/70 text-5xl md:text-7xl font-bold uppercase tracking-tight">
+        <div className="relative z-10 px-12 md:px-20 pt-20 md:pt-32">
+          <h1 className="text-white/70 text-4xl md:text-6xl font-bold uppercase tracking-tight">
             Our Tone of Voice
           </h1>
         </div>
@@ -31,8 +31,8 @@ const ToneOfVoice = () => {
 
       {/* Page 17: Introduction */}
       <section id="introduction" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-start">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
               <div>
                 <h2 className="text-aia-red font-bold uppercase">Our tone of voice as a mentor</h2>
                 <p className="mt-4 text-aia-charcoal/80">
@@ -48,7 +48,7 @@ const ToneOfVoice = () => {
               <img
                 src="/guide/assets/tone/tone-intro.png"
                 alt="Smiling older man"
-                className="w-full rounded-[18px] shadow-lg"
+                className="w-full aspect-square object-cover"
               />
             </div>
         </div>
@@ -56,7 +56,7 @@ const ToneOfVoice = () => {
 
       {/* Page 18: Principles */}
       <section id="principles" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">Tone of voice: principles</h3>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-sm">
               {[
@@ -108,7 +108,7 @@ const ToneOfVoice = () => {
 
       {/* Page 19: Principles in use */}
       <section id="principles-in-use" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">Tone of voice: principles in use</h3>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10 text-sm">
               <div>
@@ -167,7 +167,7 @@ const ToneOfVoice = () => {
 
       {/* Page 20: Spectrum */}
       <section id="spectrum" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">Tone of voice: spectrum</h3>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
               {[
@@ -212,7 +212,7 @@ const ToneOfVoice = () => {
 
       {/* Page 21: Spectrum in use */}
       <section id="spectrum-in-use" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">Tone of voice: spectrum in use</h3>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
               {[

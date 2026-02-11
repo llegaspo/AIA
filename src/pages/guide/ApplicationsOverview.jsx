@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const ApplicationsOverview = () => {
   return (
-    <main className="w-full bg-white">
-      <section className="px-10 md:px-16 py-12">
+    <main className="w-full bg-white guide-page">
+      <section className="px-12 md:px-20 py-12">
         <h1 className="text-aia-red font-bold uppercase text-3xl">Applications</h1>
         <p className="mt-4 text-aia-charcoal/80">
           Apply the brand consistently across channels. Choose the right application guidance below.

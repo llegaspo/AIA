@@ -61,6 +61,35 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.guide-page {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.guide-page p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.guide-page section[id] {
+  scroll-margin-top: 120px;
+}
+
+.logo-clean {
+  mix-blend-mode: multiply;
+}
+
+.cutout-clean {
+  mix-blend-mode: screen;
+}
+
+mark.search-highlight {
+  background: rgba(211, 17, 69, 0.2);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
 @layer utilities {
   .text-aia-midnight {
     color: var(--color-aia-midnight);

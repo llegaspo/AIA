@@ -2,24 +2,24 @@ import React from 'react';
 
 const Typography = () => {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white guide-page">
       {/* Page 72: Hero */}
       <section className="relative min-h-[50vh] md:min-h-[60vh] bg-gradient-to-br from-aia-charcoal via-aia-charcoal/90 to-aia-red">
         <div className="absolute inset-0 opacity-20" aria-hidden="true">
           <div className="absolute left-10 top-10 h-64 w-64 rotate-6 rounded-3xl bg-white/10" />
           <div className="absolute right-10 bottom-10 h-72 w-72 -rotate-12 rounded-3xl bg-white/15" />
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-10">
+        <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo.png" alt="AIA" className="h-12 w-auto" />
+            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
             </div>
           </div>
         </div>
-        <div className="relative z-10 px-8 md:px-16 pt-16 md:pt-24">
-          <h1 className="text-white text-5xl md:text-7xl font-bold uppercase tracking-tight">
+        <div className="relative z-10 px-12 md:px-20 pt-16 md:pt-24">
+          <h1 className="text-white text-4xl md:text-6xl font-bold uppercase tracking-tight">
             Typography
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
@@ -30,7 +30,7 @@ const Typography = () => {
 
       {/* Page 73: Primary typeface (English) */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Primary typeface: English</h2>
             <p className="mt-4 text-aia-charcoal/80">
               AIA Everest is a bespoke font designed to embody our Purpose and personality. It is bold, welcoming, positive and confident. It helps set us apart from our competitors in a crowded marketplace. It is a very important part of our brand expression along with our logo, colours and the Moving Mountains.
@@ -65,7 +65,7 @@ const Typography = () => {
 
       {/* Page 74: System typeface (English) */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">System typeface: English</h2>
             <p className="mt-4 text-aia-charcoal/80">
               Our system typeface is Arial. The typeface works as an alternative font in certain applications when Everest is not available, including on our Microsoft platform. Arial should only be used when it is not possible to use AIA Everest.
@@ -90,7 +90,7 @@ const Typography = () => {
 
       {/* Page 75: Primary typeface (Chinese) */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Primary typeface: Chinese</h2>
             <p className="mt-4 text-aia-charcoal/80">
               The recommended AIA corporate Chinese typeface is the Monotype Hei font family. For bilingual communication materials, the following Chinese and English font matches are recommended for their similarity in stroke weight.
@@ -108,7 +108,7 @@ const Typography = () => {
 
       {/* Page 76: Typography hierarchy */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Typography hierarchy</h2>
             <p className="mt-4 text-aia-charcoal/80">
               Creating a clearly defined hierarchy of content is important when communicating with our customers. Typography and headlines support the decision-making process and fit neatly with the role of AIA as a mentor.
@@ -135,7 +135,7 @@ const Typography = () => {
 
       {/* Page 77: Typography in use (digital) */}
       <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1400px] px-10 md:px-16 py-12">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Typography in use: digital</h2>
             <p className="mt-4 text-aia-charcoal/80">
               We use AIA Everest and Open Sans typefaces on our digital platforms.
