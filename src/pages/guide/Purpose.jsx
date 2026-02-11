@@ -64,9 +64,9 @@ const Purpose = () => {
                 </p>
               </div>
 
-              <div className="relative">
-                <div className="absolute -top-10 -right-12 w-[125%] h-[95%] hidden lg:block" aria-hidden="true">
-                  <div className="absolute inset-0 bg-aia-red rotate-[18deg]" />
+              <div className="relative isolate overflow-hidden">
+                <div className="absolute inset-0 hidden lg:block z-0" aria-hidden="true">
+                  <div className="absolute inset-0 bg-aia-red rotate-[14deg] translate-x-8" />
                   <div className="absolute inset-0 bg-aia-red/30 -rotate-[6deg] translate-x-6 translate-y-6" />
                 </div>
                 <img
