@@ -9,7 +9,7 @@ const CopySectionButton = ({ getText, label = 'Copy to Clipboard' }) => {
       await navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
-    } catch (error) {
+    } catch {
       setCopied(false);
     }
   };

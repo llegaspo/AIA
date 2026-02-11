@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import LogoLockup from '../brand/LogoLockup';
 
@@ -48,14 +48,14 @@ const SidebarSection = ({ title, children, defaultOpen = false, autoOpen = false
             </button>
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div
+                    <Motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         className="overflow-hidden"
                     >
                         {children}
-                    </motion.div>
+                    </Motion.div>
                 )}
             </AnimatePresence>
         </div>
@@ -69,6 +69,7 @@ const Sidebar = () => {
     const isPersonality = location.pathname === '/personality';
     const isTone = location.pathname === '/tone-of-voice';
     const isCultural = location.pathname === '/cultural-guidance';
+    const isApplications = location.pathname.startsWith('/applications');
 
     return (
         <aside className="w-64 h-screen fixed left-0 top-0 bg-aia-grey border-r border-gray-200 overflow-y-auto z-50">
@@ -151,10 +152,15 @@ const Sidebar = () => {
                         <SidebarLink to="/iconography">Iconography</SidebarLink>
                     </SidebarSection>
 
-                    <SidebarSection title="Applications" to="/digital">
-                        <SidebarLink to="/digital">Digital</SidebarLink>
-                        <SidebarLink to="/print">Print</SidebarLink>
-                        <SidebarLink to="/merchandise">Merchandise</SidebarLink>
+                    <SidebarSection title="Applications" to="/applications/digital" autoOpen={isApplications}>
+                        <SidebarLink to="/applications/mobile-app-icon-system">Mobile app icon system</SidebarLink>
+                        <SidebarLink to="/applications/digital">Digital</SidebarLink>
+                        <SidebarLink to="/applications/digital-social">Digital: social media</SidebarLink>
+                        <SidebarLink to="/applications/corporate">Corporate</SidebarLink>
+                        <SidebarLink to="/applications/print">Print</SidebarLink>
+                        <SidebarLink to="/applications/merchandise">Merchandise</SidebarLink>
+                        <SidebarLink to="/applications/environmental">Environmental</SidebarLink>
+                        <SidebarLink to="/applications/events">Events</SidebarLink>
                     </SidebarSection>
 
                     <SidebarSection title="AIA One Billion" to="/aia-one-billion#introduction">
@@ -166,38 +172,6 @@ const Sidebar = () => {
                         <SidebarLink to="/aia-one-billion#examples">Examples</SidebarLink>
                         <SidebarLink to="/aia-one-billion#assets">AOB assets</SidebarLink>
                         <SidebarLink to="/aia-one-billion#mirror">Mirror Moving Mountains</SidebarLink>
-                    </SidebarSection>
-
-                    <SidebarSection title="AIA Vitality" to="/aia-vitality#introduction">
-                        <SidebarLink to="/aia-vitality#introduction">Introduction</SidebarLink>
-                        <SidebarLink to="/aia-vitality#about">About</SidebarLink>
-                        <SidebarLink to="/aia-vitality#positioning">Positioning</SidebarLink>
-                        <SidebarLink to="/aia-vitality#logo">Logo</SidebarLink>
-                        <SidebarLink to="/aia-vitality#localised">Localised versions</SidebarLink>
-                        <SidebarLink to="/aia-vitality#brand-elements">Brand elements</SidebarLink>
-                        <SidebarLink to="/aia-vitality#moving-mountains">Moving Mountains</SidebarLink>
-                        <SidebarLink to="/aia-vitality#examples">Examples</SidebarLink>
-                    </SidebarSection>
-
-                    <SidebarSection title="High Net Worth" to="/high-net-worth#introduction">
-                        <SidebarLink to="/high-net-worth#introduction">Introduction</SidebarLink>
-                        <SidebarLink to="/high-net-worth#core-colours">Core colours</SidebarLink>
-                        <SidebarLink to="/high-net-worth#moving-mountains">Moving Mountains</SidebarLink>
-                        <SidebarLink to="/high-net-worth#applying-colour">Applying colour</SidebarLink>
-                        <SidebarLink to="/high-net-worth#photography">Using with photography</SidebarLink>
-                        <SidebarLink to="/high-net-worth#typography">Typography</SidebarLink>
-                        <SidebarLink to="/high-net-worth#applications">Applications</SidebarLink>
-                        <SidebarLink to="/high-net-worth#corporate-gifts">Corporate gifts</SidebarLink>
-                    </SidebarSection>
-
-                    <SidebarSection title="Brand Checklist" to="/brand-checklist#introduction">
-                        <SidebarLink to="/brand-checklist#introduction">Introduction</SidebarLink>
-                        <SidebarLink to="/brand-checklist#positioning">Positioning checklist</SidebarLink>
-                        <SidebarLink to="/brand-checklist#identity">Identity checklist</SidebarLink>
-                    </SidebarSection>
-
-                    <SidebarSection title="Assets" to="/assets#links">
-                        <SidebarLink to="/assets#links">Asset links and contacts</SidebarLink>
                     </SidebarSection>
                 </nav>
 

@@ -12,7 +12,7 @@ const Illustration = () => {
         </div>
         <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
+            <img src="/assets/assets/logo_cropped_transparent.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
@@ -42,7 +42,7 @@ const Illustration = () => {
           <div className="grid grid-cols-2 gap-4">
             {['asset_11.png', 'asset_12.png', 'asset_13.png', 'asset_14.png'].map((asset) => (
               <div key={asset} className="rounded-lg border border-gray-100 p-2">
-                <img src={`/assets/assets/${asset}`} alt="Illustration example" className="w-full h-32 object-contain" />
+                <img src={`/assets/assets/${asset}`} alt="Illustration example" className="w-full h-24 object-contain" />
               </div>
             ))}
           </div>
@@ -59,7 +59,7 @@ const Illustration = () => {
           <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
             {['asset_15.png', 'asset_16.png', 'asset_17.png', 'asset_18.png'].map((asset) => (
               <div key={asset} className="rounded-lg border border-gray-100 p-2">
-                <img src={`/assets/assets/${asset}`} alt="Illustration example" className="w-full h-28 object-contain" />
+                <img src={`/assets/assets/${asset}`} alt="Illustration example" className="w-full h-24 object-contain" />
               </div>
             ))}
           </div>
@@ -73,11 +73,11 @@ const Illustration = () => {
           <p className="mt-4 text-aia-charcoal/80">
             When creating a scene, use muted grey backgrounds so characters and brand colours stand out.
           </p>
-          <div className="mt-6 rounded-2xl bg-aia-grey/50 p-8">
+          <div className="mt-6 rounded-2xl bg-aia-grey/30 p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-              <img src="/assets/assets/asset_19.png" alt="Scene element" className="h-32 object-contain" />
-              <img src="/assets/assets/asset_20.png" alt="Scene element" className="h-32 object-contain" />
-              <img src="/assets/assets/asset_21.png" alt="Scene element" className="h-32 object-contain" />
+              <img src="/assets/assets/asset_19.png" alt="Scene element" className="h-20 object-contain" />
+              <img src="/assets/assets/asset_20.png" alt="Scene element" className="h-20 object-contain" />
+              <img src="/assets/assets/asset_21.png" alt="Scene element" className="h-20 object-contain" />
             </div>
           </div>
         </div>

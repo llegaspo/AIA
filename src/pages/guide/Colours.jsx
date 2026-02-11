@@ -12,7 +12,7 @@ const Colours = () => {
         </div>
         <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
+            <img src="/assets/assets/logo_cropped_transparent.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
@@ -71,6 +71,64 @@ const Colours = () => {
             <p className="mt-4 text-aia-charcoal/80">
               When printing spot colours, ensure test prints are provided and reviewed before moving to press. When printing please ensure someone from the artwork team is present at the printers to do a press proof so any adjustments can be agreed.
             </p>
+        </div>
+      </section>
+
+      {/* Core colour shades */}
+      <section className="border-t border-aia-red/10">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
+          <h2 className="text-aia-red font-bold uppercase">Core colour shades</h2>
+          <p className="mt-4 text-aia-charcoal/80">
+            Use approved tints of AIA Red and AIA Charcoal when you need softer emphasis, background layers, or subtle hierarchy.
+          </p>
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-aia-red font-semibold uppercase text-sm">AIA Red shades</h3>
+              <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+                {[
+                  '#D31145',
+                  '#E13A5D',
+                  '#EA657B',
+                  '#F28F9E',
+                  '#F6B7C2',
+                  '#FADDE2',
+                  '#FCEFF1',
+                  '#FFFFFF',
+                ].map((hex) => (
+                  <div key={hex} className="rounded-lg border border-gray-100 p-2 text-center">
+                    <div className="h-10 rounded" style={{ background: hex }} />
+                    <p className="mt-2 text-aia-charcoal/70">{hex}</p>
+                    <div className="mt-2 flex items-center justify-center">
+                      <CopyButton value={hex} size="xs" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-aia-red font-semibold uppercase text-sm">AIA Charcoal shades</h3>
+              <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+                {[
+                  '#333D47',
+                  '#4A5662',
+                  '#66717C',
+                  '#808B96',
+                  '#A4AEB7',
+                  '#C8CFD6',
+                  '#E7EAEE',
+                  '#F7F8FA',
+                ].map((hex) => (
+                  <div key={hex} className="rounded-lg border border-gray-100 p-2 text-center">
+                    <div className="h-10 rounded" style={{ background: hex }} />
+                    <p className="mt-2 text-aia-charcoal/70">{hex}</p>
+                    <div className="mt-2 flex items-center justify-center">
+                      <CopyButton value={hex} size="xs" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

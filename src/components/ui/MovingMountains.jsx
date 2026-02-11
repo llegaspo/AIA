@@ -1,10 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 // Basic Mountain Shape (Triangle with rounded top)
 const Mountain = ({ color = "fill-aia-red", opacity = 1, className = "", delay = 0 }) => {
     return (
-        <motion.svg
+        <Motion.svg
             viewBox="0 0 100 100"
             className={`w-full h-full ${className}`}
             initial={{ y: 20, opacity: 0 }}
@@ -23,7 +23,7 @@ const Mountain = ({ color = "fill-aia-red", opacity = 1, className = "", delay =
                 style={{ opacity: opacity }} // fallback if class doesn't handle it
                 fill="currentColor"
             />
-        </motion.svg>
+        </Motion.svg>
     );
 };
 
@@ -45,7 +45,7 @@ export const ThreeMountains = ({ className = "" }) => {
 
 
 // Improved Implementation using pure SVG for better layering control
-export const MovingMountainsOverlay = ({ variation = "three", className = "" }) => {
+export const MovingMountainsOverlay = ({ className = "" }) => {
     // Colors and opacities based on brand standards
     // Core Moving Mountains:
     // 1st: 100% Red (Front)
@@ -66,7 +66,7 @@ export const MovingMountainsOverlay = ({ variation = "three", className = "" }) 
                 {/* Example Layout for 3 Mountains - adjusting coordinates to match visual style */}
 
                 {/* Back / Right - Lightest */}
-                <motion.path
+                <Motion.path
                     d="M250 50 L350 300 L150 300 Z"
                     fill="#D31145"
                     fillOpacity="0.2"
@@ -76,7 +76,7 @@ export const MovingMountainsOverlay = ({ variation = "three", className = "" }) 
                 />
 
                 {/* Middle - Mid Tone */}
-                <motion.path
+                <Motion.path
                     d="M150 100 L250 300 L50 300 Z"
                     fill="#D31145"
                     fillOpacity="0.4"
@@ -90,7 +90,7 @@ export const MovingMountainsOverlay = ({ variation = "three", className = "" }) 
                     Let's follow the standard: 
                     "First mountain is always 100% AIA Red"
                 */}
-                <motion.path
+                <Motion.path
                     d="M50 150 L150 300 L-50 300 Z"
                     fill="#D31145"
                     fillOpacity="0.6" // Adjusting to look like the "Red 60% tint" example

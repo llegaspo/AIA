@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Download, Check, Info, Sparkles } from 'lucide-react';
 import CopyableText from '../components/ui/CopyableText';
 import Modal from '../components/ui/Modal';
@@ -67,7 +67,7 @@ const LogoSpecSVG = ({ type = 'lockup' }) => {
                     {type === 'lockup' ? (
                         <LogoLockup logoClassName="h-10" />
                     ) : (
-                        <img src="/assets/logo_std.png" alt="AIA Logo" className="h-16 w-auto logo-clean" />
+                        <img src="/assets/logo_std_transparent.png" alt="AIA Logo" className="h-16 w-auto logo-clean" />
                     )}
                     <div className="absolute top-0 left-0 right-0 h-px border-t border-aia-red/30"></div>
                     <div className="absolute bottom-0 left-0 right-0 h-px border-b border-aia-red/30"></div>
@@ -195,7 +195,6 @@ const TypeSpecimen = ({ name, weights, sampleText, isPrimary }) => (
 );
 
 const BrandSectionPage = () => {
-    const { sectionId } = useParams();
     const location = useLocation();
     const [activeModal, setActiveModal] = useState(null);
 
@@ -283,8 +282,8 @@ const BrandSectionPage = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                             {[
-                                { id: 'lockup', name: 'HLBL Logo Lockup', img: '/assets/logo_lockup.png', desc: 'The HLBL Logo Lockup is our preferred logo and should be used in most circumstances.' },
-                                { id: 'std', name: 'Corporate Logo', img: '/assets/logo_std.png', desc: "The AIA Corporate Logo is a recognisable symbol of our brand's heritage, success and longevity." },
+                                { id: 'lockup', name: 'HLBL Logo Lockup', img: '/assets/logo_lockup_transparent.png', desc: 'The HLBL Logo Lockup is our preferred logo and should be used in most circumstances.' },
+                                { id: 'std', name: 'Corporate Logo', img: '/assets/logo_std_transparent.png', desc: "The AIA Corporate Logo is a recognisable symbol of our brand's heritage, success and longevity." },
                                 { id: 'wordmark', name: 'Wordmark', img: '/assets/logo_wordmark.svg', desc: 'The AIA Wordmark addresses issues of legibility and is also used for creating sub-brands.' }
                             ].map(logo => (
                                 <div key={logo.id} className="space-y-8 flex flex-col items-center">
@@ -318,12 +317,12 @@ const BrandSectionPage = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="bg-white border border-gray-100 rounded-2xl p-12 flex flex-col items-center justify-center group hover:bg-gray-50 transition-all relative overflow-hidden">
-                                <img src="/assets/logo_std.png" alt="Standard" className="h-20 object-contain mb-8 group-hover:scale-105 transition-transform logo-clean" />
-                                <DownloadButton assetPath="/assets/logo_std.png" className="text-aia-charcoal" />
+                                <img src="/assets/logo_std_transparent.png" alt="Standard" className="h-20 object-contain mb-8 group-hover:scale-105 transition-transform logo-clean" />
+                                <DownloadButton assetPath="/assets/logo_std_transparent.png" className="text-aia-charcoal" />
                             </div>
                             <div className="bg-aia-charcoal rounded-2xl p-12 flex flex-col items-center justify-center group hover:bg-black transition-all relative overflow-hidden">
-                                <img src="/assets/logo_rev.png" alt="Reverse" className="h-20 object-contain mb-8 group-hover:scale-105 transition-transform brightness-0 invert" />
-                                <DownloadButton assetPath="/assets/logo_rev.png" className="text-white" />
+                                <img src="/assets/logo_rev_transparent.png" alt="Reverse" className="h-20 object-contain mb-8 group-hover:scale-105 transition-transform brightness-0 invert" />
+                                <DownloadButton assetPath="/assets/logo_rev_transparent.png" className="text-white" />
                             </div>
                         </div>
                     </section>

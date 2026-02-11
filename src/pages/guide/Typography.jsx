@@ -11,7 +11,7 @@ const Typography = () => {
         </div>
         <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
+            <img src="/assets/assets/logo_cropped_transparent.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
@@ -38,6 +38,20 @@ const Typography = () => {
             <p className="mt-4 text-aia-charcoal/80">
               Design tip: OTF and web fonts are provided and available from our assets links page.
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <button
+                type="button"
+                className="rounded-full border border-aia-red px-4 py-2 text-xs uppercase tracking-wide text-aia-red hover:bg-aia-red hover:text-white transition-colors"
+              >
+                Download AIA Everest (OTF)
+              </button>
+              <button
+                type="button"
+                className="rounded-full border border-aia-red px-4 py-2 text-xs uppercase tracking-wide text-aia-red hover:bg-aia-red hover:text-white transition-colors"
+              >
+                Download Web Font Kit
+              </button>
+            </div>
             <p className="mt-4 text-aia-charcoal/80">
               Please ensure you have received a signed font release from your creative partners before sharing our font.
             </p>

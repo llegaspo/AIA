@@ -77,10 +77,13 @@ body {
 
 .logo-clean {
   mix-blend-mode: multiply;
+  background: transparent;
 }
 
 .cutout-clean {
   mix-blend-mode: screen;
+  background: transparent;
+  display: block;
 }
 
 mark.search-highlight {

@@ -1,35 +1,35 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { Search as SearchIcon, X, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const searchIndex = [
     { title: 'Our Brand', path: '/our-brand#welcome', category: 'Our Brand', keywords: 'welcome contents introduction brand standards' },
     { title: 'Our Purpose', path: '/purpose#why-our-purpose', category: 'Our Brand', keywords: 'purpose healthier longer better lives active customer-centric personal ambition' },
-    { title: 'Our Personality', path: '/personality#why-a-mentor', category: 'Our Brand', keywords: 'persona mentor personality traits summary' },
+    { title: 'Our Personality', path: '/personality#why-a-mentor', category: 'Our Brand', keywords: 'persona mentor personality traits summary company values' },
     { title: 'Tone of Voice', path: '/tone-of-voice#introduction', category: 'Our Brand', keywords: 'tone voice principles spectrum mentor' },
     { title: 'Cultural Guidance', path: '/cultural-guidance#introduction', category: 'Our Brand', keywords: 'cultural clusters exploration empowerment expression emancipation' },
     { title: 'Our Logos', path: '/logos', category: 'Our Identity', keywords: 'logo lockup corporate wordmark usage clear space' },
-    { title: 'Colours', path: '/colour', category: 'Our Identity', keywords: 'colours palette red charcoal white secondary' },
-    { title: 'Typography', path: '/typography', category: 'Our Identity', keywords: 'typography fonts typeface hierarchy' },
+    { title: 'Colours', path: '/colour', category: 'Our Identity', keywords: 'colours palette red charcoal white secondary shades tints' },
+    { title: 'Typography', path: '/typography', category: 'Our Identity', keywords: 'typography fonts typeface hierarchy download' },
     { title: 'Moving Mountains', path: '/moving-mountains', category: 'Visual Elements', keywords: 'moving mountains shapes brand pattern' },
     { title: 'Photography', path: '/photography', category: 'Visual Elements', keywords: 'photography principles style portrait' },
-    { title: 'Illustration', path: '/illustration', category: 'Visual Elements', keywords: 'illustration style examples' },
+    { title: 'Illustration', path: '/illustration', category: 'Visual Elements', keywords: 'illustration style examples scenes integration' },
     { title: 'Iconography', path: '/iconography', category: 'Visual Elements', keywords: 'icons system icons illustrated icons' },
-    { title: 'Digital', path: '/digital', category: 'Applications', keywords: 'digital app social media corporate operation' },
-    { title: 'Print', path: '/print', category: 'Applications', keywords: 'print collateral' },
-    { title: 'Merchandise', path: '/merchandise', category: 'Applications', keywords: 'merchandise gifts' },
+    { title: 'Mobile App Icon System', path: '/applications/mobile-app-icon-system', category: 'Applications', keywords: 'mobile app icon system customer agency region tag' },
+    { title: 'Digital', path: '/applications/digital', category: 'Applications', keywords: 'digital app web website email mobile' },
+    { title: 'Digital: Social Media', path: '/applications/digital-social', category: 'Applications', keywords: 'digital social media facebook instagram examples' },
+    { title: 'Corporate', path: '/applications/corporate', category: 'Applications', keywords: 'corporate daily operation stationery email signature' },
+    { title: 'Print', path: '/applications/print', category: 'Applications', keywords: 'print outdoor advertising annual report brochure' },
+    { title: 'Merchandise', path: '/applications/merchandise', category: 'Applications', keywords: 'merchandise branded pen tote bag phone cover' },
+    { title: 'Environmental', path: '/applications/environmental', category: 'Applications', keywords: 'environmental office walls furniture waiting area' },
+    { title: 'Events', path: '/applications/events', category: 'Applications', keywords: 'events rollup banner stage office event' },
     { title: 'AIA One Billion', path: '/aia-one-billion#introduction', category: 'AIA One Billion', keywords: 'aob logo localised usage assets' },
-    { title: 'AIA Vitality', path: '/aia-vitality#introduction', category: 'AIA Vitality', keywords: 'vitality logo brand elements moving mountains' },
-    { title: 'High Net Worth', path: '/high-net-worth#introduction', category: 'High Net Worth', keywords: 'hnw colours typography photography applications' },
-    { title: 'Brand Checklist', path: '/brand-checklist#introduction', category: 'Brand Checklist', keywords: 'positioning identity checklist' },
-    { title: 'Assets', path: '/assets#links', category: 'Assets', keywords: 'asset links contacts downloads' },
 ];
 
 const Search = ({ variant = 'global', className = "" }) => {
     const [query, setQuery] = useState("");
     const [isFocused, setIsFocused] = useState(false);
-    const [results, setResults] = useState([]);
     const [activeIndex, setActiveIndex] = useState(0);
     const [contentIndex, setContentIndex] = useState([]);
     const navigate = useNavigate();
@@ -95,15 +95,15 @@ const Search = ({ variant = 'global', className = "" }) => {
             88: { title: 'Illustration in use', path: '/illustration', category: 'Illustration' },
             90: { title: 'System icons', path: '/iconography', category: 'Iconography' },
             91: { title: 'Illustrated icons', path: '/iconography', category: 'Iconography' },
-            100: { title: 'Mobile App Icon System', path: '/digital', category: 'Applications' },
-            101: { title: 'Digital', path: '/digital', category: 'Applications' },
-            104: { title: 'Print', path: '/print', category: 'Applications' },
-            105: { title: 'Merchandise', path: '/merchandise', category: 'Applications' },
+            100: { title: 'Mobile App Icon System', path: '/applications/mobile-app-icon-system', category: 'Applications' },
+            101: { title: 'Digital', path: '/applications/digital', category: 'Applications' },
+            102: { title: 'Digital: Social Media', path: '/applications/digital-social', category: 'Applications' },
+            103: { title: 'Corporate Daily Operation', path: '/applications/corporate', category: 'Applications' },
+            104: { title: 'Print', path: '/applications/print', category: 'Applications' },
+            105: { title: 'Merchandise', path: '/applications/merchandise', category: 'Applications' },
+            106: { title: 'Environmental', path: '/applications/environmental', category: 'Applications' },
+            107: { title: 'Events', path: '/applications/events', category: 'Applications' },
             109: { title: 'AIA One Billion', path: '/aia-one-billion#introduction', category: 'AIA One Billion' },
-            118: { title: 'AIA Vitality', path: '/aia-vitality#introduction', category: 'AIA Vitality' },
-            127: { title: 'High Net Worth', path: '/high-net-worth#introduction', category: 'High Net Worth' },
-            137: { title: 'Brand Checklist', path: '/brand-checklist#introduction', category: 'Brand Checklist' },
-            140: { title: 'Assets', path: '/assets#links', category: 'Assets' },
         };
 
         const buildIndex = async () => {
@@ -115,6 +115,8 @@ const Search = ({ variant = 'global', className = "" }) => {
                 const entries = [];
                 for (let i = 1; i < parts.length; i += 2) {
                     const pageNumber = parseInt(parts[i], 10);
+                    if (Number.isNaN(pageNumber)) continue;
+                    if (pageNumber > 116) continue;
                     const pageText = (parts[i + 1] || '').replace(/\s+/g, ' ').trim();
                     const route = pageRouteMap[pageNumber] || {
                         title: `Page ${pageNumber}`,
@@ -130,7 +132,7 @@ const Search = ({ variant = 'global', className = "" }) => {
                     });
                 }
                 setContentIndex(entries);
-            } catch (error) {
+            } catch {
                 setContentIndex([]);
             }
         };
@@ -138,12 +140,10 @@ const Search = ({ variant = 'global', className = "" }) => {
         buildIndex();
     }, []);
 
-    useEffect(() => {
+    const results = useMemo(() => {
         if (query.trim() === "") {
-            setResults([]);
-            return;
+            return [];
         }
-
         const lowered = query.toLowerCase();
         const merged = [...searchIndex, ...contentIndex];
         const filtered = merged
@@ -164,10 +164,10 @@ const Search = ({ variant = 'global', className = "" }) => {
                 }
                 return { ...item, snippet };
             });
-        const deduped = Array.from(new Map(filtered.map(item => [item.path, item])).values());
-        setResults(deduped.slice(0, 50));
-        setActiveIndex(0);
+        return filtered.slice(0, 60);
     }, [query, contentIndex]);
+
+    const safeActiveIndex = Math.min(activeIndex, Math.max(results.length - 1, 0));
 
     // Handle click outside to close results
     useEffect(() => {
@@ -188,7 +188,7 @@ const Search = ({ variant = 'global', className = "" }) => {
 
     const handleCycle = (direction) => {
         if (results.length === 0) return;
-        const nextIndex = (activeIndex + direction + results.length) % results.length;
+        const nextIndex = (safeActiveIndex + direction + results.length) % results.length;
         setActiveIndex(nextIndex);
         const nextPath = results[nextIndex].path;
         const withQuery = `${nextPath}${nextPath.includes('?') ? '&' : '?'}q=${encodeURIComponent(query)}`;
@@ -209,7 +209,10 @@ const Search = ({ variant = 'global', className = "" }) => {
                 <input
                     type="text"
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
+                    onChange={(e) => {
+                        setQuery(e.target.value);
+                        setActiveIndex(0);
+                    }}
                     onFocus={() => setIsFocused(true)}
                     onKeyDown={(e) => {
                         if (e.key === 'Enter') {
@@ -221,8 +224,8 @@ const Search = ({ variant = 'global', className = "" }) => {
                     className={`flex-1 bg-transparent border-none outline-none font-sans ${isHero ? 'text-xl' : 'text-sm'
                         } text-aia-charcoal placeholder:text-gray-300`}
                 />
-                {query && results.length > 0 && (
-                    <div className="flex items-center gap-1 px-2">
+                    {query && results.length > 0 && (
+                        <div className="flex items-center gap-1 px-2">
                         <button
                             onClick={() => handleCycle(-1)}
                             className="p-1 rounded-full border border-gray-200 hover:border-aia-red hover:text-aia-red text-gray-400 transition-colors"
@@ -238,13 +241,13 @@ const Search = ({ variant = 'global', className = "" }) => {
                             <ChevronRight size={14} />
                         </button>
                         <span className="text-[10px] text-gray-400 px-1">
-                            {activeIndex + 1}/{results.length}
+                            {safeActiveIndex + 1}/{results.length}
                         </span>
                     </div>
                 )}
                 <AnimatePresence>
                     {query && (
-                        <motion.button
+                        <Motion.button
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.8 }}
@@ -252,7 +255,7 @@ const Search = ({ variant = 'global', className = "" }) => {
                             className="p-2 text-gray-400 hover:text-aia-red transition-colors"
                         >
                             <X size={isHero ? 20 : 16} />
-                        </motion.button>
+                        </Motion.button>
                     )}
                 </AnimatePresence>
                 {isHero && (
@@ -264,7 +267,7 @@ const Search = ({ variant = 'global', className = "" }) => {
 
             <AnimatePresence>
                 {isFocused && query && results.length > 0 && (
-                    <motion.div
+                    <Motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
@@ -298,7 +301,7 @@ const Search = ({ variant = 'global', className = "" }) => {
                                 <button
                                     key={item.path}
                                     onClick={() => handleSelect(item.path)}
-                                    className={`w-full text-left px-4 py-3 rounded-xl border transition-all flex justify-between items-center group ${index === activeIndex ? 'border-aia-red/20 bg-aia-grey' : 'border-transparent hover:border-aia-red/10 hover:bg-aia-grey'}`}
+                                    className={`w-full text-left px-4 py-3 rounded-xl border transition-all flex justify-between items-center group ${index === safeActiveIndex ? 'border-aia-red/20 bg-aia-grey' : 'border-transparent hover:border-aia-red/10 hover:bg-aia-grey'}`}
                                 >
                                     <div className="flex flex-col">
                                         <span className="text-sm font-medium text-aia-charcoal group-hover:text-aia-red">{item.title}</span>
@@ -313,7 +316,7 @@ const Search = ({ variant = 'global', className = "" }) => {
                                 </button>
                             ))}
                         </div>
-                    </motion.div>
+                    </Motion.div>
                 )}
             </AnimatePresence>
         </div>

@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const FullGuideViewer = () => {
-    const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 141;
     const location = useLocation();
-
-    useEffect(() => {
+    const navigate = useNavigate();
+    const currentPage = useMemo(() => {
         const params = new URLSearchParams(location.search);
-        const pageParam = parseInt(params.get('page') || '', 10);
+        const pageParam = parseInt(params.get('page') || '1', 10);
         if (!Number.isNaN(pageParam) && pageParam >= 1 && pageParam <= totalPages) {
-            setCurrentPage(pageParam);
+            return pageParam;
         }
+        return 1;
     }, [location.search]);
 
     const goToNextPage = () => {
-        if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+        if (currentPage < totalPages) navigate(`/full-guide?page=${currentPage + 1}`);
     };
 
     const goToPrevPage = () => {
-        if (currentPage > 1) setCurrentPage(currentPage - 1);
+        if (currentPage > 1) navigate(`/full-guide?page=${currentPage - 1}`);
     };
 
     const goToPage = (page) => {
-        setCurrentPage(page);
+        navigate(`/full-guide?page=${page}`);
     };
 
     return (
@@ -68,7 +68,7 @@ const FullGuideViewer = () => {
                             onChange={(e) => {
                                 const page = parseInt(e.target.value);
                                 if (page >= 1 && page <= totalPages) {
-                                    setCurrentPage(page);
+                                    navigate(`/full-guide?page=${page}`);
                                 }
                             }}
                             className="w-20 px-3 py-2 border border-gray-300 rounded text-center focus:outline-none focus:ring-2 focus:ring-aia-red"

@@ -20,11 +20,12 @@ import {
   Digital,
   Print,
   Merchandise,
+  ApplicationsMobileAppIconSystem,
+  ApplicationsDigitalSocial,
+  ApplicationsCorporate,
+  ApplicationsEnvironmental,
+  ApplicationsEvents,
   AiaOneBillion,
-  AiaVitality,
-  HighNetWorth,
-  BrandChecklist,
-  Assets,
   // Our Brand combined page
   OurBrand,
 } from './pages/guide';
@@ -51,14 +52,15 @@ function App() {
           <Route path="photography" element={<Photography />} />
           <Route path="illustration" element={<Illustration />} />
           <Route path="iconography" element={<Iconography />} />
-          <Route path="digital" element={<Digital />} />
-          <Route path="print" element={<Print />} />
-          <Route path="merchandise" element={<Merchandise />} />
+          <Route path="applications/mobile-app-icon-system" element={<ApplicationsMobileAppIconSystem />} />
+          <Route path="applications/digital" element={<Digital />} />
+          <Route path="applications/digital-social" element={<ApplicationsDigitalSocial />} />
+          <Route path="applications/corporate" element={<ApplicationsCorporate />} />
+          <Route path="applications/print" element={<Print />} />
+          <Route path="applications/merchandise" element={<Merchandise />} />
+          <Route path="applications/environmental" element={<ApplicationsEnvironmental />} />
+          <Route path="applications/events" element={<ApplicationsEvents />} />
           <Route path="aia-one-billion" element={<AiaOneBillion />} />
-          <Route path="aia-vitality" element={<AiaVitality />} />
-          <Route path="high-net-worth" element={<HighNetWorth />} />
-          <Route path="brand-checklist" element={<BrandChecklist />} />
-          <Route path="assets" element={<Assets />} />
           <Route path="full-guide" element={<FullGuideViewer />} />
           <Route path="branding/*" element={<BrandSectionPage />} /> {/* Catch-all for others if needed */}
         </Route>

@@ -1,7 +1,9 @@
 import React from 'react';
 import MovingMountainsOverlay from '../components/ui/MovingMountains.jsx';
 import Search from '../components/ui/Search';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
+import CopySectionButton from '../components/ui/CopySectionButton';
+import CopyButton from '../components/ui/CopyButton';
 
 const Home = () => {
     return (
@@ -13,7 +15,7 @@ const Home = () => {
 
             {/* Hero Content */}
             <div className="relative z-10 w-full max-w-5xl px-12 md:px-24 py-32 space-y-12">
-                <motion.div
+                <Motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -27,31 +29,77 @@ const Home = () => {
                             Version 2.0 • Digital Identity Hub
                         </p>
                     </div>
-                </motion.div>
+                </Motion.div>
 
-                <motion.div
+                <Motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
                     <Search variant="hero" className="max-w-2xl" />
-                </motion.div>
+                </Motion.div>
 
-                <motion.div
+                <Motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.6 }}
-                    className="flex gap-12 pt-8"
+                    className="pt-8"
                 >
-                    <div className="space-y-1">
-                        <p className="text-[10px] font-bold uppercase tracking-widest text-aia-red">Quick Access</p>
-                        <p className="text-xs text-aia-charcoal/60">Logos, Colours, Fonts</p>
+                    <div className="flex flex-col gap-10">
+                        <div className="space-y-1">
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-aia-red">Quick Access</p>
+                            <p className="text-xs text-aia-charcoal/60">Copy brand tone, values, and primary colours.</p>
+                        </div>
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                            <div className="rounded-2xl border border-gray-100 p-6">
+                                <h3 className="text-sm font-semibold text-aia-charcoal">Brand Personality</h3>
+                                <p className="mt-2 text-xs text-aia-charcoal/60">Copy the full mentor traits list.</p>
+                                <div className="mt-4">
+                                    <CopySectionButton
+                                        label="Copy Personality"
+                                        getText={() =>
+                                            `Brand Personality (AIA as a Mentor)\n\nSummary:\n- Our personality is how our customers experience our brand. It applies to how we come across visually and how we communicate - in person and on the page.\n\nTraits:\n- Compassionate: Compassion is about being empathetic. It means standing in our customers’ shoes and seeing things from their point of view. We are never judgemental.\n- Straightforward: We speak simply and to the point. No matter how complex the subject, we are easy to understand. We are direct and respectful, not long-winded or insensitive.\n- Positive: We are optimistic, enthusiastic and focused on opportunity. We project an infectious sense of energy while staying grounded, practical and realistic.\n- Confident: Confidence means feeling proud of our long-standing history and unrivalled expertise. We are knowledgeable without being arrogant or showing off.\n- Encouraging: Encouraging means being gently supportive, instilling confidence and positivity in our customers. We are never harsh or too directive. We seek to encourage a ‘can do’ mentality.\n- Motivating: Motivation is about being inspiring. We lead by example, always showing, not telling, and providing evidence wherever we can.\n- Guiding: Guiding means indicating a way forward, exercising a subtle influence and providing options. We are instructive but not prescriptive.\n- On your side: On your side means championing the causes that matter to our customers. It means being inclusive, accepting and celebrating individuals, not alienating them.`
+                                        }
+                                    />
+                                </div>
+                            </div>
+                            <div className="rounded-2xl border border-gray-100 p-6">
+                                <h3 className="text-sm font-semibold text-aia-charcoal">Company Values</h3>
+                                <p className="mt-2 text-xs text-aia-charcoal/60">Copy the values block for quick use.</p>
+                                <div className="mt-4">
+                                    <CopySectionButton
+                                        label="Copy Values"
+                                        getText={() =>
+                                            `Company Values\n\n- Customer First: We serve people and communities by putting customer needs at the center of every decision.\n- Integrity: We act with honesty, transparency, and accountability.\n- Excellence: We deliver quality, consistency, and continual improvement.\n- Care & Empathy: We listen, support, and guide with humanity.\n- Collaboration: We work as one team across markets and functions.\n- Innovation: We adapt and create to help people live Healthier, Longer, Better Lives.`
+                                        }
+                                    />
+                                </div>
+                            </div>
+                            <div className="rounded-2xl border border-gray-100 p-6">
+                                <h3 className="text-sm font-semibold text-aia-charcoal">Primary Colours</h3>
+                                <p className="mt-2 text-xs text-aia-charcoal/60">Tap to copy core hex codes.</p>
+                                <div className="mt-4 space-y-3">
+                                    {[
+                                        { name: 'AIA Red', hex: '#D31145' },
+                                        { name: 'White', hex: '#FFFFFF' },
+                                        { name: 'AIA Charcoal', hex: '#333D47' },
+                                    ].map((swatch) => (
+                                        <div key={swatch.name} className="flex items-center justify-between rounded-lg border border-gray-100 px-3 py-2">
+                                            <div className="flex items-center gap-3">
+                                                <div className="h-6 w-6 rounded" style={{ background: swatch.hex }} />
+                                                <div>
+                                                    <p className="text-xs font-semibold text-aia-charcoal">{swatch.name}</p>
+                                                    <p className="text-[10px] text-aia-charcoal/60">{swatch.hex}</p>
+                                                </div>
+                                            </div>
+                                            <CopyButton value={swatch.hex} size="xs" />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="space-y-1 border-l border-gray-200 pl-12">
-                        <p className="text-[10px] font-bold uppercase tracking-widest text-aia-red">Latest Update</p>
-                        <p className="text-xs text-aia-charcoal/60">Digital Mockups v2.1</p>
-                    </div>
-                </motion.div>
+                </Motion.div>
             </div>
         </div>
     );

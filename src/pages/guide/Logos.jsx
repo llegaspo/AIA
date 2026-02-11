@@ -19,7 +19,7 @@ const Logos = () => {
                 </p>
                 <div className="mt-4 flex items-center justify-center gap-2">
                   <a
-                    href="/assets/logo_lockup.png"
+                    href="/assets/logo_lockup_transparent.png"
                     download
                     className="rounded-full border border-aia-red px-3 py-1 text-xs uppercase tracking-wide text-aia-red hover:bg-aia-red hover:text-white transition-colors"
                   >
@@ -28,14 +28,14 @@ const Logos = () => {
                 </div>
               </div>
               <div>
-                <img src="/assets/logo_std.png" alt="Corporate Logo" className="mx-auto h-20 logo-clean" />
+                <img src="/assets/logo_std_transparent.png" alt="Corporate Logo" className="mx-auto h-20 logo-clean" />
                 <h3 className="mt-4 font-semibold text-aia-charcoal">Corporate Logo</h3>
                 <p className="mt-2 text-sm text-aia-charcoal/70">
                   The AIA Corporate Logo is a recognisable symbol of our brand’s heritage, success and longevity.
                 </p>
                 <div className="mt-4 flex items-center justify-center gap-2">
                   <a
-                    href="/assets/logo_std.png"
+                    href="/assets/logo_std_transparent.png"
                     download
                     className="rounded-full border border-aia-red px-3 py-1 text-xs uppercase tracking-wide text-aia-red hover:bg-aia-red hover:text-white transition-colors"
                   >
@@ -198,7 +198,7 @@ const Logos = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center">
-                <img src="/assets/logo_std.png" alt="AIA Corporate Logo" className="h-44 logo-clean" />
+                <img src="/assets/logo_std_transparent.png" alt="AIA Corporate Logo" className="h-44 logo-clean" />
               </div>
             </div>
             <div className="mt-8 rounded-lg bg-gray-100 p-6 text-sm text-aia-charcoal/70">
@@ -209,7 +209,7 @@ const Logos = () => {
                     <div className="absolute inset-6 border border-dashed border-aia-red/40" />
                     <div className="absolute inset-10 border border-aia-red/30" />
                     <img
-                      src="/assets/logo_std.png"
+                      src="/assets/logo_std_transparent.png"
                       alt="Corporate logo clear space"
                       className="absolute inset-0 m-auto h-16 logo-clean"
                     />
@@ -224,11 +224,11 @@ const Logos = () => {
                   <div className="mt-4 space-y-3">
                     <div className="flex items-center gap-4">
                       <span className="text-aia-red font-semibold">10mm</span>
-                      <img src="/assets/logo_std.png" alt="Print minimum size" className="h-7 logo-clean" />
+                      <img src="/assets/logo_std_transparent.png" alt="Print minimum size" className="h-7 logo-clean" />
                     </div>
                     <div className="flex items-center gap-4">
                       <span className="text-aia-red font-semibold">24px</span>
-                      <img src="/assets/logo_std.png" alt="Digital minimum size" className="h-6 logo-clean" />
+                      <img src="/assets/logo_std_transparent.png" alt="Digital minimum size" className="h-6 logo-clean" />
                     </div>
                     <p className="text-xs text-aia-charcoal/50">*Not to scale</p>
                   </div>
@@ -368,7 +368,7 @@ const Logos = () => {
                         <div className="rounded border border-gray-200 p-2">
                           <p className="text-aia-red font-semibold">Yes</p>
                           <p className="mt-1">Use the Corporate Logo when space is limited.</p>
-                          <img src="/assets/logo_std.png" alt="Corporate logo" className="mx-auto mt-2 h-8 logo-clean" />
+                          <img src="/assets/logo_std_transparent.png" alt="Corporate logo" className="mx-auto mt-2 h-8 logo-clean" />
                         </div>
                         <div className="rounded border border-gray-200 p-2">
                           <p className="text-aia-red font-semibold">No</p>
@@ -427,7 +427,7 @@ const Logos = () => {
                   <div className="mt-3 grid grid-cols-3 gap-3">
                     {Array.from({ length: 6 }).map((_, idx) => (
                       <div key={idx} className="h-16 border border-gray-100 rounded relative">
-                        <img src="/assets/logo_std.png" alt="Corporate placement" className="absolute top-2 left-2 h-5 logo-clean" />
+                        <img src="/assets/logo_std_transparent.png" alt="Corporate placement" className="absolute top-2 left-2 h-5 logo-clean" />
                       </div>
                     ))}
                   </div>
@@ -435,7 +435,7 @@ const Logos = () => {
                 <div className="rounded-lg border border-gray-200 p-4">
                   <p className="text-xs uppercase text-aia-charcoal/60">Corporate Logo placement – top left</p>
                   <div className="h-32 border border-gray-100 rounded relative">
-                    <img src="/assets/logo_std.png" alt="Corporate placement top left" className="absolute top-3 left-3 h-6 logo-clean" />
+                    <img src="/assets/logo_std_transparent.png" alt="Corporate placement top left" className="absolute top-3 left-3 h-6 logo-clean" />
                   </div>
                 </div>
               </div>
@@ -447,6 +447,12 @@ const Logos = () => {
       <section className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Logo don’ts</h2>
+            <div className="mt-6 flex items-center gap-4">
+              <div className="h-16 w-16 rounded-lg border border-gray-100 bg-white flex items-center justify-center">
+                <img src="/guide/assets/logos/logo-donts-crop.png" alt="Logo don'ts example" className="h-10 w-10 logo-clean" />
+              </div>
+              <p className="text-xs text-aia-charcoal/60">Example pulled from the logo don’ts reference panel.</p>
+            </div>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
               {[
                 'Don’t alter or redesign any element of our logos.',

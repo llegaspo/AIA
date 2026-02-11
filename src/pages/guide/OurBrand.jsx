@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useScrollSpy from '../../components/guide/useScrollSpy';
 
 const OurBrand = () => {
@@ -10,7 +11,7 @@ const OurBrand = () => {
         <div className="absolute left-0 top-0 h-full w-1 bg-aia-red" aria-hidden="true" />
         <div className="px-12 md:px-20 py-16">
           <div className="flex items-center gap-3 text-aia-red">
-            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
+            <img src="/assets/assets/logo_cropped_transparent.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
@@ -34,37 +35,42 @@ const OurBrand = () => {
           <div>
             <h3 className="text-aia-red font-bold uppercase text-sm">Our Brand</h3>
             <ul className="mt-3 space-y-2 text-sm text-aia-charcoal/80">
-              <li>Welcome</li>
-              <li>Contents</li>
-              <li>Our Purpose</li>
-              <li>Our Personality</li>
-              <li>Our Tone of Voice</li>
-              <li>Cultural Guidance</li>
+              <li><Link className="hover:text-aia-red" to="/our-brand#welcome">Welcome</Link></li>
+              <li><Link className="hover:text-aia-red" to="/our-brand#contents">Contents</Link></li>
+              <li><Link className="hover:text-aia-red" to="/purpose#why-our-purpose">Our Purpose</Link></li>
+              <li><Link className="hover:text-aia-red" to="/personality#why-a-mentor">Our Personality</Link></li>
+              <li><Link className="hover:text-aia-red" to="/tone-of-voice#introduction">Our Tone of Voice</Link></li>
+              <li><Link className="hover:text-aia-red" to="/cultural-guidance#introduction">Cultural Guidance</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-aia-red font-bold uppercase text-sm">Our Identity</h3>
             <ul className="mt-3 space-y-2 text-sm text-aia-charcoal/80">
-              <li>Our logos</li>
+              <li><Link className="hover:text-aia-red" to="/logos">Our logos</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-aia-red font-bold uppercase text-sm">Visual Elements</h3>
             <ul className="mt-3 space-y-2 text-sm text-aia-charcoal/80">
-              <li>Colours</li>
-              <li>Typography</li>
-              <li>Moving Mountains</li>
-              <li>Photography</li>
-              <li>Illustration</li>
-              <li>Iconography</li>
+              <li><Link className="hover:text-aia-red" to="/colour">Colours</Link></li>
+              <li><Link className="hover:text-aia-red" to="/typography">Typography</Link></li>
+              <li><Link className="hover:text-aia-red" to="/moving-mountains">Moving Mountains</Link></li>
+              <li><Link className="hover:text-aia-red" to="/photography">Photography</Link></li>
+              <li><Link className="hover:text-aia-red" to="/illustration">Illustration</Link></li>
+              <li><Link className="hover:text-aia-red" to="/iconography">Iconography</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-aia-red font-bold uppercase text-sm">Applications</h3>
             <ul className="mt-3 space-y-2 text-sm text-aia-charcoal/80">
-              <li>Digital</li>
-              <li>Print</li>
-              <li>Merchandise</li>
+              <li><Link className="hover:text-aia-red" to="/applications/mobile-app-icon-system">Mobile app icon system</Link></li>
+              <li><Link className="hover:text-aia-red" to="/applications/digital">Digital</Link></li>
+              <li><Link className="hover:text-aia-red" to="/applications/digital-social">Digital: social media</Link></li>
+              <li><Link className="hover:text-aia-red" to="/applications/corporate">Corporate</Link></li>
+              <li><Link className="hover:text-aia-red" to="/applications/print">Print</Link></li>
+              <li><Link className="hover:text-aia-red" to="/applications/merchandise">Merchandise</Link></li>
+              <li><Link className="hover:text-aia-red" to="/applications/environmental">Environmental</Link></li>
+              <li><Link className="hover:text-aia-red" to="/applications/events">Events</Link></li>
             </ul>
           </div>
         </div>

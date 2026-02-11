@@ -8,7 +8,7 @@ const CopyButton = ({ value, size = 'sm' }) => {
       await navigator.clipboard.writeText(value);
       setCopied(true);
       setTimeout(() => setCopied(false), 1200);
-    } catch (error) {
+    } catch {
       setCopied(false);
     }
   };

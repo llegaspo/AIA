@@ -15,7 +15,7 @@ const Purpose = () => {
         <div className="absolute inset-0 bg-black/10" aria-hidden="true" />
         <div className="relative z-10 px-12 md:px-20 pt-10">
           <div className="flex items-center gap-3 text-white">
-            <img src="/assets/assets/logo_cropped.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
+            <img src="/assets/assets/logo_cropped_transparent.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
             <div className="text-[10px] uppercase tracking-widest">
               <div>Healthier, Longer,</div>
               <div>Better Lives</div>
@@ -65,7 +65,7 @@ const Purpose = () => {
               </div>
 
               <div className="relative">
-                <div className="absolute -top-10 -right-12 w-[125%] h-[95%]">
+                <div className="absolute -top-10 -right-12 w-[125%] h-[95%] hidden lg:block" aria-hidden="true">
                   <div className="absolute inset-0 bg-aia-red rotate-[18deg]" />
                   <div className="absolute inset-0 bg-aia-red/30 -rotate-[6deg] translate-x-6 translate-y-6" />
                 </div>
@@ -130,23 +130,23 @@ const Purpose = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-end">
                 {[
                   {
-                    src: '/guide/assets/purpose/purpose-family.png',
+                    src: '/guide/assets/purpose/purpose-family-transparent.png',
                     label: '“For my family”',
                     rotate: 'rotate-[12deg]',
                   },
                   {
-                    src: '/guide/assets/purpose/purpose-career.png',
+                    src: '/guide/assets/purpose/purpose-career-transparent.png',
                     label: '“For my career”',
                     rotate: 'rotate-[-8deg]',
                   },
                   {
-                    src: '/guide/assets/purpose/purpose-future.png',
+                    src: '/guide/assets/purpose/purpose-future-transparent.png',
                     label: '“For my future”',
                     rotate: 'rotate-[8deg]',
                   },
                 ].map((item) => (
                   <div key={item.label} className="text-center">
-                    <div className="relative mx-auto w-[260px] h-[260px] bg-white">
+                    <div className="relative mx-auto w-[260px] h-[260px] isolate bg-transparent">
                       <img
                         src={item.src}
                         alt={item.label}
