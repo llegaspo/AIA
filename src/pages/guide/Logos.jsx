@@ -1,11 +1,28 @@
 import React from 'react';
 import LogoLockup from '../../components/brand/LogoLockup';
+import useScrollSpy from '../../components/guide/useScrollSpy';
 
 const Logos = () => {
+  useScrollSpy(
+    [
+      'logos-overview',
+      'hlbl-logo-lockup',
+      'localised-versions',
+      'corporate-logo',
+      'wordmark',
+      'wordmark-usage',
+      'logo-usage',
+      'logo-placement',
+      'logo-donts',
+      'wordmark-donts',
+    ],
+    'logos-overview'
+  );
+
   return (
     <main className="w-full bg-white guide-page">
       {/* Page 31: Overview */}
-      <section className="border-t border-aia-red/10">
+      <section id="logos-overview" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h1 className="text-aia-red font-bold uppercase text-3xl">Our Logos</h1>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -64,7 +81,7 @@ const Logos = () => {
       </section>
 
       {/* Page 32: HLBL Logo Lockup */}
-      <section className="border-t border-aia-red/10">
+      <section id="hlbl-logo-lockup" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">HLBL Logo Lockup</h2>
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
@@ -120,7 +137,7 @@ const Logos = () => {
       </section>
 
       {/* Page 33: Localised versions */}
-      <section className="border-t border-aia-red/10">
+      <section id="localised-versions" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">HLBL Logo Lockup: Localised versions</h2>
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr_0.7fr] gap-10">
@@ -173,7 +190,7 @@ const Logos = () => {
       </section>
 
       {/* Page 34: Corporate Logo */}
-      <section className="border-t border-aia-red/10">
+      <section id="corporate-logo" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Corporate Logo</h2>
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
@@ -239,7 +256,7 @@ const Logos = () => {
       </section>
 
       {/* Page 35: Wordmark */}
-      <section className="border-t border-aia-red/10">
+      <section id="wordmark" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Wordmark</h2>
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
@@ -300,7 +317,7 @@ const Logos = () => {
       </section>
 
       {/* Page 36: Wordmark usage (use extracted images) */}
-      <section className="border-t border-aia-red/10">
+      <section id="wordmark-usage" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Wordmark usage</h2>
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
@@ -329,7 +346,7 @@ const Logos = () => {
       </section>
 
       {/* Page 37: Logo usage (flow) */}
-      <section className="border-t border-aia-red/10">
+      <section id="logo-usage" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Logo usage</h2>
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
@@ -389,7 +406,7 @@ const Logos = () => {
       </section>
 
       {/* Page 38: Placement */}
-      <section className="border-t border-aia-red/10">
+      <section id="logo-placement" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Placement</h2>
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
@@ -444,7 +461,7 @@ const Logos = () => {
       </section>
 
       {/* Page 39: Logo don'ts */}
-      <section className="border-t border-aia-red/10">
+      <section id="logo-donts" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Logo don’ts</h2>
             <div className="mt-10 space-y-10">
@@ -517,7 +534,7 @@ const Logos = () => {
       </section>
 
       {/* Page 40: Wordmark don'ts */}
-      <section className="border-t border-aia-red/10">
+      <section id="wordmark-donts" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Wordmark don’ts</h2>
             <div className="mt-10 space-y-10">

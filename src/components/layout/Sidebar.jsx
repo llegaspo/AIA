@@ -72,8 +72,10 @@ const Sidebar = () => {
     const isCultural = location.pathname === '/cultural-guidance';
     const isApplications = location.pathname.startsWith('/applications');
     const isVideo = location.pathname.startsWith('/video');
+    const isLogos = location.pathname === '/logos';
     const isColour = location.pathname === '/colour';
     const isTypography = location.pathname === '/typography';
+    const isIdentity = isLogos || isColour || isTypography;
     const isIllustration = location.pathname === '/illustration';
     const isIconography = location.pathname === '/iconography';
     const isPhotography = location.pathname === '/photography';
@@ -150,8 +152,22 @@ const Sidebar = () => {
                         <SidebarLink to="/video/end-frames" variant="page">Video End Frames</SidebarLink>
                     </SidebarSection>
 
-                    <SidebarSection title="Our Identity" to="/logos">
+                    <SidebarSection title="Our Identity" to="/logos#logos-overview" autoOpen={isIdentity}>
                         <SidebarLink to="/logos">Our Logos</SidebarLink>
+                        {isLogos && (
+                            <div className="ml-4 border-l border-aia-red/10 pl-2">
+                                <SidebarLink to="/logos#logos-overview">Overview</SidebarLink>
+                                <SidebarLink to="/logos#hlbl-logo-lockup">HLBL Logo Lockup</SidebarLink>
+                                <SidebarLink to="/logos#localised-versions">Localised versions</SidebarLink>
+                                <SidebarLink to="/logos#corporate-logo">Corporate Logo</SidebarLink>
+                                <SidebarLink to="/logos#wordmark">Wordmark</SidebarLink>
+                                <SidebarLink to="/logos#wordmark-usage">Wordmark usage</SidebarLink>
+                                <SidebarLink to="/logos#logo-usage">Logo usage</SidebarLink>
+                                <SidebarLink to="/logos#logo-placement">Placement</SidebarLink>
+                                <SidebarLink to="/logos#logo-donts">Logo don’ts</SidebarLink>
+                                <SidebarLink to="/logos#wordmark-donts">Wordmark don’ts</SidebarLink>
+                            </div>
+                        )}
                         <SidebarLink to="/colour">Colours</SidebarLink>
                         {isColour && (
                             <div className="ml-4 border-l border-aia-red/10 pl-2">

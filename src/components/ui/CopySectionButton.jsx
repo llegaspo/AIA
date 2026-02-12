@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CopySectionButton = ({ getText, label = 'Copy to Clipboard' }) => {
+const CopySectionButton = ({ getText, label = 'Copy to Clipboard', className = '' }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -18,7 +18,7 @@ const CopySectionButton = ({ getText, label = 'Copy to Clipboard' }) => {
     <button
       type="button"
       onClick={handleCopy}
-      className="rounded-full bg-aia-red px-4 py-2 text-xs uppercase tracking-wide text-white hover:bg-aia-red/90 transition-colors shadow-sm"
+      className={`rounded-full bg-aia-red px-4 py-2 text-xs uppercase tracking-wide text-white hover:bg-aia-red/90 transition-colors shadow-sm ${className}`}
       aria-label={label}
     >
       {copied ? 'Copied' : label}

@@ -99,8 +99,39 @@ const Photography = () => {
       <section id="photo-donts" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Photography don’ts</h2>
-          <div className="mt-8 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-            <img src="/guide/assets/photography/photo-donts.png" alt="Photography don’ts reference" className="w-full h-auto" />
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-5 gap-8">
+            {[
+              {
+                src: '/assets/photography-donts/no-overly-posed.png',
+                text: 'Don’t create overly\nposed or staged photos.',
+              },
+              {
+                src: '/assets/photography-donts/no-exag-body-img.png',
+                text: 'Don’t use imagery that\nexaggerates body ideals.',
+              },
+              {
+                src: '/assets/photography-donts/no-landscape.png',
+                text: 'Don’t use landscapes\nwithout people.',
+              },
+              {
+                src: '/assets/photography-donts/no-negative-img.png',
+                text: 'Don’t use negative,\noverly dramatic imagery.',
+              },
+              {
+                src: '/assets/photography-donts/no-single-use-plastic.png',
+                text: 'Don’t show single-use\nplastic products.',
+              },
+            ].map((item) => (
+              <div key={item.src} className="space-y-4">
+                <div className="h-44 rounded-lg border border-gray-100 bg-white flex items-center justify-center p-3">
+                  <img src={item.src} alt="Photography don’t" className="max-h-full w-auto object-contain" />
+                </div>
+                <div className="flex items-start gap-3 text-sm text-aia-charcoal/80 leading-relaxed">
+                  <span className="text-aia-charcoal/60 text-xl leading-none">✕</span>
+                  <span className="whitespace-pre-line">{item.text}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
