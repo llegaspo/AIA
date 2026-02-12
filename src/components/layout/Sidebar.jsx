@@ -64,7 +64,7 @@ const SidebarSection = ({ title, children, defaultOpen = false, autoOpen = false
 
 const Sidebar = () => {
     const location = useLocation();
-    const isOurBrand = location.pathname === '/our-brand';
+    const isOurBrand = location.pathname.startsWith('/our-brand');
     const isPurpose = location.pathname === '/purpose';
     const isPersonality = location.pathname === '/personality';
     const isTone = location.pathname === '/tone-of-voice';
@@ -86,8 +86,8 @@ const Sidebar = () => {
                     >
                         {isOurBrand && (
                             <div className="ml-4 border-l border-aia-red/10 pl-2">
-                                <SidebarLink to="/our-brand#welcome">Welcome</SidebarLink>
-                                <SidebarLink to="/our-brand#contents">Contents</SidebarLink>
+                                <SidebarLink to="/our-brand/welcome">Welcome</SidebarLink>
+                                <SidebarLink to="/our-brand/contents">Contents</SidebarLink>
                             </div>
                         )}
 
@@ -163,16 +163,6 @@ const Sidebar = () => {
                         <SidebarLink to="/applications/events">Events</SidebarLink>
                     </SidebarSection>
 
-                    <SidebarSection title="AIA One Billion" to="/aia-one-billion#introduction">
-                        <SidebarLink to="/aia-one-billion#introduction">Introduction</SidebarLink>
-                        <SidebarLink to="/aia-one-billion#logo">Logo</SidebarLink>
-                        <SidebarLink to="/aia-one-billion#localised">Localised versions</SidebarLink>
-                        <SidebarLink to="/aia-one-billion#usage-hlbl">Usage with HLBL</SidebarLink>
-                        <SidebarLink to="/aia-one-billion#video">Video usage</SidebarLink>
-                        <SidebarLink to="/aia-one-billion#examples">Examples</SidebarLink>
-                        <SidebarLink to="/aia-one-billion#assets">AOB assets</SidebarLink>
-                        <SidebarLink to="/aia-one-billion#mirror">Mirror Moving Mountains</SidebarLink>
-                    </SidebarSection>
                 </nav>
 
                 <div className="mt-12 pt-8 border-t border-gray-200/50 text-[9px] text-aia-charcoal/40 uppercase tracking-widest font-sans flex items-center justify-between">

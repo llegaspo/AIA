@@ -126,7 +126,7 @@ const MovingMountains = () => {
               <h3 className="font-semibold">Cutout</h3>
               <p className="mt-2 text-sm text-aia-charcoal/70">Cutout photography can merge with the mountains for a minimal design.</p>
               <div className="mt-4 h-44 rounded-xl bg-aia-grey flex items-center justify-center">
-                <img src="/guide/assets/purpose/purpose-family-transparent.png" alt="Cutout" className="h-28 cutout-clean" />
+                <img src="/assets/family-picture.png" alt="Cutout" className="h-28" />
               </div>
             </div>
             <div className="rounded-lg border border-gray-100 p-6">

@@ -1,4 +1,6 @@
 export { default as OurBrand } from './OurBrand';
+export { default as Welcome } from './Welcome';
+export { default as Contents } from './Contents';
 export { default as Purpose } from './Purpose';
 export { default as Personality } from './Personality';
 export { default as ToneOfVoice } from './ToneOfVoice';
@@ -18,4 +20,3 @@ export { default as ApplicationsDigitalSocial } from './ApplicationsDigitalSocia
 export { default as ApplicationsCorporate } from './ApplicationsCorporate';
 export { default as ApplicationsEnvironmental } from './ApplicationsEnvironmental';
 export { default as ApplicationsEvents } from './ApplicationsEvents';
-export { default as AiaOneBillion } from './AiaOneBillion';

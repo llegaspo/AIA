@@ -25,9 +25,10 @@ import {
   ApplicationsCorporate,
   ApplicationsEnvironmental,
   ApplicationsEvents,
-  AiaOneBillion,
   // Our Brand combined page
   OurBrand,
+  Welcome,
+  Contents,
 } from './pages/guide';
 
 function App() {
@@ -36,7 +37,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="our-brand" element={<OurBrand />} />
+          <Route path="our-brand" element={<Welcome />} />
+          <Route path="our-brand/welcome" element={<Welcome />} />
+          <Route path="our-brand/contents" element={<Contents />} />
           <Route path="brand-standards" element={<OurBrand />} />
           <Route path="moving-mountains-library" element={<MovingMountainsLibrary />} />
 
@@ -60,7 +63,6 @@ function App() {
           <Route path="applications/merchandise" element={<Merchandise />} />
           <Route path="applications/environmental" element={<ApplicationsEnvironmental />} />
           <Route path="applications/events" element={<ApplicationsEvents />} />
-          <Route path="aia-one-billion" element={<AiaOneBillion />} />
           <Route path="full-guide" element={<FullGuideViewer />} />
           <Route path="branding/*" element={<BrandSectionPage />} /> {/* Catch-all for others if needed */}
         </Route>

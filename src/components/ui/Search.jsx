@@ -4,7 +4,7 @@ import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const searchIndex = [
-    { title: 'Our Brand', path: '/our-brand#welcome', category: 'Our Brand', keywords: 'welcome contents introduction brand standards' },
+    { title: 'Our Brand', path: '/our-brand/welcome', category: 'Our Brand', keywords: 'welcome contents introduction brand standards' },
     { title: 'Our Purpose', path: '/purpose#why-our-purpose', category: 'Our Brand', keywords: 'purpose healthier longer better lives active customer-centric personal ambition' },
     { title: 'Our Personality', path: '/personality#why-a-mentor', category: 'Our Brand', keywords: 'persona mentor personality traits summary company values' },
     { title: 'Tone of Voice', path: '/tone-of-voice#introduction', category: 'Our Brand', keywords: 'tone voice principles spectrum mentor' },
@@ -24,7 +24,6 @@ const searchIndex = [
     { title: 'Merchandise', path: '/applications/merchandise', category: 'Applications', keywords: 'merchandise branded pen tote bag phone cover' },
     { title: 'Environmental', path: '/applications/environmental', category: 'Applications', keywords: 'environmental office walls furniture waiting area' },
     { title: 'Events', path: '/applications/events', category: 'Applications', keywords: 'events rollup banner stage office event' },
-    { title: 'AIA One Billion', path: '/aia-one-billion#introduction', category: 'AIA One Billion', keywords: 'aob logo localised usage assets' },
 ];
 
 const Search = ({ variant = 'global', className = "" }) => {
@@ -39,8 +38,8 @@ const Search = ({ variant = 'global', className = "" }) => {
 
     useEffect(() => {
         const pageRouteMap = {
-            2: { title: 'Welcome', path: '/our-brand#welcome', category: 'Our Brand' },
-            3: { title: 'Contents', path: '/our-brand#contents', category: 'Our Brand' },
+            2: { title: 'Welcome', path: '/our-brand/welcome', category: 'Our Brand' },
+            3: { title: 'Contents', path: '/our-brand/contents', category: 'Our Brand' },
             5: { title: 'Why our Purpose?', path: '/purpose#why-our-purpose', category: 'Our Purpose' },
             6: { title: 'Active', path: '/purpose#active', category: 'Our Purpose' },
             7: { title: 'Customer-centric', path: '/purpose#customer-centric', category: 'Our Purpose' },
@@ -103,7 +102,6 @@ const Search = ({ variant = 'global', className = "" }) => {
             105: { title: 'Merchandise', path: '/applications/merchandise', category: 'Applications' },
             106: { title: 'Environmental', path: '/applications/environmental', category: 'Applications' },
             107: { title: 'Events', path: '/applications/events', category: 'Applications' },
-            109: { title: 'AIA One Billion', path: '/aia-one-billion#introduction', category: 'AIA One Billion' },
         };
 
         const buildIndex = async () => {

@@ -1,33 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useScrollSpy from '../../components/guide/useScrollSpy';
 
-const OurBrand = () => {
-  useScrollSpy(['welcome', 'contents'], 'welcome');
-
+const Contents = () => {
   return (
     <main className="w-full bg-white guide-page">
-      <section id="welcome" className="relative min-h-[55vh] bg-gradient-to-br from-white via-white to-aia-grey">
-        <div className="absolute left-0 top-0 h-full w-1 bg-aia-red" aria-hidden="true" />
-        <div className="px-12 md:px-20 py-16">
-          <div className="flex items-center gap-3 text-aia-red">
-            <img src="/assets/assets/logo_cropped_transparent.png" alt="AIA" className="h-12 w-auto logo-clean mix-blend-multiply" />
-            <div className="text-[10px] uppercase tracking-widest">
-              <div>Healthier, Longer,</div>
-              <div>Better Lives</div>
-            </div>
-          </div>
-          <h1 className="mt-16 text-4xl md:text-6xl font-semibold text-aia-midnight">
-            At AIA, our Purpose is to help people live
-          </h1>
-          <h2 className="mt-6 text-4xl md:text-6xl font-bold text-aia-red">
-            Healthier, Longer, Better Lives
-          </h2>
-        </div>
-      </section>
-
-      <section id="contents" className="px-12 md:px-20 py-12 min-h-[70vh] border-t border-aia-red/10">
-        <h2 className="text-aia-red font-bold uppercase text-3xl">Contents</h2>
+      <section className="px-12 md:px-20 py-12 min-h-[70vh]">
+        <h1 className="text-aia-red font-bold uppercase text-3xl">Contents</h1>
         <p className="mt-4 text-aia-charcoal/70">
           Use this page to jump to any section of the AIA Brand Standards.
         </p>
@@ -35,8 +13,8 @@ const OurBrand = () => {
           <div>
             <h3 className="text-aia-red font-bold uppercase text-sm">Our Brand</h3>
             <ul className="mt-3 space-y-2 text-sm text-aia-charcoal/80">
-              <li><Link className="hover:text-aia-red" to="/our-brand#welcome">Welcome</Link></li>
-              <li><Link className="hover:text-aia-red" to="/our-brand#contents">Contents</Link></li>
+              <li><Link className="hover:text-aia-red" to="/our-brand/welcome">Welcome</Link></li>
+              <li><Link className="hover:text-aia-red" to="/our-brand/contents">Contents</Link></li>
               <li><Link className="hover:text-aia-red" to="/purpose#why-our-purpose">Our Purpose</Link></li>
               <li><Link className="hover:text-aia-red" to="/personality#why-a-mentor">Our Personality</Link></li>
               <li><Link className="hover:text-aia-red" to="/tone-of-voice#introduction">Our Tone of Voice</Link></li>
@@ -79,4 +57,4 @@ const OurBrand = () => {
   );
 };
 
-export default OurBrand;
+export default Contents;

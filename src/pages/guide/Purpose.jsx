@@ -127,30 +127,27 @@ const Purpose = () => {
                   Healthier, Longer, Better Lives is personal. We recognise that it means something different to everyone.
                 </h3>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-end">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-20 items-start">
                 {[
                   {
-                    src: '/guide/assets/purpose/purpose-family-transparent.png',
+                    src: '/assets/family-picture.png',
                     label: '“For my family”',
-                    rotate: 'rotate-[12deg]',
                   },
                   {
-                    src: '/guide/assets/purpose/purpose-career-transparent.png',
+                    src: '/assets/career-picture.png',
                     label: '“For my career”',
-                    rotate: 'rotate-[-8deg]',
                   },
                   {
-                    src: '/guide/assets/purpose/purpose-future-transparent.png',
+                    src: '/assets/future-picture.png',
                     label: '“For my future”',
-                    rotate: 'rotate-[8deg]',
                   },
                 ].map((item) => (
                   <div key={item.label} className="text-center">
-                    <div className="relative mx-auto w-[260px] h-[260px] isolate bg-transparent">
+                    <div className="relative mx-auto w-[150px] h-[150px] md:w-[170px] md:h-[170px] lg:w-[190px] lg:h-[190px] isolate bg-transparent">
                       <img
                         src={item.src}
                         alt={item.label}
-                        className="relative z-10 w-full h-full object-contain bg-transparent cutout-clean"
+                        className="relative z-10 w-full h-full object-contain bg-transparent"
                       />
                     </div>
                     <p className="mt-4 text-aia-red italic">{item.label}</p>
