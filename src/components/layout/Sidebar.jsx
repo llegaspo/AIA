@@ -3,6 +3,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import LogoLockup from '../brand/LogoLockup';
+import { VIDEO_END_FRAMES } from '../../data/videoEndFrames';
 
 const SidebarLink = ({ to, children, exact = false, variant = 'section' }) => {
     const location = useLocation();
@@ -70,6 +71,12 @@ const Sidebar = () => {
     const isTone = location.pathname === '/tone-of-voice';
     const isCultural = location.pathname === '/cultural-guidance';
     const isApplications = location.pathname.startsWith('/applications');
+    const isVideo = location.pathname.startsWith('/video');
+    const isColour = location.pathname === '/colour';
+    const isTypography = location.pathname === '/typography';
+    const isIllustration = location.pathname === '/illustration';
+    const isIconography = location.pathname === '/iconography';
+    const isPhotography = location.pathname === '/photography';
 
     return (
         <aside className="w-64 h-screen fixed left-0 top-0 bg-aia-grey border-r border-gray-200 overflow-y-auto z-50">
@@ -139,17 +146,65 @@ const Sidebar = () => {
                         )}
                     </SidebarSection>
 
+                    <SidebarSection title="Video" to={`/video/end-frames/${VIDEO_END_FRAMES[0].id}`} autoOpen={isVideo}>
+                        {VIDEO_END_FRAMES.map((video) => (
+                            <SidebarLink key={video.id} to={`/video/end-frames/${video.id}`}>
+                                {video.title}
+                            </SidebarLink>
+                        ))}
+                    </SidebarSection>
+
                     <SidebarSection title="Our Identity" to="/logos">
                         <SidebarLink to="/logos">Our Logos</SidebarLink>
                         <SidebarLink to="/colour">Colours</SidebarLink>
+                        {isColour && (
+                            <div className="ml-4 border-l border-aia-red/10 pl-2">
+                                <SidebarLink to="/colour#core-colours">Core colours</SidebarLink>
+                                <SidebarLink to="/colour#secondary-colours">Secondary colours</SidebarLink>
+                                <SidebarLink to="/colour#core-shades">Core colour shades</SidebarLink>
+                                <SidebarLink to="/colour#colour-donts">Colour don’ts</SidebarLink>
+                            </div>
+                        )}
                         <SidebarLink to="/typography">Typography</SidebarLink>
+                        {isTypography && (
+                            <div className="ml-4 border-l border-aia-red/10 pl-2">
+                                <SidebarLink to="/typography#primary-english">Primary typeface</SidebarLink>
+                                <SidebarLink to="/typography#system-english">System typeface</SidebarLink>
+                                <SidebarLink to="/typography#primary-chinese">Chinese typeface</SidebarLink>
+                                <SidebarLink to="/typography#hierarchy">Hierarchy</SidebarLink>
+                                <SidebarLink to="/typography#digital-typography">Digital usage</SidebarLink>
+                            </div>
+                        )}
                     </SidebarSection>
 
                     <SidebarSection title="Visual Elements" to="/colour">
                         <SidebarLink to="/moving-mountains">Moving Mountains</SidebarLink>
                         <SidebarLink to="/photography">Photography</SidebarLink>
+                        {isPhotography && (
+                            <div className="ml-4 border-l border-aia-red/10 pl-2">
+                                <SidebarLink to="/photography#photo-principles">Principles</SidebarLink>
+                                <SidebarLink to="/photography#photo-briefs">Briefs</SidebarLink>
+                                <SidebarLink to="/photography#photo-works">What works</SidebarLink>
+                                <SidebarLink to="/photography#photo-donts">Don’ts</SidebarLink>
+                            </div>
+                        )}
                         <SidebarLink to="/illustration">Illustration</SidebarLink>
+                        {isIllustration && (
+                            <div className="ml-4 border-l border-aia-red/10 pl-2">
+                                <SidebarLink to="/illustration#illustration-style">Style</SidebarLink>
+                                <SidebarLink to="/illustration#illustration-examples">Examples</SidebarLink>
+                                <SidebarLink to="/illustration#illustration-scene">Scene</SidebarLink>
+                                <SidebarLink to="/illustration#illustration-integration">Integration</SidebarLink>
+                                <SidebarLink to="/illustration#illustration-in-use">In use</SidebarLink>
+                            </div>
+                        )}
                         <SidebarLink to="/iconography">Iconography</SidebarLink>
+                        {isIconography && (
+                            <div className="ml-4 border-l border-aia-red/10 pl-2">
+                                <SidebarLink to="/iconography#system-icons">System icons</SidebarLink>
+                                <SidebarLink to="/iconography#illustrated-icons">Illustrated icons</SidebarLink>
+                            </div>
+                        )}
                     </SidebarSection>
 
                     <SidebarSection title="Applications" to="/applications/digital" autoOpen={isApplications}>

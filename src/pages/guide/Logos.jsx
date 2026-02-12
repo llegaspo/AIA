@@ -447,29 +447,71 @@ const Logos = () => {
       <section className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Logo don’ts</h2>
-            <div className="mt-6 flex items-center gap-4">
-              <div className="h-16 w-16 rounded-lg border border-gray-100 bg-white flex items-center justify-center">
-                <img src="/guide/assets/logos/logo-donts-crop.png" alt="Logo don'ts example" className="h-10 w-10 logo-clean" />
+            <div className="mt-10 space-y-10">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+                {[
+                  {
+                    src: '/guide/assets/logos-donts/no-alter-img.png',
+                    text: 'Don’t alter or redesign\nany element of our logos.',
+                  },
+                  {
+                    src: '/guide/assets/logos-donts/use-sufficient-contrast.png',
+                    text: "Don’t place our logo on a\ncolour background without\nsufficient contrast.",
+                  },
+                  {
+                    src: '/guide/assets/logos-donts/no-deconstruct.png',
+                    text: "Don’t deconstruct\nour logo to create\nother identities.",
+                  },
+                  {
+                    src: '/guide/assets/logos-donts/no-other-colors.png',
+                    text: "Don’t apply other colours\nto our logo besides AIA\nRed and white.",
+                  },
+                  {
+                    src: '/guide/assets/logos-donts/no-close-text.png',
+                    text: "Don’t place text so close to\nthe Corporate Logo that it can\nbe confused with the HLBL\nLogo Lockup.",
+                  },
+                ].map((item) => (
+                  <div key={item.src} className="space-y-4">
+                    <div className="h-28 flex items-center justify-center">
+                      <img src={item.src} alt="Logo don’t" className="max-h-28 w-auto object-contain" />
+                    </div>
+                    <div className="flex items-start gap-3 text-sm text-aia-charcoal/80 leading-relaxed">
+                      <span className="text-aia-charcoal/60 text-xl leading-none">✕</span>
+                      <span className="whitespace-pre-line">{item.text}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <p className="text-xs text-aia-charcoal/60">Example pulled from the logo don’ts reference panel.</p>
-            </div>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-              {[
-                'Don’t alter or redesign any element of our logos.',
-                'Don’t place our logo on a colour background without sufficient contrast.',
-                'Don’t deconstruct our logo to create other identities.',
-                'Don’t apply other colours to our logo besides AIA Red and white.',
-                'Don’t place text so close to the Corporate Logo that it can be confused with the HLBL Logo Lockup.',
-                'Don’t use other colours. Our logos are always in one colour: AIA Red or white.',
-                'Don’t alter the HLBL Logo Lockup. The elements have been set in a defined relationship with one another.',
-                'Don’t outline the logo to make it stand out against a background; use a different image or alter the logo position if legibility is a problem.',
-                'Don’t add an outline to the logo.',
-              ].map((text) => (
-                <div key={text} className="flex items-start gap-2">
-                  <span className="text-aia-charcoal/60">✕</span>
-                  <p className="text-aia-charcoal/70">{text}</p>
-                </div>
-              ))}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                {[
+                  {
+                    src: '/guide/assets/logos-donts/no-use-other-colors.png',
+                    text: "Don’t use other colours.\nOur logos are always in one\ncolour: AIA Red or white.",
+                  },
+                  {
+                    src: '/guide/assets/logos-donts/no-alter-hlbl-logo.png',
+                    text: "Don’t alter the HLBL Logo\nLockup. The elements\nhave been set in a defined\nrelationship with one another.",
+                  },
+                  {
+                    src: '/guide/assets/logos-donts/no-outline-logo.png',
+                    text: "Don’t outline the logo\nto make it stand out\nagainst a background;\nuse a different image or\nalter the logo position if\nlegibility is a problem.",
+                  },
+                  {
+                    src: '/guide/assets/logos-donts/no-add-outline-logo.png',
+                    text: "Don’t add an outline to\nthe logo.",
+                  },
+                ].map((item) => (
+                  <div key={item.src} className="space-y-4">
+                    <div className="h-28 flex items-center justify-center">
+                      <img src={item.src} alt="Logo don’t" className="max-h-28 w-auto object-contain" />
+                    </div>
+                    <div className="flex items-start gap-3 text-sm text-aia-charcoal/80 leading-relaxed">
+                      <span className="text-aia-charcoal/60 text-xl leading-none">✕</span>
+                      <span className="whitespace-pre-line">{item.text}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
         </div>
       </section>
@@ -478,19 +520,46 @@ const Logos = () => {
       <section className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Wordmark don’ts</h2>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-              {[
-                'Don’t alter or redesign our Wordmark.',
-                'Don’t place our Wordmark on a colour background without sufficient contrast.',
-                'Don’t lock the Wordmark up with our Purpose.',
-                'Don’t apply other colours to our Wordmark besides AIA Red and white.',
-                'Don’t use the Wordmark when the Corporate Logo or HLBL Logo Lockup should be used.',
-              ].map((text) => (
-                <div key={text} className="flex items-start gap-2">
-                  <span className="text-aia-charcoal/60">✕</span>
-                  <p className="text-aia-charcoal/70">{text}</p>
+            <div className="mt-10 space-y-10">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                {[
+                  {
+                    src: '/guide/assets/wordmark-donts/no-alter-redesign-wordmark.png',
+                    text: "Don’t alter or redesign\nour Wordmark.",
+                  },
+                  {
+                    src: '/guide/assets/wordmark-donts/have-sufficient-contrast.png',
+                    text: "Don’t place our Wordmark\non a colour background\nwithout sufficient contrast.",
+                  },
+                  {
+                    src: '/guide/assets/wordmark-donts/dont-lock-word-map-w-purpose.png',
+                    text: "Don’t lock the Wordmark up\nwith our Purpose.",
+                  },
+                  {
+                    src: '/guide/assets/wordmark-donts/no-other-colors.png',
+                    text: "Don’t apply other colours\nto our Wordmark besides\nAIA Red and white.",
+                  },
+                ].map((item) => (
+                  <div key={item.src} className="space-y-4">
+                    <div className="h-24 flex items-center justify-center">
+                      <img src={item.src} alt="Wordmark don’t" className="max-h-24 w-auto object-contain" />
+                    </div>
+                    <div className="flex items-start gap-3 text-sm text-aia-charcoal/80 leading-relaxed">
+                      <span className="text-aia-charcoal/60 text-xl leading-none">✕</span>
+                      <span className="whitespace-pre-line">{item.text}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
+                <div className="rounded-xl overflow-hidden border border-gray-100 bg-white">
+                  <img src="/guide/assets/wordmark-donts/no-wordmark-when-logo.png" alt="Wordmark don’t" className="w-full h-auto" />
                 </div>
-              ))}
+                <div className="flex items-start gap-3 text-sm text-aia-charcoal/80 leading-relaxed">
+                  <span className="text-aia-charcoal/60 text-xl leading-none">✕</span>
+                  <span>Don’t use the Wordmark when the Corporate Logo or HLBL Logo Lockup should be used.</span>
+                </div>
+              </div>
             </div>
         </div>
       </section>

@@ -1,7 +1,9 @@
 import React from 'react';
+import useScrollSpy from '../../components/guide/useScrollSpy';
 import CopyButton from '../../components/ui/CopyButton';
 
 const Colours = () => {
+  useScrollSpy(['core-colours', 'secondary-colours', 'core-shades', 'colour-donts'], 'core-colours');
   return (
     <main className="w-full bg-white guide-page">
       {/* Page 50: Hero */}
@@ -30,7 +32,7 @@ const Colours = () => {
       </section>
 
       {/* Page 51: Core colours */}
-      <section className="border-t border-aia-red/10">
+      <section id="core-colours" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Core colours</h2>
             <p className="mt-4 text-aia-charcoal/80">
@@ -75,7 +77,7 @@ const Colours = () => {
       </section>
 
       {/* Core colour shades */}
-      <section className="border-t border-aia-red/10">
+      <section id="secondary-colours" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Core colour shades</h2>
           <p className="mt-4 text-aia-charcoal/80">
@@ -133,7 +135,7 @@ const Colours = () => {
       </section>
 
       {/* Page 52: Secondary colours */}
-      <section className="border-t border-aia-red/10">
+      <section id="core-shades" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Secondary colours</h2>
             <p className="mt-4 text-aia-charcoal/80">
@@ -165,70 +167,48 @@ const Colours = () => {
         </div>
       </section>
 
-      {/* Page 53: Background colours */}
-      <section className="border-t border-aia-red/10">
+      {/* Page 56: Colours don’ts */}
+      <section id="colour-donts" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">Background colours</h2>
-            <p className="mt-4 text-aia-charcoal/80">
-              An approved set of background colours may be used sparingly in your designs to add interest, however AIA Red is our lead brand colour and must always be predominant.
-            </p>
-            <p className="mt-4 text-aia-charcoal/80">
-              Only use the secondary colours and tints as shown here. Gradient colour backgrounds should be avoided at all times; the AIA colour palette is not meant to be used in this way.
-            </p>
-            <p className="mt-4 text-aia-charcoal/80">
-              Text, visuals and images should be fully legible with plenty of contrast for accessibility.
-            </p>
-        </div>
-      </section>
-
-      {/* Page 54: Core colours in use */}
-      <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">Core colours in use</h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="rounded-lg overflow-hidden shadow-sm border border-gray-100">
-                <div className="h-32 bg-aia-red" />
-                <div className="p-4 text-sm text-aia-charcoal/70">Use AIA Red for bold headlines and key highlights.</div>
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-sm border border-gray-100">
-                <div className="h-32 bg-aia-grey" />
-                <div className="p-4 text-sm text-aia-charcoal/70">Use white space to create clarity and emphasis.</div>
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-sm border border-gray-100">
-                <div className="h-32 bg-aia-charcoal" />
-                <div className="p-4 text-sm text-aia-charcoal/70">Use AIA Charcoal for body copy and hierarchy.</div>
-              </div>
-            </div>
-        </div>
-      </section>
-
-      {/* Page 55: Secondary colours in use */}
-      <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">Secondary colours in use</h2>
-            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-              {['#FF7A85', '#BA0361', '#FF754D', '#F7C926', '#4C4794', '#A199BA', '#1F78AD', '#88B943'].map((hex) => (
-                <div key={hex} className="rounded-lg border border-gray-100 overflow-hidden">
-                  <div className="h-20" style={{ background: hex }} />
-                  <div className="p-2 text-xs text-aia-charcoal/60">{hex}</div>
+            <h2 className="text-aia-red font-bold uppercase">Colours don’ts</h2>
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-5 gap-8">
+              {[
+                {
+                  src: '/guide/assets/color-donts/contrast.png',
+                  text: "Don’t use colours\nwhere this is no\nvisual contrast.",
+                },
+                {
+                  src: '/guide/assets/color-donts/secondary.png',
+                  text:
+                    "Don’t apply secondary\ncolours to the Moving\nMountains without\nAIA Red unless you\nare placing the Moving\nMountains on an\nAIA Red background.",
+                },
+                {
+                  src: '/guide/assets/color-donts/four-secondary.png',
+                  text:
+                    "Don’t use more\nthan four secondary\ncolours on one page\nor section unless\nthey are being used\nas navigation.",
+                },
+                {
+                  src: '/guide/assets/color-donts/incorrect-background.png',
+                  text:
+                    "Don’t use an incorrect\nbackground colour;\nchoose from the\napproved palette\nand tints.",
+                },
+                {
+                  src: '/guide/assets/color-donts/no-second-if-no-aia-red.png',
+                  text:
+                    "Don’t use secondary\ncolours without using\nAIA Red.",
+                },
+              ].map((item) => (
+                <div key={item.src} className="space-y-4">
+                  <div className="h-28 flex items-center justify-center">
+                    <img src={item.src} alt="Colour don’t" className="max-h-28 w-auto object-contain" />
+                  </div>
+                  <div className="flex items-start gap-3 text-sm text-aia-charcoal/80 leading-relaxed">
+                    <span className="text-aia-charcoal/60 text-xl leading-none">✕</span>
+                    <span className="whitespace-pre-line">{item.text}</span>
+                  </div>
                 </div>
               ))}
             </div>
-        </div>
-      </section>
-
-      {/* Page 56: Colours don’ts */}
-      <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">Colours don’ts</h2>
-            <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-aia-charcoal/70">
-              <li>Don’t use gradients; the palette should stay flat and bold.</li>
-              <li>Don’t let secondary colours overpower AIA Red.</li>
-              <li>Don’t use low-contrast text on coloured backgrounds.</li>
-              <li>Don’t introduce unapproved colours.</li>
-              <li>Don’t apply Moving Mountains in non-core colours on coloured backgrounds.</li>
-              <li>Don’t use tints outside the approved scale.</li>
-            </ul>
         </div>
       </section>
     </main>

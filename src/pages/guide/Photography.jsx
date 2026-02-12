@@ -1,6 +1,8 @@
 import React from 'react';
+import useScrollSpy from '../../components/guide/useScrollSpy';
 
 const Photography = () => {
+  useScrollSpy(['photo-principles', 'photo-briefs', 'photo-works', 'photo-donts'], 'photo-principles');
   return (
     <main className="w-full bg-white guide-page">
       {/* Hero */}
@@ -27,7 +29,7 @@ const Photography = () => {
       </section>
 
       {/* Principles */}
-      <section className="border-t border-aia-red/10">
+      <section id="photo-principles" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Our photography principles</h2>
           <p className="mt-4 text-aia-charcoal/80">
@@ -45,7 +47,7 @@ const Photography = () => {
       </section>
 
       {/* Brief essentials */}
-      <section className="border-t border-aia-red/10">
+      <section id="photo-briefs" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Photography briefs</h2>
           <p className="mt-4 text-aia-charcoal/80">
@@ -73,7 +75,7 @@ const Photography = () => {
       </section>
 
       {/* What works */}
-      <section className="border-t border-aia-red/10">
+      <section id="photo-works" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">What works and what doesn’t</h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -94,16 +96,12 @@ const Photography = () => {
       </section>
 
       {/* Don’ts */}
-      <section className="border-t border-aia-red/10">
+      <section id="photo-donts" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Photography don’ts</h2>
-          <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-aia-charcoal/70">
-            <li>Don’t use landscape photography. Show people.</li>
-            <li>Don’t use overly posed imagery.</li>
-            <li>Don’t use negative or gloomy imagery.</li>
-            <li>Don’t include single‑use plastics or harmful materials.</li>
-            <li>Don’t perpetuate unrealistic body images.</li>
-          </ul>
+          <div className="mt-8 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+            <img src="/guide/assets/photography/photo-donts.png" alt="Photography don’ts reference" className="w-full h-auto" />
+          </div>
         </div>
       </section>
     </main>

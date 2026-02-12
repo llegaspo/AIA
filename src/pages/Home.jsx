@@ -29,6 +29,11 @@ const Home = () => {
                             Version 2.0 • Digital Identity Hub
                         </p>
                     </div>
+                    <p className="mt-6 max-w-2xl text-sm text-aia-charcoal/70">
+                        This is our single source of truth for brand standards, assets, and applications.
+                        <br />
+                        If it is not here, it is not official.
+                    </p>
                 </Motion.div>
 
                 <Motion.div
@@ -53,12 +58,24 @@ const Home = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl w-full">
                             <div className="rounded-2xl border border-gray-100 p-6">
                                 <h3 className="text-sm font-semibold text-aia-charcoal">Brand Personality</h3>
-                                <p className="mt-2 text-xs text-aia-charcoal/60">Copy the full mentor traits list.</p>
-                                <div className="mt-4">
+                                <p className="mt-2 text-xs text-aia-charcoal/60">Copy brand personality, tone of voice, or the combined prompt.</p>
+                                <div className="mt-4 flex flex-wrap gap-2">
                                     <CopySectionButton
                                         label="Copy Personality"
                                         getText={() =>
                                             `Brand Personality (AIA as a Mentor)\n\nSummary:\n- Our personality is how our customers experience our brand. It applies to how we come across visually and how we communicate - in person and on the page.\n\nTraits:\n- Compassionate: Compassion is about being empathetic. It means standing in our customers’ shoes and seeing things from their point of view. We are never judgemental.\n- Straightforward: We speak simply and to the point. No matter how complex the subject, we are easy to understand. We are direct and respectful, not long-winded or insensitive.\n- Positive: We are optimistic, enthusiastic and focused on opportunity. We project an infectious sense of energy while staying grounded, practical and realistic.\n- Confident: Confidence means feeling proud of our long-standing history and unrivalled expertise. We are knowledgeable without being arrogant or showing off.\n- Encouraging: Encouraging means being gently supportive, instilling confidence and positivity in our customers. We are never harsh or too directive. We seek to encourage a ‘can do’ mentality.\n- Motivating: Motivation is about being inspiring. We lead by example, always showing, not telling, and providing evidence wherever we can.\n- Guiding: Guiding means indicating a way forward, exercising a subtle influence and providing options. We are instructive but not prescriptive.\n- On your side: On your side means championing the causes that matter to our customers. It means being inclusive, accepting and celebrating individuals, not alienating them.`
+                                        }
+                                    />
+                                    <CopySectionButton
+                                        label="Copy Tone of Voice"
+                                        getText={() =>
+                                            `Tone of Voice (Mentor)\n\nSummary:\n- Bring our brand and persona to life through words.\n- Say the right thing in the right moment to demonstrate mentor qualities.\n\nPrinciples:\n- Use simple language: short sentences, simple words, avoid jargon.\n- Speak to the individual: refer to “you”, respect individuality and culture.\n- Strengthen with proof: show evidence, avoid vague statements.\n- Focus on the future: highlight how today shapes tomorrow.\n- Be positive and inclusive: optimistic, bold, welcoming and never negative.`
+                                        }
+                                    />
+                                    <CopySectionButton
+                                        label="Copy Full Prompt"
+                                        getText={() =>
+                                            `AIA Brand Prompt (Personality + Values + Tone)\n\nBrand Personality (AIA as a Mentor):\n- Compassionate\n- Straightforward\n- Positive\n- Confident\n- Encouraging\n- Motivating\n- Guiding\n- On your side\n\nCompany Values:\n- Customer First\n- Integrity\n- Excellence\n- Care & Empathy\n- Collaboration\n- Innovation\n\nTone of Voice Principles:\n- Use simple language\n- Speak to the individual\n- Strengthen with proof\n- Focus on the future\n- Be positive and inclusive\n\nInstruction:\nWrite content that feels like a helpful mentor—clear, confident, encouraging, and future‑focused. Keep language simple, speak directly to the reader, back up statements with proof, and stay positive and inclusive.`
                                         }
                                     />
                                 </div>
@@ -80,9 +97,9 @@ const Home = () => {
                                 <p className="mt-2 text-xs text-aia-charcoal/60">Tap to copy core hex codes.</p>
                                 <div className="mt-4 grid grid-cols-3 gap-2">
                                     {[
-                                        { name: 'AIA Red', hex: '#D31145' },
+                                        { name: 'Red', hex: '#D31145' },
                                         { name: 'White', hex: '#FFFFFF' },
-                                        { name: 'AIA Charcoal', hex: '#333D47' },
+                                        { name: 'Charcoal', hex: '#333D47' },
                                     ].map((swatch) => (
                                         <div key={swatch.name} className="rounded-lg border border-gray-100 px-2 py-2 flex flex-col items-center gap-2 min-w-0">
                                             <div className="h-8 w-8 rounded" style={{ background: swatch.hex }} />

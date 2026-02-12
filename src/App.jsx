@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import MovingMountainsLibrary from './pages/MovingMountainsLibrary';
@@ -25,11 +25,13 @@ import {
   ApplicationsCorporate,
   ApplicationsEnvironmental,
   ApplicationsEvents,
+  VideoEndFrameDetail,
   // Our Brand combined page
   OurBrand,
   Welcome,
   Contents,
 } from './pages/guide';
+import { VIDEO_END_FRAMES } from './data/videoEndFrames';
 
 function App() {
   return (
@@ -63,6 +65,8 @@ function App() {
           <Route path="applications/merchandise" element={<Merchandise />} />
           <Route path="applications/environmental" element={<ApplicationsEnvironmental />} />
           <Route path="applications/events" element={<ApplicationsEvents />} />
+          <Route path="video/end-frames" element={<Navigate to={`/video/end-frames/${VIDEO_END_FRAMES[0].id}`} replace />} />
+          <Route path="video/end-frames/:videoId" element={<VideoEndFrameDetail />} />
           <Route path="full-guide" element={<FullGuideViewer />} />
           <Route path="branding/*" element={<BrandSectionPage />} /> {/* Catch-all for others if needed */}
         </Route>

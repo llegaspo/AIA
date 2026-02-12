@@ -1,6 +1,8 @@
 import React from 'react';
+import useScrollSpy from '../../components/guide/useScrollSpy';
 
 const Typography = () => {
+  useScrollSpy(['primary-english', 'system-english', 'primary-chinese', 'hierarchy', 'digital-typography'], 'primary-english');
   return (
     <main className="w-full bg-white guide-page">
       {/* Page 72: Hero */}
@@ -29,7 +31,7 @@ const Typography = () => {
       </section>
 
       {/* Page 73: Primary typeface (English) */}
-      <section className="border-t border-aia-red/10">
+      <section id="primary-english" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Primary typeface: English</h2>
             <p className="mt-4 text-aia-charcoal/80">
@@ -78,7 +80,7 @@ const Typography = () => {
       </section>
 
       {/* Page 74: System typeface (English) */}
-      <section className="border-t border-aia-red/10">
+      <section id="system-english" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">System typeface: English</h2>
             <p className="mt-4 text-aia-charcoal/80">
@@ -103,7 +105,7 @@ const Typography = () => {
       </section>
 
       {/* Page 75: Primary typeface (Chinese) */}
-      <section className="border-t border-aia-red/10">
+      <section id="primary-chinese" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Primary typeface: Chinese</h2>
             <p className="mt-4 text-aia-charcoal/80">
@@ -121,7 +123,7 @@ const Typography = () => {
       </section>
 
       {/* Page 76: Typography hierarchy */}
-      <section className="border-t border-aia-red/10">
+      <section id="hierarchy" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Typography hierarchy</h2>
             <p className="mt-4 text-aia-charcoal/80">
@@ -148,7 +150,7 @@ const Typography = () => {
       </section>
 
       {/* Page 77: Typography in use (digital) */}
-      <section className="border-t border-aia-red/10">
+      <section id="digital-typography" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h2 className="text-aia-red font-bold uppercase">Typography in use: digital</h2>
             <p className="mt-4 text-aia-charcoal/80">

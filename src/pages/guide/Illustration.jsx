@@ -1,7 +1,8 @@
 import React from 'react';
-import MovingMountainsOverlay from '../../components/ui/MovingMountains';
+import useScrollSpy from '../../components/guide/useScrollSpy';
 
 const Illustration = () => {
+  useScrollSpy(['illustration-style', 'illustration-examples', 'illustration-scene', 'illustration-integration', 'illustration-in-use'], 'illustration-style');
   return (
     <main className="w-full bg-white guide-page">
       {/* Hero */}
@@ -28,38 +29,64 @@ const Illustration = () => {
       </section>
 
       {/* Style */}
-      <section className="border-t border-aia-red/10">
+      <section id="illustration-style" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12">
           <div>
             <h2 className="text-aia-red font-bold uppercase">Our illustration style</h2>
-            <p className="mt-4 text-aia-charcoal/80">
-              Everyday surrealism places dreams and ambitions at the heart of our designs and uses scale and wit to set us apart.
+            <p className="mt-4 text-aia-red font-semibold">Everyday surrealism</p>
+            <p className="mt-4 text-aia-charcoal/80 text-sm leading-relaxed">
+              AIA as a mentor is working to help our customers to live Healthier, Longer, Better Lives, whatever
+              that means to them. Because everyone’s dreams and ambitions are different, we use that as the
+              inspiration for our illustration style.
             </p>
-            <p className="mt-4 text-aia-charcoal/80">
-              AIA Red should always be present. Secondary colours may support, but keep the palette restrained and consistent.
+            <p className="mt-4 text-aia-charcoal/80 text-sm leading-relaxed">
+              Everyday surrealism places dreams and ambitions at the heart of our designs and uses scale and
+              wit to set us apart from our competitors. Each illustration tells a story and builds on our Purpose
+              and customer-centric approach.
+            </p>
+            <p className="mt-4 text-aia-charcoal/80 text-sm leading-relaxed">
+              Rather than just mimic what our photography does, we push our illustrations to the more playful
+              end of the spectrum.
+            </p>
+            <p className="mt-4 text-aia-red text-sm font-semibold">
+              Everyday surrealism, along with our distinctive colouring and shading style, is what makes our
+              illustrations stand out as unmistakably AIA.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            {['asset_11.png', 'asset_12.png', 'asset_13.png', 'asset_14.png'].map((asset) => (
-              <div key={asset} className="rounded-lg border border-gray-100 p-2">
-                <img src={`/assets/assets/${asset}`} alt="Illustration example" className="w-full h-24 object-contain" />
-              </div>
-            ))}
+          <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+            <img
+              src="/guide/assets/illustration/Illustration/illustration-style.png"
+              alt="Illustration style"
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
 
       {/* Examples */}
-      <section className="border-t border-aia-red/10">
+      <section id="illustration-examples" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Illustration examples</h2>
-          <p className="mt-4 text-aia-charcoal/80">
-            Use AIA Red prominently. Secondary colours can add energy but must stay within the palette.
+          <p className="mt-4 text-aia-charcoal/80 text-sm leading-relaxed max-w-4xl">
+            When colouring illustrations, AIA Red should always be present, with secondary colours used for other
+            elements wherever possible. Should you need to use a colour outside of our core and secondary palettes,
+            please pick a colour that complements our colours e.g. for skin tone, vegetables, nature etc.
           </p>
-          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['asset_15.png', 'asset_16.png', 'asset_17.png', 'asset_18.png'].map((asset) => (
-              <div key={asset} className="rounded-lg border border-gray-100 p-2">
-                <img src={`/assets/assets/${asset}`} alt="Illustration example" className="w-full h-24 object-contain" />
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-5 gap-6">
+            {[
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-1.png',
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-2.png',
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-3.png',
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-4.png',
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-5.png',
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-6.png',
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-7.png',
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-8.png',
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-9.png',
+              '/guide/assets/illustration/Illustration/illustration_example/ill-ex-10.png',
+            ].map((asset) => (
+              <div key={asset} className="rounded-lg border border-gray-100 p-3 bg-white flex items-center justify-center">
+                <img src={asset} alt="Illustration example" className="h-24 w-auto object-contain" />
               </div>
             ))}
           </div>
@@ -67,58 +94,90 @@ const Illustration = () => {
       </section>
 
       {/* Scene example */}
-      <section className="border-t border-aia-red/10">
+      <section id="illustration-scene" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
           <h2 className="text-aia-red font-bold uppercase">Illustration scene example</h2>
-          <p className="mt-4 text-aia-charcoal/80">
-            When creating a scene, use muted grey backgrounds so characters and brand colours stand out.
+          <p className="mt-4 text-aia-charcoal/80 text-sm leading-relaxed max-w-3xl">
+            When using multiple illustrations to create a scene the background is shown in shades of grey.
+            This example was created for the website and mobile app but could be used across all formats.
           </p>
-          <div className="mt-6 rounded-2xl bg-aia-grey/30 p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-              <img src="/assets/assets/asset_19.png" alt="Scene element" className="h-20 object-contain" />
-              <img src="/assets/assets/asset_20.png" alt="Scene element" className="h-20 object-contain" />
-              <img src="/assets/assets/asset_21.png" alt="Scene element" className="h-20 object-contain" />
-            </div>
+          <div className="mt-8 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+            <img
+              src="/guide/assets/illustration/Illustration/illustration-scene.png"
+              alt="Illustration scene"
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
 
       {/* Moving Mountains integration */}
-      <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+      <section id="illustration-integration" className="border-t border-aia-red/10">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
           <div>
             <h2 className="text-aia-red font-bold uppercase">Moving Mountains integration</h2>
-            <p className="mt-4 text-aia-charcoal/80">
-              Use Moving Mountains as a cropped landscape, or minimal backdrop for depth.
+            <p className="mt-4 text-aia-charcoal/80 text-sm leading-relaxed">
+              Should you want to create a scene for your illustrations you can use the Moving Mountains as a backdrop.
             </p>
-            <ul className="mt-4 text-aia-charcoal/70 list-disc list-inside">
-              <li>Cropped mountain landscape with characters interacting</li>
-              <li>Minimal integration as a subtle background layer</li>
-            </ul>
+            <p className="mt-4 text-aia-charcoal/80 text-sm leading-relaxed">This can be done in two ways:</p>
+            <p className="mt-4 text-aia-red font-semibold">Cropped mountain landscape</p>
+            <p className="mt-2 text-aia-charcoal/80 text-sm leading-relaxed">
+              The Moving Mountains become part of the illustrations and our characters interact with them, becoming part of the narrative.
+            </p>
+            <p className="mt-4 text-aia-red font-semibold">Minimal integration</p>
+            <p className="mt-2 text-aia-charcoal/80 text-sm leading-relaxed">
+              The Moving Mountains can be used as a simple backdrop for illustrations to add more depth.
+            </p>
           </div>
-          <div className="rounded-2xl bg-aia-grey/40 p-6">
-            <MovingMountainsOverlay className="w-full h-40 text-aia-red" />
+          <div className="space-y-6">
+            <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+              <img src="/guide/assets/illustration/Illustration/moving-mountains/cropped-mountain-landscape.png" alt="Cropped mountain landscape" className="w-full h-auto" />
+              <p className="mt-3 text-xs text-aia-charcoal/70">Cropped mountain landscape</p>
+            </div>
+            <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+              <img src="/guide/assets/illustration/Illustration/moving-mountains/minimal-integration.png" alt="Minimal integration" className="w-full h-auto" />
+              <p className="mt-3 text-xs text-aia-charcoal/70">Minimal integration</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Illustration in use */}
-      <section className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-          <h2 className="text-aia-red font-bold uppercase">Illustration in use</h2>
-          <p className="mt-4 text-aia-charcoal/80">
-            Illustrations should only be used where photography is not appropriate. Avoid above‑the‑line communications.
-          </p>
-          <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-aia-charcoal/70">
-            <li>Website / app product info</li>
-            <li>Explainer videos</li>
-            <li>Internal comms</li>
-            <li>Annual reports</li>
-            <li>Healthy living index</li>
-            <li>Infographics</li>
-            <li>Email marketing</li>
-            <li>Social media posts</li>
-          </ul>
+      <section id="illustration-in-use" className="border-t border-aia-red/10">
+        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12">
+          <div>
+            <h2 className="text-aia-red font-bold uppercase">Illustration in use</h2>
+            <p className="mt-4 text-aia-charcoal/80 text-sm leading-relaxed">
+              Illustrations should only be used where photography is not appropriate. As much as possible we want our
+              customers to see themselves in our brand and photography is the best way to do this. Illustrations
+              should not be used in any above‑the‑line communications.
+            </p>
+            <p className="mt-4 text-aia-charcoal/80 text-sm leading-relaxed">Illustrations may be used for:</p>
+            <ul className="mt-4 text-aia-charcoal/80 text-sm space-y-2 list-disc list-inside">
+              <li>Website / app product info</li>
+              <li>Explainer videos</li>
+              <li>Internal comms</li>
+              <li>Annual reports</li>
+              <li>Healthy living index</li>
+              <li>Infographics</li>
+              <li>Email marketing</li>
+              <li>Social media posts</li>
+            </ul>
+          </div>
+          <div className="grid grid-cols-2 gap-6 items-start">
+            <div className="col-span-1 row-span-2 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+              <img src="/guide/assets/illustration/Illustration/illustration-in-use/goal-cp.png" alt="App example" className="w-full h-auto" />
+            </div>
+            <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+              <img src="/guide/assets/illustration/Illustration/illustration-in-use/weekly-exercise.png" alt="Weekly exercise example" className="w-full h-auto" />
+            </div>
+            <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+              <img src="/guide/assets/illustration/Illustration/illustration-in-use/difficult-healthy-eating.png" alt="Healthy eating example" className="w-full h-auto" />
+            </div>
+            <div className="col-span-1 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+              <img src="/guide/assets/illustration/Illustration/illustration-in-use/instagram.png" alt="Social media example" className="w-full h-auto" />
+            </div>
+          </div>
         </div>
       </section>
     </main>

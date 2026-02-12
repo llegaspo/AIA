@@ -1,0 +1,58 @@
+export const VIDEO_END_FRAMES = [
+  {
+    id: 'corporate-white-bg',
+    title: 'Corporate - White Background',
+    aspectRatio: '16 / 9',
+    mp4Src: '/assets/videos/Video_End_frame_corporate_WhiteBG.mp4',
+    movSrc: '/assets/videos/Video_End_frame_corporate_WhiteBG.mov',
+  },
+  {
+    id: 'corporate-red-bg',
+    title: 'Corporate - Red Background',
+    aspectRatio: '16 / 9',
+    mp4Src: '/assets/videos/Video_End_frame_corporate_RedBG.mp4',
+    movSrc: '/assets/videos/Video_End_frame_corporate_RedBG.mov',
+  },
+  {
+    id: 'hlbl-white-bg',
+    title: 'HLBL - White Background',
+    aspectRatio: '16 / 9',
+    mp4Src: '/assets/videos/Video_End_frame_HLBL_WhiteBG.mp4',
+    movSrc: '/assets/videos/Video_End_frame_HLBL_WhiteBG.mov',
+  },
+  {
+    id: 'hlbl-red-bg',
+    title: 'HLBL - Red Background',
+    aspectRatio: '16 / 9',
+    mp4Src: '/assets/videos/Video_End_frame_HLBL_RedBG.mp4',
+    movSrc: '/assets/videos/Video_End_frame_HLBL_RedBG.mov',
+  },
+  {
+    id: 'square-corporate-white-bg',
+    title: 'Square Corporate - White Background',
+    aspectRatio: '1 / 1',
+    mp4Src: '/assets/videos/Video_End_frame_Square_corporate_WhtieBG.mp4',
+    movSrc: '/assets/videos/Video_End_frame_Square_corporate_WhtieBG.mov',
+  },
+  {
+    id: 'square-corporate-red-bg',
+    title: 'Square Corporate - Red Background',
+    aspectRatio: '1 / 1',
+    mp4Src: '/assets/videos/Video_End_frame_Square_corporate_RedBG.mp4',
+    movSrc: '/assets/videos/Video_End_frame_Square_corporate_RedBG.mov',
+  },
+  {
+    id: 'square-hlbl-white-bg',
+    title: 'Square HLBL - White Background',
+    aspectRatio: '1 / 1',
+    mp4Src: '/assets/videos/Video_End_frame_Square_HLBL_WhiteBG.mp4',
+    movSrc: '/assets/videos/Video_End_frame_Square_HLBL_WhiteBG.mov',
+  },
+  {
+    id: 'square-hlbl-red-bg',
+    title: 'Square HLBL - Red Background',
+    aspectRatio: '1 / 1',
+    mp4Src: '/assets/videos/Video_End_frame_Square_HLBL_RedBG.mp4',
+    movSrc: '/assets/videos/Video_End_frame_Square_HLBL_RedBG.mov',
+  },
+];
