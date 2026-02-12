@@ -4,7 +4,7 @@ import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const searchIndex = [
-    { title: 'Our Brand', path: '/our-brand/welcome', category: 'Our Brand', keywords: 'welcome contents introduction brand standards' },
+    { title: 'Our Brand', path: '/our-brand#welcome', category: 'Our Brand', keywords: 'welcome contents introduction brand standards' },
     { title: 'Our Purpose', path: '/purpose#why-our-purpose', category: 'Our Brand', keywords: 'purpose healthier longer better lives active customer-centric personal ambition' },
     { title: 'Our Personality', path: '/personality#why-a-mentor', category: 'Our Brand', keywords: 'persona mentor personality traits summary company values' },
     { title: 'Tone of Voice', path: '/tone-of-voice#introduction', category: 'Our Brand', keywords: 'tone voice principles spectrum mentor' },
@@ -37,8 +37,8 @@ const Search = ({ variant = 'global', className = "" }) => {
 
     useEffect(() => {
         const pageRouteMap = {
-            2: { title: 'Welcome', path: '/our-brand/welcome', category: 'Our Brand' },
-            3: { title: 'Contents', path: '/our-brand/contents', category: 'Our Brand' },
+            2: { title: 'Welcome', path: '/our-brand#welcome', category: 'Our Brand' },
+            3: { title: 'Contents', path: '/our-brand#contents', category: 'Our Brand' },
             5: { title: 'Why our Purpose?', path: '/purpose#why-our-purpose', category: 'Our Purpose' },
             6: { title: 'Active', path: '/purpose#active', category: 'Our Purpose' },
             7: { title: 'Customer-centric', path: '/purpose#customer-centric', category: 'Our Purpose' },

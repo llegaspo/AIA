@@ -27,8 +27,6 @@ import {
   VideoEndFrames,
   // Our Brand combined page
   OurBrand,
-  Welcome,
-  Contents,
 } from './pages/guide';
 import { VIDEO_END_FRAMES } from './data/videoEndFrames';
 
@@ -46,10 +44,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="our-brand" element={<Welcome />} />
-          <Route path="our-brand/welcome" element={<Welcome />} />
-          <Route path="our-brand/contents" element={<Contents />} />
-          <Route path="brand-standards" element={<OurBrand />} />
+          <Route path="our-brand" element={<OurBrand />} />
+          <Route path="our-brand/welcome" element={<Navigate to="/our-brand#welcome" replace />} />
+          <Route path="our-brand/contents" element={<Navigate to="/our-brand#contents" replace />} />
+          <Route path="brand-standards" element={<Navigate to="/our-brand#welcome" replace />} />
           <Route path="moving-mountains-library" element={<MovingMountainsLibrary />} />
 
           {/* Dynamic Brand Sections */}

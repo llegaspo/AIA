@@ -13,8 +13,8 @@ const Contents = () => {
           <div>
             <h3 className="text-aia-red font-bold uppercase text-sm">Our Brand</h3>
             <ul className="mt-3 space-y-2 text-sm text-aia-charcoal/80">
-              <li><Link className="hover:text-aia-red" to="/our-brand/welcome">Welcome</Link></li>
-              <li><Link className="hover:text-aia-red" to="/our-brand/contents">Contents</Link></li>
+              <li><Link className="hover:text-aia-red" to="/our-brand#welcome">Welcome</Link></li>
+              <li><Link className="hover:text-aia-red" to="/our-brand#contents">Contents</Link></li>
               <li><Link className="hover:text-aia-red" to="/purpose#why-our-purpose">Our Purpose</Link></li>
               <li><Link className="hover:text-aia-red" to="/personality#why-a-mentor">Our Personality</Link></li>
               <li><Link className="hover:text-aia-red" to="/tone-of-voice#introduction">Our Tone of Voice</Link></li>

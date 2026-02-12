@@ -93,8 +93,8 @@ const Sidebar = () => {
                     >
                         {isOurBrand && (
                             <div className="ml-4 border-l border-aia-red/10 pl-2">
-                                <SidebarLink to="/our-brand/welcome">Welcome</SidebarLink>
-                                <SidebarLink to="/our-brand/contents">Contents</SidebarLink>
+                                <SidebarLink to="/our-brand#welcome">Welcome</SidebarLink>
+                                <SidebarLink to="/our-brand#contents">Contents</SidebarLink>
                             </div>
                         )}
 
