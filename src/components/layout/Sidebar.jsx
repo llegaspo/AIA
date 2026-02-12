@@ -7,6 +7,7 @@ import { VIDEO_END_FRAMES } from '../../data/videoEndFrames';
 
 const SidebarLink = ({ to, children, exact = false, variant = 'section' }) => {
     const location = useLocation();
+    const navigate = useNavigate();
     const [path, hash] = to.split('#');
     const isHashMatch = hash ? location.pathname === path && location.hash === `#${hash}` : false;
 
@@ -14,6 +15,20 @@ const SidebarLink = ({ to, children, exact = false, variant = 'section' }) => {
         <NavLink
             to={to}
             end={exact}
+            onClick={(e) => {
+                if (!hash) return;
+                if (location.pathname !== path) return;
+
+                // For same-page hash links, force a scroll even if hash doesn't change.
+                e.preventDefault();
+                if (location.hash !== `#${hash}`) {
+                    navigate(`${path}#${hash}`);
+                }
+                const target = document.getElementById(hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }}
             className={({ isActive }) => {
                 const active = hash ? isHashMatch : isActive;
                 const sizeClass = variant === 'page' ? 'text-sm' : 'text-xs';

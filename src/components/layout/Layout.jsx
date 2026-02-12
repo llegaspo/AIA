@@ -28,11 +28,13 @@ const Layout = () => {
     useEffect(() => {
         if (!location.hash) return;
         const id = location.hash.replace('#', '');
+        // Only auto-scroll on route/page change; hash updates during scroll-spy
+        // should not fight the user's manual scrolling.
         const el = document.getElementById(id);
         if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            el.scrollIntoView({ behavior: 'auto', block: 'start' });
         }
-    }, [location.hash]);
+    }, [location.pathname]);
 
     useSearchHighlight(contentRef);
 
