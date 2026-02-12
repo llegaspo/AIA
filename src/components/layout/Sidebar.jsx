@@ -146,12 +146,8 @@ const Sidebar = () => {
                         )}
                     </SidebarSection>
 
-                    <SidebarSection title="Video" to={`/video/end-frames#${VIDEO_END_FRAMES[0].id}`} autoOpen={isVideo}>
-                        {VIDEO_END_FRAMES.map((video) => (
-                            <SidebarLink key={video.id} to={`/video/end-frames#${video.id}`}>
-                                {video.title}
-                            </SidebarLink>
-                        ))}
+                    <SidebarSection title="Video" to="/video/end-frames" autoOpen={isVideo}>
+                        <SidebarLink to="/video/end-frames" variant="page">Video End Frames</SidebarLink>
                     </SidebarSection>
 
                     <SidebarSection title="Our Identity" to="/logos">
