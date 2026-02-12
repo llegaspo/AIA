@@ -19,6 +19,11 @@ const Welcome = () => {
           <h2 className="mt-6 text-4xl md:text-6xl font-bold text-aia-red">
             Healthier, Longer, Better Lives
           </h2>
+          <p className="mt-8 max-w-2xl text-sm text-aia-charcoal/70">
+            This is our single source of truth for brand standards, assets, and applications.
+            <br />
+            If it is not here, it is not official.
+          </p>
         </div>
       </section>
     </main>

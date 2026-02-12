@@ -29,11 +29,6 @@ const Home = () => {
                             Version 2.0 • Digital Identity Hub
                         </p>
                     </div>
-                    <p className="mt-6 max-w-2xl text-sm text-aia-charcoal/70">
-                        This is our single source of truth for brand standards, assets, and applications.
-                        <br />
-                        If it is not here, it is not official.
-                    </p>
                 </Motion.div>
 
                 <Motion.div
