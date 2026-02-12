@@ -30,7 +30,7 @@ const defaultSections = [
   {
     title: 'Applications',
     items: [
-      { label: 'Digital', active: false },
+      { label: 'Digital: Social Media', active: false },
       { label: 'Print', active: false },
       { label: 'Merchandise', active: false },
     ],

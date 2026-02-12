@@ -64,7 +64,6 @@ const OurBrand = () => {
             <h3 className="text-aia-red font-bold uppercase text-sm">Applications</h3>
             <ul className="mt-3 space-y-2 text-sm text-aia-charcoal/80">
               <li><Link className="hover:text-aia-red" to="/applications/mobile-app-icon-system">Mobile app icon system</Link></li>
-              <li><Link className="hover:text-aia-red" to="/applications/digital">Digital</Link></li>
               <li><Link className="hover:text-aia-red" to="/applications/digital-social">Digital: social media</Link></li>
               <li><Link className="hover:text-aia-red" to="/applications/corporate">Corporate</Link></li>
               <li><Link className="hover:text-aia-red" to="/applications/print">Print</Link></li>

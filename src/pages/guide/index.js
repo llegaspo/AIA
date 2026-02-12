@@ -20,4 +20,4 @@ export { default as ApplicationsDigitalSocial } from './ApplicationsDigitalSocia
 export { default as ApplicationsCorporate } from './ApplicationsCorporate';
 export { default as ApplicationsEnvironmental } from './ApplicationsEnvironmental';
 export { default as ApplicationsEvents } from './ApplicationsEvents';
-export { default as VideoEndFrameDetail } from './VideoEndFrameDetail';
+export { default as VideoEndFrames } from './VideoEndFrames';

@@ -146,9 +146,9 @@ const Sidebar = () => {
                         )}
                     </SidebarSection>
 
-                    <SidebarSection title="Video" to={`/video/end-frames/${VIDEO_END_FRAMES[0].id}`} autoOpen={isVideo}>
+                    <SidebarSection title="Video" to={`/video/end-frames#${VIDEO_END_FRAMES[0].id}`} autoOpen={isVideo}>
                         {VIDEO_END_FRAMES.map((video) => (
-                            <SidebarLink key={video.id} to={`/video/end-frames/${video.id}`}>
+                            <SidebarLink key={video.id} to={`/video/end-frames#${video.id}`}>
                                 {video.title}
                             </SidebarLink>
                         ))}
@@ -207,9 +207,8 @@ const Sidebar = () => {
                         )}
                     </SidebarSection>
 
-                    <SidebarSection title="Applications" to="/applications/digital" autoOpen={isApplications}>
+                    <SidebarSection title="Applications" to="/applications/mobile-app-icon-system" autoOpen={isApplications}>
                         <SidebarLink to="/applications/mobile-app-icon-system">Mobile app icon system</SidebarLink>
-                        <SidebarLink to="/applications/digital">Digital</SidebarLink>
                         <SidebarLink to="/applications/digital-social">Digital: social media</SidebarLink>
                         <SidebarLink to="/applications/corporate">Corporate</SidebarLink>
                         <SidebarLink to="/applications/print">Print</SidebarLink>
