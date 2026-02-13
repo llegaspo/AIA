@@ -70,14 +70,14 @@ const CulturalGuidance = () => {
 
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
               <div>
-                <h4 className="text-aia-red font-semibold uppercase">Exploration</h4>
+                <h4 className="inline-flex rounded-lg bg-aia-red px-4 py-2 text-white font-semibold uppercase">Exploration</h4>
                 <p className="mt-2">Brunei</p>
                 <p>Cambodia</p>
                 <p>Thailand</p>
                 <p>Vietnam</p>
               </div>
               <div>
-                <h4 className="text-aia-red font-semibold uppercase">Empowerment</h4>
+                <h4 className="inline-flex rounded-lg bg-aia-red px-4 py-2 text-white font-semibold uppercase">Empowerment</h4>
                 <p className="mt-2">Indonesia</p>
                 <p>Malaysia</p>
                 <p>Myanmar</p>
@@ -85,12 +85,12 @@ const CulturalGuidance = () => {
                 <p>Sri Lanka</p>
               </div>
               <div>
-                <h4 className="text-aia-red font-semibold uppercase">Expression</h4>
+                <h4 className="inline-flex rounded-lg bg-aia-red px-4 py-2 text-white font-semibold uppercase">Expression</h4>
                 <p className="mt-2">China</p>
                 <p>India</p>
               </div>
               <div>
-                <h4 className="text-aia-red font-semibold uppercase">Emancipation</h4>
+                <h4 className="inline-flex rounded-lg bg-aia-red px-4 py-2 text-white font-semibold uppercase">Emancipation</h4>
                 <p className="mt-2">Australia</p>
                 <p>Hong Kong</p>
                 <p>Macau</p>
@@ -136,7 +136,7 @@ const CulturalGuidance = () => {
                 },
               ].map((item) => (
                 <div key={item.title}>
-                  <h4 className="text-aia-red font-semibold uppercase">{item.title}</h4>
+                  <h4 className="inline-flex rounded-lg bg-aia-red px-4 py-2 text-white font-semibold uppercase">{item.title}</h4>
                   <p className="mt-2 text-aia-charcoal/80">{item.body}</p>
                   <p className="mt-4 text-aia-charcoal/60">Mentor leading trait:</p>
                   <p className="text-aia-red font-semibold">{item.trait}</p>
@@ -149,27 +149,59 @@ const CulturalGuidance = () => {
       {/* Page 26: Exploration */}
       <section id="exploration" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h3 className="text-aia-red font-bold uppercase">Exploration</h3>
-            <p className="mt-2 text-aia-charcoal/80">
-              Healthier, Longer, Better Lives is about: <strong>Culture and community</strong>
-            </p>
-            <p className="mt-2 text-aia-charcoal/80">Because people feel: <strong>Uncertain optimism</strong></p>
-            <p className="mt-2 text-aia-charcoal/80">And they want: <strong>To do their best within their cultures</strong></p>
+            <h3 className="text-aia-red font-bold uppercase text-lg">Exploration</h3>
+            <h4 className="mt-8 text-aia-midnight font-bold uppercase text-2xl md:text-3xl tracking-tight">Healthier, Longer, Better Lives</h4>
 
-            <div className="mt-6 text-sm text-aia-charcoal/80">
-              <p className="font-semibold">A mentor:</p>
-              <ul className="mt-2 space-y-1">
-                <li>Appreciates tradition.</li>
-                <li>Recognises the pleasure and joy in modernity.</li>
-                <li>Has a deep connection to the natural world.</li>
-                <li>Feels familiar.</li>
-                <li>Is about simple pleasures.</li>
-                <li>Is future-focused and progress-oriented.</li>
-              </ul>
-              <p className="mt-4">Leading trait: <span className="text-aia-red font-semibold">Encouraging</span></p>
-              <p>Supporting traits: Motivating / Guiding / On your side / Compassionate / Straightforward / Positive / Confident</p>
-              <p className="mt-4 text-aia-red">Encouraging means being gently supportive, instilling confidence and positivity in our customers. We are never harsh, smug or too directive. We seek to encourage a ‘can do’ mentality.</p>
-              <p className="mt-4">Markets: Brunei, Cambodia, Thailand, Vietnam</p>
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1fr_1fr_1fr_0.55fr] gap-6 text-aia-charcoal/85">
+              <div>
+                <p className="text-aia-red font-bold text-lg">It’s about:</p>
+                <p className="mt-2 text-lg">Culture and community</p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Because people feel:</p>
+                <p className="mt-2 text-lg">Uncertain optimism</p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">And they want:</p>
+                <p className="mt-2 text-lg">To do their best within their cultures</p>
+              </div>
+              <div className="lg:text-right text-aia-red font-semibold text-lg leading-tight">
+                <p>Brunei</p>
+                <p className="mt-3">Cambodia</p>
+                <p className="mt-3">Thailand</p>
+                <p className="mt-3">Vietnam</p>
+              </div>
+            </div>
+
+            <div className="mt-10 border-t border-aia-red/40" />
+
+            <h4 className="mt-8 text-aia-midnight font-bold uppercase text-2xl md:text-3xl tracking-tight">AIA as a mentor</h4>
+
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 text-aia-charcoal/85">
+              <div>
+                <p className="text-aia-red font-bold text-lg">A mentor:</p>
+                <ul className="mt-3 space-y-1 text-base list-disc pl-6">
+                  <li>Appreciates tradition.</li>
+                  <li>Recognises the pleasure and joy in modernity.</li>
+                  <li>Has a deep connection to the natural world.</li>
+                  <li>Feels familiar.</li>
+                  <li>Is about simple pleasures.</li>
+                  <li>Is future-focused and progress-oriented.</li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Leading trait:</p>
+                <p className="mt-3 text-lg">Encouraging</p>
+                <p className="mt-4 text-base text-aia-charcoal/85">
+                  Encouraging means being gently supportive, instilling confidence and positivity in our customers. We are never harsh, smug or too directive. We seek to encourage a ‘can do’ mentality.
+                </p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Supporting traits:</p>
+                <p className="mt-3 text-base text-aia-charcoal/85">
+                  Motivating / Guiding / On your side / Compassionate / Straightforward / Positive / Confident
+                </p>
+              </div>
             </div>
         </div>
       </section>
@@ -177,26 +209,59 @@ const CulturalGuidance = () => {
       {/* Page 27: Empowerment */}
       <section id="empowerment" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h3 className="text-aia-red font-bold uppercase">Empowerment</h3>
-            <p className="mt-2 text-aia-charcoal/80">
-              Healthier, Longer, Better Lives is about: <strong>Becoming independent</strong>
-            </p>
-            <p className="mt-2 text-aia-charcoal/80">Because people feel: <strong>Restricted and held back</strong></p>
-            <p className="mt-2 text-aia-charcoal/80">And they want: <strong>Independence without judgement</strong></p>
+            <h3 className="text-aia-red font-bold uppercase text-lg">Empowerment</h3>
+            <h4 className="mt-8 text-aia-midnight font-bold uppercase text-2xl md:text-3xl tracking-tight">Healthier, Longer, Better Lives</h4>
 
-            <div className="mt-6 text-sm text-aia-charcoal/80">
-              <p className="font-semibold">A mentor:</p>
-              <ul className="mt-2 space-y-1">
-                <li>Is about independent individuals.</li>
-                <li>Is vibrant, positive and inspiring.</li>
-                <li>Shows how to overcome challenges and restrictions.</li>
-                <li>Helps you follow your ambitions and define your own path.</li>
-                <li>Is about breaking down barriers and perceptions.</li>
-              </ul>
-              <p className="mt-4">Leading trait: <span className="text-aia-red font-semibold">Motivating</span></p>
-              <p>Supporting traits: Encouraging / Guiding / On your side / Compassionate / Straightforward / Positive / Confident</p>
-              <p className="mt-4 text-aia-red">Motivating is about being inspiring. We lead by example, always showing, not telling and providing evidence wherever we can.</p>
-              <p className="mt-4">Markets: Indonesia, Malaysia, Myanmar, Philippines, Sri Lanka</p>
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1fr_1fr_1fr_0.65fr] gap-6 text-aia-charcoal/85">
+              <div>
+                <p className="text-aia-red font-bold text-lg">It’s about:</p>
+                <p className="mt-2 text-lg">Becoming independent</p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Because people feel:</p>
+                <p className="mt-2 text-lg">Restricted and held back</p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">And they want:</p>
+                <p className="mt-2 text-lg">Independence without judgement</p>
+              </div>
+              <div className="lg:text-right text-aia-red font-semibold text-lg leading-tight">
+                <p>Indonesia</p>
+                <p className="mt-2">Malaysia</p>
+                <p className="mt-2">Myanmar</p>
+                <p className="mt-2">Philippines</p>
+                <p className="mt-2">Sri Lanka</p>
+              </div>
+            </div>
+
+            <div className="mt-10 border-t border-aia-red/40" />
+
+            <h4 className="mt-8 text-aia-midnight font-bold uppercase text-2xl md:text-3xl tracking-tight">AIA as a mentor</h4>
+
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 text-aia-charcoal/85">
+              <div>
+                <p className="text-aia-red font-bold text-lg">A mentor:</p>
+                <ul className="mt-3 space-y-1 text-base list-disc pl-6">
+                  <li>Is about independent individuals.</li>
+                  <li>Is vibrant, positive and inspiring.</li>
+                  <li>Shows how to overcome challenges and restrictions.</li>
+                  <li>Helps you follow your ambitions and define your own path.</li>
+                  <li>Is about breaking down barriers and perceptions.</li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Leading trait:</p>
+                <p className="mt-3 text-lg">Motivating</p>
+                <p className="mt-4 text-base text-aia-charcoal/85">
+                  Motivating is about being inspiring. We lead by example, always showing, not telling and providing evidence wherever we can.
+                </p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Supporting traits:</p>
+                <p className="mt-3 text-base text-aia-charcoal/85">
+                  Encouraging / Guiding / On your side / Compassionate / Straightforward / Positive / Confident
+                </p>
+              </div>
             </div>
         </div>
       </section>
@@ -204,26 +269,56 @@ const CulturalGuidance = () => {
       {/* Page 28: Expression */}
       <section id="expression" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h3 className="text-aia-red font-bold uppercase">Expression</h3>
-            <p className="mt-2 text-aia-charcoal/80">
-              Healthier, Longer, Better Lives is about: <strong>Self-expression and enjoyment</strong>
-            </p>
-            <p className="mt-2 text-aia-charcoal/80">Because people feel: <strong>Emotionally constrained</strong></p>
-            <p className="mt-2 text-aia-charcoal/80">And they want: <strong>To enjoy life more</strong></p>
+            <h3 className="text-aia-red font-bold uppercase text-lg">Expression</h3>
+            <h4 className="mt-8 text-aia-midnight font-bold uppercase text-2xl md:text-3xl tracking-tight">Healthier, Longer, Better Lives</h4>
 
-            <div className="mt-6 text-sm text-aia-charcoal/80">
-              <p className="font-semibold">A mentor:</p>
-              <ul className="mt-2 space-y-1">
-                <li>Is about being present in life.</li>
-                <li>Is always felt by the individual.</li>
-                <li>Is about unique moments.</li>
-                <li>Is about finding control.</li>
-                <li>Helps with expressing emotions.</li>
-              </ul>
-              <p className="mt-4">Leading trait: <span className="text-aia-red font-semibold">Guiding</span></p>
-              <p>Supporting traits: Encouraging / Motivating / On your side / Compassionate / Straightforward / Positive / Confident</p>
-              <p className="mt-4 text-aia-red">Guiding means indicating a way forward, exercising a subtle influence and providing options. It is instructive but not prescriptive.</p>
-              <p className="mt-4">Markets: China, India</p>
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1fr_1fr_1fr_0.45fr] gap-6 text-aia-charcoal/85">
+              <div>
+                <p className="text-aia-red font-bold text-lg">It’s about:</p>
+                <p className="mt-2 text-lg">Self-expression and enjoyment</p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Because people feel:</p>
+                <p className="mt-2 text-lg">Emotionally constrained</p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">And they want:</p>
+                <p className="mt-2 text-lg">To enjoy life more</p>
+              </div>
+              <div className="lg:text-right text-aia-red font-semibold text-lg leading-tight">
+                <p>China</p>
+                <p className="mt-3">India</p>
+              </div>
+            </div>
+
+            <div className="mt-10 border-t border-aia-red/40" />
+
+            <h4 className="mt-8 text-aia-midnight font-bold uppercase text-2xl md:text-3xl tracking-tight">AIA as a mentor</h4>
+
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 text-aia-charcoal/85">
+              <div>
+                <p className="text-aia-red font-bold text-lg">A mentor:</p>
+                <ul className="mt-3 space-y-1 text-base list-disc pl-6">
+                  <li>Is about being present in life.</li>
+                  <li>Is always felt by the individual.</li>
+                  <li>Is about unique moments.</li>
+                  <li>Is about finding control.</li>
+                  <li>Helps with expressing emotions.</li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Leading trait:</p>
+                <p className="mt-3 text-lg">Guiding</p>
+                <p className="mt-4 text-base text-aia-charcoal/85">
+                  Guiding means indicating a way forward, exercising a subtle influence and providing options. It is instructive but not prescriptive.
+                </p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Supporting traits:</p>
+                <p className="mt-3 text-base text-aia-charcoal/85">
+                  Encouraging / Motivating / On your side / Compassionate / Straightforward / Positive / Confident
+                </p>
+              </div>
             </div>
         </div>
       </section>
@@ -231,26 +326,61 @@ const CulturalGuidance = () => {
       {/* Page 29: Emancipation */}
       <section id="emancipation" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h3 className="text-aia-red font-bold uppercase">Emancipation</h3>
-            <p className="mt-2 text-aia-charcoal/80">
-              Healthier, Longer, Better Lives is about: <strong>Self-confidence and rediscovery</strong>
-            </p>
-            <p className="mt-2 text-aia-charcoal/80">Because people feel: <strong>Things need to change</strong></p>
-            <p className="mt-2 text-aia-charcoal/80">And they want: <strong>To feel achievement and validation</strong></p>
+            <h3 className="text-aia-red font-bold uppercase text-lg">Emancipation</h3>
+            <h4 className="mt-8 text-aia-midnight font-bold uppercase text-2xl md:text-3xl tracking-tight">Healthier, Longer, Better Lives</h4>
 
-            <div className="mt-6 text-sm text-aia-charcoal/80">
-              <p className="font-semibold">A mentor:</p>
-              <ul className="mt-2 space-y-1">
-                <li>Is about slowing down and reflecting.</li>
-                <li>Finds new options.</li>
-                <li>Is about individuals defining their own success.</li>
-                <li>Is simple, honest and authentic.</li>
-                <li>Helps reconnect with a simpler way of life.</li>
-              </ul>
-              <p className="mt-4">Leading trait: <span className="text-aia-red font-semibold">On your side</span></p>
-              <p>Supporting traits: Encouraging / Motivating / Guiding / Compassionate / Straightforward / Positive / Confident</p>
-              <p className="mt-4 text-aia-red">On your side means championing the causes that matter to our customers. It’s being inclusive, accepting and celebrating individuals, not alienating them.</p>
-              <p className="mt-4">Markets: Australia, Hong Kong, Macau, New Zealand, Singapore, South Korea, Taiwan</p>
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1fr_1fr_1fr_0.7fr] gap-6 text-aia-charcoal/85">
+              <div>
+                <p className="text-aia-red font-bold text-lg">It’s about:</p>
+                <p className="mt-2 text-lg">Self-confidence and rediscovery</p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Because people feel:</p>
+                <p className="mt-2 text-lg">Things need to change</p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">And they want:</p>
+                <p className="mt-2 text-lg">To feel achievement and validation</p>
+              </div>
+              <div className="lg:text-right text-aia-red font-semibold text-lg leading-tight">
+                <p>Australia</p>
+                <p className="mt-2">Hong Kong</p>
+                <p className="mt-2">Macau</p>
+                <p className="mt-2">New Zealand</p>
+                <p className="mt-2">Singapore</p>
+                <p className="mt-2">South Korea</p>
+                <p className="mt-2">Taiwan</p>
+              </div>
+            </div>
+
+            <div className="mt-10 border-t border-aia-red/40" />
+
+            <h4 className="mt-8 text-aia-midnight font-bold uppercase text-2xl md:text-3xl tracking-tight">AIA as a mentor</h4>
+
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 text-aia-charcoal/85">
+              <div>
+                <p className="text-aia-red font-bold text-lg">A mentor:</p>
+                <ul className="mt-3 space-y-1 text-base list-disc pl-6">
+                  <li>Is about slowing down and reflecting.</li>
+                  <li>Finds new options.</li>
+                  <li>Is about individuals defining their own success.</li>
+                  <li>Is simple, honest and authentic.</li>
+                  <li>Helps reconnect with a simpler way of life.</li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Leading trait:</p>
+                <p className="mt-3 text-lg">On your side</p>
+                <p className="mt-4 text-base text-aia-charcoal/85">
+                  On your side means championing the causes that matter to our customers. It’s being inclusive, accepting and celebrating individuals, not alienating them.
+                </p>
+              </div>
+              <div>
+                <p className="text-aia-red font-bold text-lg">Supporting traits:</p>
+                <p className="mt-3 text-base text-aia-charcoal/85">
+                  Encouraging / Motivating / Guiding / Compassionate / Straightforward / Positive / Confident
+                </p>
+              </div>
             </div>
         </div>
       </section>
