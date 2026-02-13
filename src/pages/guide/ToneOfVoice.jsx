@@ -97,7 +97,7 @@ const ToneOfVoice = () => {
       <section id="principles" className="border-t border-aia-red/10">
         <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
             <h3 className="text-aia-red font-bold uppercase">Tone of voice: principles</h3>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-sm">
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-0 text-sm lg:divide-x lg:divide-aia-red/40">
               {[
                 {
                   title: 'Use simple language',
@@ -130,11 +130,11 @@ const ToneOfVoice = () => {
                   list: ['Making bold statements.', 'Being part of something bigger.', 'Not excluding anyone.'],
                 },
               ].map((item) => (
-                <div key={item.title}>
-                  <h4 className="text-aia-red font-semibold uppercase text-xs">{item.title}</h4>
-                  <p className="mt-3 text-aia-charcoal/80">{item.body}</p>
-                  <p className="mt-4 text-aia-charcoal/60 uppercase text-[10px]">It means:</p>
-                  <ul className="mt-2 space-y-1 text-aia-charcoal/70">
+                <div key={item.title} className="lg:px-6">
+                  <h4 className="text-aia-red font-bold leading-tight text-2xl">{item.title}</h4>
+                  <p className="mt-6 text-aia-charcoal/80 text-base leading-relaxed">{item.body}</p>
+                  <p className="mt-8 text-aia-red font-bold text-xl">It means:</p>
+                  <ul className="mt-4 space-y-1 text-aia-red font-semibold text-lg leading-snug">
                     {item.list.map((li) => (
                       <li key={li}>{li}</li>
                     ))}
