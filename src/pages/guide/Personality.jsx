@@ -1,6 +1,7 @@
 import React from 'react';
 import useScrollSpy from '../../components/guide/useScrollSpy';
 import CopySectionButton from '../../components/ui/CopySectionButton';
+import { motion as Motion } from 'framer-motion';
 
 const Personality = () => {
   useScrollSpy(['why-a-mentor', 'why-a-persona', 'what-a-mentor-is', 'personality-traits', 'company-values', 'summary'], 'why-a-mentor');
@@ -32,7 +33,13 @@ const Personality = () => {
 
       {/* Page 11: Brand persona */}
       <section id="why-a-mentor" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-14">
+        <Motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.45, ease: 'easeOut' }}
+          className="mx-auto max-w-[1680px] px-12 md:px-20 py-14"
+        >
             <p className="text-aia-red font-bold uppercase tracking-wide">Our Brand Persona</p>
             <h2 className="mt-6 text-5xl md:text-6xl text-aia-red font-bold uppercase text-center">Mentor</h2>
             <p className="mt-6 text-2xl text-aia-midnight text-center max-w-[900px] mx-auto leading-snug">
@@ -55,19 +62,29 @@ const Personality = () => {
             </div>
 
             <div className="mt-14 flex items-center justify-center">
-              <div className="relative w-full max-w-[980px] h-8">
-                <div className="absolute inset-x-10 top-1/2 h-1 -translate-y-1/2 bg-aia-red" />
-                <div className="absolute left-0 top-1/2 h-0 w-0 -translate-y-1/2 border-y-[12px] border-y-transparent border-r-[20px] border-r-aia-red" />
-                <div className="absolute right-0 top-1/2 h-0 w-0 -translate-y-1/2 border-y-[12px] border-y-transparent border-l-[20px] border-l-aia-red" />
+              <div className="relative w-full max-w-[980px] h-16">
+                <svg viewBox="0 0 1000 80" className="absolute inset-0 h-full w-full" aria-hidden="true">
+                  <line x1="72" y1="40" x2="928" y2="40" stroke="#D31145" strokeWidth="6" />
+                  <polygon points="72,40 112,14 112,66" fill="#D31145" />
+                  <polygon points="928,40 888,14 888,66" fill="#D31145" />
+                </svg>
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-aia-red bg-white px-6 py-2 text-xs md:text-sm font-semibold text-aia-red uppercase tracking-wide text-center">
+                  Healthier, Longer, Better Lives
+                </div>
               </div>
             </div>
-            <p className="mt-4 text-center text-aia-red font-semibold tracking-wide">Healthier, Longer, Better Lives</p>
-        </div>
+        </Motion.div>
       </section>
 
       {/* Page 12: Why a persona is important */}
       <section id="why-a-persona" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
+        <Motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.45, ease: 'easeOut' }}
+          className="mx-auto max-w-[1680px] px-12 md:px-20 py-12"
+        >
             <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-14">
               <div>
                 <h3 className="text-aia-red font-bold uppercase text-2xl">Why a persona is important</h3>
@@ -85,36 +102,44 @@ const Personality = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-10 text-aia-midnight">
-                <div className="flex items-center justify-center gap-4 text-xl font-semibold text-center">
-                  <span>Healthier, Longer,<br />Better Lives</span>
-                  <span className="text-aia-red text-3xl">+</span>
-                  <span>Mentor</span>
-                </div>
+              <div className="text-aia-midnight">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.9fr_0.9fr] lg:grid-rows-3 lg:gap-x-8 lg:gap-y-8 items-center">
+                  <div className="lg:row-start-2 lg:col-start-1 flex items-center justify-center gap-4 text-xl md:text-2xl font-semibold text-center">
+                    <span>Healthier, Longer,<br />Better Lives</span>
+                    <span className="text-aia-red text-4xl md:text-5xl leading-none">+</span>
+                    <span>Mentor</span>
+                  </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center text-base font-semibold">
-                  <div className="flex items-center gap-3">
-                    <span className="text-aia-red text-2xl">↗</span>
-                    <span>How we behave</span>
+                  <div className="lg:row-start-1 lg:col-start-2 flex items-center gap-4 justify-center lg:justify-start">
+                    <span className="text-aia-red text-5xl md:text-6xl leading-none">↗</span>
+                    <span className="text-4xl md:text-5xl text-aia-red/60 leading-none -ml-3">│</span>
+                    <span className="text-4xl md:text-5xl text-aia-red/45 leading-none -ml-5">│</span>
+                    <span className="text-3xl md:text-4xl font-semibold leading-tight">How we<br />behave</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-aia-red text-2xl">→</span>
-                    <span>How we speak</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-aia-red text-2xl">↘</span>
-                    <span>How we look</span>
-                  </div>
-                </div>
 
-                <div className="flex items-center gap-4 text-base font-semibold">
-                  <div className="h-2 w-12 rounded-full bg-aia-red" />
-                  <div className="h-2 w-12 rounded-full bg-aia-red/50" />
-                  <span>Unmistakably<br />AIA</span>
+                  <div className="lg:row-start-2 lg:col-start-2 flex items-center gap-4 justify-center lg:justify-start">
+                    <span className="text-aia-red text-5xl md:text-6xl leading-none">→</span>
+                    <span className="text-3xl md:text-4xl font-semibold leading-tight">How we<br />speak</span>
+                  </div>
+
+                  <div className="lg:row-start-3 lg:col-start-2 flex items-center gap-4 justify-center lg:justify-start">
+                    <span className="text-aia-red text-5xl md:text-6xl leading-none">↘</span>
+                    <span className="text-aia-red/60 text-4xl md:text-5xl leading-none -ml-3">│</span>
+                    <span className="text-aia-red/45 text-4xl md:text-5xl leading-none -ml-5">│</span>
+                    <span className="text-3xl md:text-4xl font-semibold leading-tight">How we<br />look</span>
+                  </div>
+
+                  <div className="lg:row-start-2 lg:col-start-3 flex items-center gap-6 justify-center lg:justify-start">
+                    <div className="flex flex-col gap-2">
+                      <span className="h-4 w-16 rounded-full bg-aia-red" />
+                      <span className="h-4 w-16 rounded-full bg-[#F46A7B]" />
+                    </div>
+                    <span className="text-3xl md:text-4xl font-semibold leading-tight">Unmistakably<br />AIA</span>
+                  </div>
                 </div>
               </div>
             </div>
-        </div>
+        </Motion.div>
       </section>
 
       {/* Page 13: AIA as a mentor */}
@@ -182,7 +207,7 @@ const Personality = () => {
             <div className="mt-4">
               <CopySectionButton
                 label="Copy to Clipboard"
-                className="bg-transparent text-aia-red border border-aia-red hover:bg-aia-red/5 hover:text-aia-red shadow-none"
+                className="bg-white !text-aia-red border border-aia-red hover:bg-aia-red/5 hover:!text-aia-red shadow-none"
                 getText={() =>
                   `Brand Personality (AIA as a Mentor)\n\nSummary:\n- Our personality is how our customers experience our brand. It applies to how we come across visually and how we communicate - in person and on the page.\n\nTraits:\n- Compassionate: Compassion is about being empathetic. It means standing in our customers’ shoes and seeing things from their point of view. We are never judgemental.\n- Straightforward: We speak simply and to the point. No matter how complex the subject, we are easy to understand. We are direct and respectful, not long-winded or insensitive.\n- Positive: We are optimistic, enthusiastic and focused on opportunity. We project an infectious sense of energy while staying grounded, practical and realistic.\n- Confident: Confidence means feeling proud of our long-standing history and unrivalled expertise. We are knowledgeable without being arrogant or showing off.\n- Encouraging: Encouraging means being gently supportive, instilling confidence and positivity in our customers. We are never harsh or too directive. We seek to encourage a ‘can do’ mentality.\n- Motivating: Motivation is about being inspiring. We lead by example, always showing, not telling, and providing evidence wherever we can.\n- Guiding: Guiding means indicating a way forward, exercising a subtle influence and providing options. We are instructive but not prescriptive.\n- On your side: On your side means championing the causes that matter to our customers. It means being inclusive, accepting and celebrating individuals, not alienating them.`
                 }
@@ -253,6 +278,7 @@ const Personality = () => {
           <div className="mt-4">
             <CopySectionButton
               label="Copy to Clipboard"
+              className="bg-white !text-aia-red border border-aia-red hover:bg-aia-red/5 hover:!text-aia-red shadow-none"
               getText={() =>
                 `Company Values\n\n- Customer First: We serve people and communities by putting customer needs at the center of every decision.\n- Integrity: We act with honesty, transparency, and accountability.\n- Excellence: We deliver quality, consistency, and continual improvement.\n- Care & Empathy: We listen, support, and guide with humanity.\n- Collaboration: We work as one team across markets and functions.\n- Innovation: We adapt and create to help people live Healthier, Longer, Better Lives.`
               }

@@ -75,6 +75,25 @@ body {
   scroll-margin-top: 120px;
 }
 
+/* Subtle, consistent hover motion for interactive content on guide pages */
+.guide-page button,
+.guide-page a[download] {
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.guide-page button:hover,
+.guide-page a[download]:hover {
+  transform: translateY(-1px);
+}
+
+.guide-page img:not(.object-cover):not(.cover-image) {
+  transition: transform 240ms ease, filter 240ms ease;
+}
+
+.guide-page img:not(.object-cover):not(.cover-image):hover {
+  transform: translateY(-2px);
+}
+
 .logo-clean {
   mix-blend-mode: multiply;
   background: transparent;

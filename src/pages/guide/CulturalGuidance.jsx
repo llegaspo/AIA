@@ -52,11 +52,11 @@ const CulturalGuidance = () => {
                   You can download the Full Cultural Insights Research Reports from our asset links page.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <img src="/guide/assets/cultural/cultural-intro-000.png" alt="Portrait" className="w-full rounded-none" />
-                <img src="/guide/assets/cultural/cultural-intro-001.png" alt="Portrait" className="w-full rounded-none" />
-                <img src="/guide/assets/cultural/cultural-intro-002.png" alt="Portrait" className="w-full rounded-none" />
-                <img src="/guide/assets/cultural/cultural-intro-003.png" alt="Portrait" className="w-full rounded-none" />
+              <div className="grid grid-cols-4 gap-2 md:gap-3 max-w-[380px] md:max-w-[520px] lg:max-w-none mx-auto lg:mx-0">
+                <img src="/guide/assets/cultural/cultural-intro-000.png" alt="Portrait" className="w-full h-28 sm:h-36 md:h-44 lg:h-52 object-cover rounded-none" />
+                <img src="/guide/assets/cultural/cultural-intro-001.png" alt="Portrait" className="w-full h-28 sm:h-36 md:h-44 lg:h-52 object-cover rounded-none" />
+                <img src="/guide/assets/cultural/cultural-intro-002.png" alt="Portrait" className="w-full h-28 sm:h-36 md:h-44 lg:h-52 object-cover rounded-none" />
+                <img src="/guide/assets/cultural/cultural-intro-003.png" alt="Portrait" className="w-full h-28 sm:h-36 md:h-44 lg:h-52 object-cover rounded-none" />
               </div>
             </div>
         </div>

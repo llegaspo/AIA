@@ -71,9 +71,19 @@ const Layout = () => {
                         </Motion.header>
                     )}
                 </AnimatePresence>
-                <div ref={contentRef} className={showHeader ? 'pt-0' : ''}>
-                    <Outlet />
-                </div>
+                <AnimatePresence mode="wait">
+                    <Motion.div
+                        key={location.pathname}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -6 }}
+                        transition={{ duration: 0.28, ease: 'easeOut' }}
+                        ref={contentRef}
+                        className={showHeader ? 'pt-0' : ''}
+                    >
+                        <Outlet />
+                    </Motion.div>
+                </AnimatePresence>
             </main>
 
             <Modal isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} title="Admin Login">

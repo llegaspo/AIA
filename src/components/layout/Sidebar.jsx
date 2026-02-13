@@ -3,7 +3,6 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import LogoLockup from '../brand/LogoLockup';
-import { VIDEO_END_FRAMES } from '../../data/videoEndFrames';
 
 const SidebarLink = ({ to, children, exact = false, variant = 'section' }) => {
     const location = useLocation();
@@ -94,6 +93,7 @@ const Sidebar = () => {
     const isIllustration = location.pathname === '/illustration';
     const isIconography = location.pathname === '/iconography';
     const isPhotography = location.pathname === '/photography';
+    const isVisualElements = isPhotography || isIllustration || isIconography || isVideo || location.pathname === '/moving-mountains';
 
     return (
         <aside className="w-64 h-screen fixed left-0 top-0 bg-aia-grey border-r border-gray-200 overflow-y-auto z-50">
@@ -163,10 +163,6 @@ const Sidebar = () => {
                         )}
                     </SidebarSection>
 
-                    <SidebarSection title="Video" to="/video/end-frames" autoOpen={isVideo}>
-                        <SidebarLink to="/video/end-frames" variant="page">Video End Frames</SidebarLink>
-                    </SidebarSection>
-
                     <SidebarSection title="Our Identity" to="/logos#logos-overview" autoOpen={isIdentity}>
                         <SidebarLink to="/logos">Our Logos</SidebarLink>
                         {isLogos && (
@@ -204,7 +200,7 @@ const Sidebar = () => {
                         )}
                     </SidebarSection>
 
-                    <SidebarSection title="Visual Elements" to="/colour">
+                    <SidebarSection title="Visual Elements" to="/moving-mountains" autoOpen={isVisualElements}>
                         <SidebarLink to="/moving-mountains">Moving Mountains</SidebarLink>
                         <SidebarLink to="/photography">Photography</SidebarLink>
                         {isPhotography && (
@@ -232,6 +228,7 @@ const Sidebar = () => {
                                 <SidebarLink to="/iconography#illustrated-icons">Illustrated icons</SidebarLink>
                             </div>
                         )}
+                        <SidebarLink to="/video/end-frames">Video End Frames</SidebarLink>
                     </SidebarSection>
 
                     <SidebarSection title="Applications" to="/applications/mobile-app-icon-system" autoOpen={isApplications}>

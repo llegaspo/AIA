@@ -3,6 +3,30 @@ import useScrollSpy from '../../components/guide/useScrollSpy';
 
 const Iconography = () => {
   useScrollSpy(['system-icons', 'illustrated-icons'], 'system-icons');
+  const systemIcons = [
+    '/guide/assets/iconography/house-icon.png',
+    '/guide/assets/iconography/cursor-icon.png',
+    '/guide/assets/iconography/link-icon.png',
+    '/guide/assets/iconography/lightning-icon.png',
+    '/guide/assets/iconography/click-icon.png',
+    '/guide/assets/iconography/clock-icon.png',
+    '/guide/assets/iconography/lock-icon.png',
+    '/guide/assets/iconography/warning-icon.png',
+    '/guide/assets/iconography/trash-icon.png',
+  ];
+
+  const iconBackgrounds = [
+    'bg-aia-red',
+    'bg-aia-charcoal',
+    'bg-[#FF7A85]',
+    'bg-[#BA0361]',
+    'bg-[#FF754D]',
+    'bg-[#F7C926]',
+    'bg-[#4C4794]',
+    'bg-[#A199BA]',
+    'bg-[#1F78AD]',
+  ];
+
   return (
     <main className="w-full bg-white guide-page">
       {/* Hero */}
@@ -49,51 +73,17 @@ const Iconography = () => {
               </p>
             </div>
             <div className="space-y-8">
-              <div className="grid grid-cols-5 gap-6 items-center">
-                {[
-                  '/guide/assets/iconography/house-icon.png',
-                  '/guide/assets/iconography/cursor-icon.png',
-                  '/guide/assets/iconography/link-icon.png',
-                  '/guide/assets/iconography/lightning-icon.png',
-                  '/guide/assets/iconography/click-icon.png',
-                ].map((src) => (
-                  <img key={src} src={src} alt="System icon" className="h-10 w-10 object-contain" />
-                ))}
-              </div>
-              <div className="grid grid-cols-5 gap-6">
-                {[
-                  { src: '/guide/assets/iconography/house-icon.png', bg: 'bg-aia-red' },
-                  { src: '/guide/assets/iconography/cursor-icon.png', bg: 'bg-aia-charcoal' },
-                  { src: '/guide/assets/iconography/link-icon.png', bg: 'bg-[#FF7A85]' },
-                  { src: '/guide/assets/iconography/lightning-icon.png', bg: 'bg-[#BA0361]' },
-                  { src: '/guide/assets/iconography/click-icon.png', bg: 'bg-[#FF754D]' },
-                ].map((item) => (
-                  <div key={item.src} className={`h-16 w-16 rounded-full ${item.bg} flex items-center justify-center`}>
-                    <img src={item.src} alt="System icon in circle" className="h-8 w-8 object-contain brightness-0 invert" />
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
+                {systemIcons.map((src) => (
+                  <div key={src} className="h-[4.5rem] w-[4.5rem] rounded-xl border border-gray-100 bg-white flex items-center justify-center p-3">
+                    <img src={src} alt="System icon" className="h-9 w-9 object-contain" />
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-5 gap-6 items-center">
-                {[
-                  '/guide/assets/iconography/clock-icon.png',
-                  '/guide/assets/iconography/lock-icon.png',
-                  '/guide/assets/iconography/warning-icon.png',
-                  '/guide/assets/iconography/trash-icon.png',
-                  '/guide/assets/iconography/click-icon.png',
-                ].map((src) => (
-                  <img key={src} src={src} alt="System icon" className="h-9 w-9 object-contain opacity-80" />
-                ))}
-              </div>
-              <div className="grid grid-cols-5 gap-6">
-                {[
-                  { src: '/guide/assets/iconography/clock-icon.png', bg: 'bg-[#F7C926]' },
-                  { src: '/guide/assets/iconography/lock-icon.png', bg: 'bg-[#4C4794]' },
-                  { src: '/guide/assets/iconography/warning-icon.png', bg: 'bg-[#A199BA]' },
-                  { src: '/guide/assets/iconography/trash-icon.png', bg: 'bg-[#1F78AD]' },
-                  { src: '/guide/assets/iconography/click-icon.png', bg: 'bg-[#D3CAC3]' },
-                ].map((item) => (
-                  <div key={item.src} className={`h-16 w-16 rounded-full ${item.bg} flex items-center justify-center`}>
-                    <img src={item.src} alt="System icon in circle" className="h-8 w-8 object-contain brightness-0 invert" />
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
+                {systemIcons.map((src, index) => (
+                  <div key={`${src}-circle`} className={`h-16 w-16 rounded-full ${iconBackgrounds[index]} flex items-center justify-center`}>
+                    <img src={src} alt="System icon in circle" className="h-8 w-8 object-contain brightness-0 invert" />
                   </div>
                 ))}
               </div>
