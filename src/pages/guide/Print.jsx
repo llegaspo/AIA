@@ -3,38 +3,26 @@ import React from 'react';
 const Print = () => {
   return (
     <main className="w-full bg-white guide-page">
-      <section className="px-12 md:px-20 py-12">
+      <section className="px-10 md:px-16 py-10 max-w-[1400px] mx-auto">
         <h1 className="text-aia-red font-bold uppercase text-3xl">Print</h1>
 
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
-          <div>
-            <p className="text-sm text-aia-charcoal/60 text-center mb-3">Outdoor advertising</p>
-            <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-              <img src="/assets/print_app.png" alt="Outdoor advertising" className="w-full" />
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <div>
-              <p className="text-sm text-aia-charcoal/60 text-center mb-3">Annual report cover</p>
-              <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-                <img src="/assets/assets/asset_5.png" alt="Annual report cover" className="w-full" />
-              </div>
-            </div>
-            <div>
-              <p className="text-sm text-aia-charcoal/60 text-center mb-3">Brochure spread</p>
-              <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-                <img src="/assets/assets/asset_6.png" alt="Brochure spread" className="w-full" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-10">
-          <p className="text-sm text-aia-charcoal/60 text-center mb-3">Notebooks</p>
-          <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-            <img src="/assets/assets/asset_7.png" alt="Notebooks" className="w-full" />
-          </div>
+        <div className="mt-8 grid grid-cols-1 xl:grid-cols-[1.25fr_1fr] gap-x-10 gap-y-8 items-start">
+          <figure>
+            <figcaption className="text-sm text-aia-charcoal/70 text-right mb-2">Outdoor advertising</figcaption>
+            <img src="/assets/applications/print/outdoor-advertising.png" alt="Outdoor advertising" className="w-full h-auto" />
+          </figure>
+          <figure className="xl:max-w-[360px] xl:justify-self-start">
+            <figcaption className="text-sm text-aia-charcoal/70 text-right mb-2">Annual report cover</figcaption>
+            <img src="/assets/applications/print/annual-report-cover.png" alt="Annual report cover" className="w-full h-auto" />
+          </figure>
+          <figure className="xl:max-w-[520px]">
+            <figcaption className="text-sm text-aia-charcoal/70 text-right mb-2">Notebooks</figcaption>
+            <img src="/assets/applications/print/notebooks.png" alt="Notebooks" className="w-full h-auto" />
+          </figure>
+          <figure>
+            <figcaption className="text-sm text-aia-charcoal/70 text-right mb-2">Brochure spread</figcaption>
+            <img src="/assets/applications/print/brochure-spread.png" alt="Brochure spread" className="w-full h-auto" />
+          </figure>
         </div>
       </section>
     </main>

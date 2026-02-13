@@ -1,64 +1,43 @@
 import React from 'react';
 
-const SignatureCard = ({ label }) => (
-  <div className="text-center">
-    <p className="text-[10px] text-aia-red font-semibold">{label}</p>
-    <div className="mt-3 rounded-xl border border-gray-200 bg-white p-3 text-[10px] text-aia-charcoal/70">
-      <div className="flex items-center justify-center gap-2">
-        <img src="/assets/logo_lockup_transparent.png" alt="AIA" className="h-6 logo-clean" />
-        <span>First Last Name</span>
-      </div>
-      <p className="mt-1">Job Title · Department</p>
-      <p>AIA Group</p>
-      <p className="mt-2">T: +00 0000 0000</p>
-      <p>E: email@aia.com</p>
-    </div>
-  </div>
-);
-
 const ApplicationsCorporate = () => {
   return (
     <main className="w-full bg-white guide-page">
-      <section className="px-12 md:px-20 py-12">
+      <section className="px-10 md:px-16 py-10 max-w-[1400px] mx-auto">
         <h1 className="text-aia-red font-bold uppercase text-3xl">Corporate daily operation items</h1>
-        <div className="mt-10 grid grid-cols-1 xl:grid-cols-[1.1fr_1fr] gap-12">
-          <div>
-            <p className="text-sm text-aia-charcoal/60">Corporate stationery</p>
-            <div className="mt-4 grid grid-cols-2 gap-4">
-              <div className="rounded-lg border border-gray-200 bg-white p-4 h-56">
-                <div className="h-3 w-20 bg-aia-red/70 rounded" />
-                <div className="mt-6 space-y-2">
-                  <div className="h-2 w-32 bg-aia-charcoal/10 rounded" />
-                  <div className="h-2 w-40 bg-aia-charcoal/10 rounded" />
-                  <div className="h-2 w-36 bg-aia-charcoal/10 rounded" />
-                </div>
-              </div>
-              <div className="rounded-lg border border-gray-200 bg-white p-4 h-56">
-                <div className="h-3 w-20 bg-aia-red/70 rounded" />
-                <div className="mt-6 space-y-2">
-                  <div className="h-2 w-28 bg-aia-charcoal/10 rounded" />
-                  <div className="h-2 w-36 bg-aia-charcoal/10 rounded" />
-                  <div className="h-2 w-32 bg-aia-charcoal/10 rounded" />
-                </div>
-              </div>
-              <div className="rounded-lg border border-gray-200 bg-white p-4 h-40 col-span-2">
-                <div className="h-3 w-20 bg-aia-red/70 rounded" />
-                <div className="mt-6 h-2 w-48 bg-aia-charcoal/10 rounded" />
-              </div>
-            </div>
-          </div>
+        <div className="mt-10 grid grid-cols-1 xl:grid-cols-[0.95fr_1.15fr] gap-12 items-start">
+          <figure>
+            <figcaption className="text-sm text-aia-charcoal/70 mb-3">Corporate stationery</figcaption>
+            <img
+              src="/assets/applications/corporate-operations/corporate-stationary.png"
+              alt="Corporate stationery"
+              className="w-full h-auto"
+            />
+          </figure>
 
           <div>
-            <p className="text-sm text-aia-charcoal/60 text-center">Email signature</p>
-            <div className="mt-6 grid grid-cols-2 gap-6">
-              <SignatureCard label="Standard corporate email signature" />
-              <SignatureCard label="With social media icons" />
-              <SignatureCard label="With qualifications" />
-              <SignatureCard label="With AIA Vitality status" />
-            </div>
-            <div className="mt-8 rounded-2xl border border-gray-200 bg-aia-grey/40 p-4 text-xs text-aia-charcoal/70">
-              <p>If you want to add supporting logos, qualifications, social links or endorsements to your email signature, you may do so beneath the line.</p>
-              <p className="mt-2">Under no circumstances may the HLBL Logo Lockup be removed or replaced.</p>
+            <figure>
+              <figcaption className="text-sm text-aia-charcoal/70 text-left mb-3">Email signature</figcaption>
+              <img
+                src="/assets/applications/corporate-operations/email-signature.png"
+                alt="Email signature"
+                className="w-full h-auto"
+              />
+            </figure>
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6 items-start">
+              <div className="text-[14px] leading-6 text-aia-charcoal/75">
+                <p>If you want to add supporting logos, qualifications, social links or endorsements to your email signature, you may do so beneath the line.</p>
+                <p className="mt-2">Under no circumstances may the HLBL Logo Lockup be removed or replaced.</p>
+              </div>
+              <div className="bg-aia-grey/60 px-5 py-4">
+                <h3 className="text-aia-red font-bold uppercase text-lg">Design tips</h3>
+                <p className="mt-2 text-sm font-semibold text-aia-charcoal">Colour Scheme For AIA Vitality Status</p>
+                <ul className="mt-2 text-sm leading-6">
+                  <li className="text-aia-gold">AIA Vitality Status Gold - AIA Gold</li>
+                  <li className="text-aia-silver">AIA Vitality Status Silver - AIA Silver</li>
+                  <li className="text-aia-orange">AIA Vitality Status Bronze AIA Orange</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
