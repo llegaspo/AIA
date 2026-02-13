@@ -23,7 +23,7 @@ const Logos = () => {
     <main className="w-full bg-white guide-page">
       {/* Page 31: Overview */}
       <section id="logos-overview" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
+        <div className="mx-auto max-w-[1320px] px-12 md:px-20 py-12">
             <h1 className="text-aia-red font-bold uppercase text-3xl">Our Logos</h1>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
@@ -82,9 +82,9 @@ const Logos = () => {
 
       {/* Page 32: HLBL Logo Lockup */}
       <section id="hlbl-logo-lockup" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">HLBL Logo Lockup</h2>
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
+        <div className="mx-auto max-w-[1320px] px-12 md:px-20 py-12">
+            <h2 className="text-aia-red font-bold uppercase text-3xl">HLBL Logo Lockup</h2>
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-8 items-start max-w-[1060px]">
               <div className="text-aia-charcoal/80 text-sm">
                 <p>
                   Our Purpose — Healthier, Longer, Better Lives — is central to everything we do. It is our reason for being. We lock it up with our Corporate Logo to make our commitment in a clear and unwavering manner.
@@ -96,39 +96,38 @@ const Logos = () => {
                   The height of the Corporate Logo is the Y-height. Y-height defines the size and distance between our Corporate Logo and our Purpose.
                 </p>
               </div>
-              <div className="flex items-center justify-center">
-                <LogoLockup logoClassName="h-16" />
-              </div>
-            </div>
-
-            <div className="mt-8 rounded-lg bg-gray-100 p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-aia-charcoal/70 items-center">
-                <div>
-                  <h4 className="font-semibold">Clear space</h4>
-                  <div className="mt-4 relative w-full max-w-[360px] h-40 mx-auto">
-                    <div className="absolute inset-6 border border-dashed border-aia-red/40" />
-                    <div className="absolute inset-10 border border-aia-red/30" />
-                    <div className="absolute inset-0 m-auto flex items-center justify-center">
-                      <LogoLockup logoClassName="h-8" />
-                    </div>
-                    <span className="absolute left-0 top-1/2 -translate-y-1/2 text-aia-red text-xs">0.25 Y</span>
-                    <span className="absolute right-0 top-1/2 -translate-y-1/2 text-aia-red text-xs">0.25 Y</span>
-                    <span className="absolute top-0 left-1/2 -translate-x-1/2 text-aia-red text-xs">0.25 Y</span>
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-aia-red text-xs">0.25 Y</span>
-                  </div>
+              <div>
+                <div className="flex items-center justify-start lg:justify-center">
+                  <LogoLockup logoClassName="h-12" />
                 </div>
-                <div>
-                  <h4 className="font-semibold">Minimum size</h4>
-                  <div className="mt-4 space-y-3">
-                    <div className="flex items-center gap-4">
-                      <span className="text-aia-red font-semibold">10mm</span>
-                      <LogoLockup logoClassName="h-5" />
+                <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-aia-charcoal/70">
+                  <div className="bg-gray-100 p-3 rounded">
+                    <h4 className="font-semibold">Clear space</h4>
+                    <div className="mt-2 relative w-full max-w-[200px] h-24 mx-auto">
+                      <div className="absolute inset-4 border border-dashed border-aia-red/40" />
+                      <div className="absolute inset-7 border border-aia-red/30" />
+                      <div className="absolute inset-0 m-auto flex items-center justify-center">
+                        <LogoLockup logoClassName="h-5" />
+                      </div>
+                      <span className="absolute left-0 top-1/2 -translate-y-1/2 text-aia-red text-[10px]">0.25 Y</span>
+                      <span className="absolute right-0 top-1/2 -translate-y-1/2 text-aia-red text-[10px]">0.25 Y</span>
+                      <span className="absolute top-0 left-1/2 -translate-x-1/2 text-aia-red text-[10px]">0.25 Y</span>
+                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-aia-red text-[10px]">0.25 Y</span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <span className="text-aia-red font-semibold">24px</span>
-                      <LogoLockup logoClassName="h-4" />
+                  </div>
+                  <div className="bg-gray-100 p-3 rounded">
+                    <h4 className="font-semibold">Minimum size</h4>
+                    <div className="mt-3 space-y-3">
+                      <div className="flex items-center gap-4">
+                        <span className="text-aia-red font-semibold">10mm</span>
+                        <LogoLockup logoClassName="h-5" />
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <span className="text-aia-red font-semibold">24px</span>
+                        <LogoLockup logoClassName="h-4" />
+                      </div>
+                      <p className="text-xs text-aia-charcoal/50">*Not to scale</p>
                     </div>
-                    <p className="text-xs text-aia-charcoal/50">*Not to scale</p>
                   </div>
                 </div>
               </div>
@@ -138,9 +137,9 @@ const Logos = () => {
 
       {/* Page 33: Localised versions */}
       <section id="localised-versions" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">HLBL Logo Lockup: Localised versions</h2>
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr_0.7fr] gap-10">
+        <div className="mx-auto max-w-[1320px] px-12 md:px-20 py-12">
+            <h2 className="text-aia-red font-bold uppercase text-3xl">HLBL Logo Lockup: Localised versions</h2>
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.8fr_0.75fr] gap-8 items-start max-w-[1080px]">
               <div className="text-aia-charcoal/80 text-sm">
                 <p>
                   Only approved language versions of the HLBL Logo Lockup may be used. Please refer to the Group Brand Team for advice.
@@ -158,31 +157,26 @@ const Logos = () => {
                   <li>All localised versions of the HLBL Logo Lockup must be approved by the Group Brand Team and Group CMO.</li>
                 </ul>
               </div>
-              <div className="rounded-lg bg-gray-100 p-6 text-center text-xs text-aia-charcoal/60">
-                <p className="mb-4 font-semibold">Lockup construction</p>
-                <div className="text-aia-red font-semibold">1.6 Y / 0.10 Y / 0.20 Y / 0.15 Y</div>
-                <p className="mt-4">
-                  Point of snow base of the mountain (a) aligned to cap height of characters (h)
-                </p>
+              <div>
+                <p className="text-xs uppercase tracking-wide text-aia-charcoal/60 mb-3">Lockup construction</p>
+                <img
+                  src="/assets/our-identity/hlbl-lockup-construction.png"
+                  alt="HLBL lockup construction"
+                  className="w-full max-w-[320px] h-auto"
+                />
               </div>
-              <div className="space-y-8 text-center">
+              <div className="space-y-8">
                 <div>
-                  <p className="text-xs text-aia-charcoal/60">Chinese HLBL Logo Lockup</p>
-                  <div className="mx-auto mt-2 h-20 flex items-center justify-center rounded border border-dashed border-aia-red/40 text-xs text-aia-charcoal/50">
-                    Localised lockup asset needed
-                  </div>
+                  <p className="text-xs text-aia-charcoal/60 mb-2">Chinese HLBL Logo Lockup</p>
+                  <img src="/assets/our-identity/chinese-lockup.png" alt="Chinese HLBL logo lockup" className="w-full max-w-[220px] h-auto" />
                 </div>
                 <div>
-                  <p className="text-xs text-aia-charcoal/60">Hong Kong HLBL Logo Lockup</p>
-                  <div className="mx-auto mt-2 h-20 flex items-center justify-center rounded border border-dashed border-aia-red/40 text-xs text-aia-charcoal/50">
-                    Localised lockup asset needed
-                  </div>
+                  <p className="text-xs text-aia-charcoal/60 mb-2">Hong Kong HLBL Logo Lockup</p>
+                  <img src="/assets/our-identity/hongkong-hlbl.png" alt="Hong Kong HLBL logo lockup" className="w-full max-w-[220px] h-auto" />
                 </div>
                 <div>
-                  <p className="text-xs text-aia-charcoal/60">Taiwanese HLBL Logo Lockup</p>
-                  <div className="mx-auto mt-2 h-20 flex items-center justify-center rounded border border-dashed border-aia-red/40 text-xs text-aia-charcoal/50">
-                    Localised lockup asset needed
-                  </div>
+                  <p className="text-xs text-aia-charcoal/60 mb-2">Taiwanese HLBL Logo Lockup</p>
+                  <img src="/assets/our-identity/taiwanese-hlbl.png" alt="Taiwanese HLBL logo lockup" className="w-full max-w-[220px] h-auto" />
                 </div>
               </div>
             </div>
@@ -191,9 +185,9 @@ const Logos = () => {
 
       {/* Page 34: Corporate Logo */}
       <section id="corporate-logo" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">Corporate Logo</h2>
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
+        <div className="mx-auto max-w-[1320px] px-12 md:px-20 py-12">
+            <h2 className="text-aia-red font-bold uppercase text-3xl">Corporate Logo</h2>
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-8 items-start max-w-[1060px]">
               <div className="text-aia-charcoal/80 text-sm">
                 <p>
                   The AIA Corporate Logo is a recognisable symbol of our brand’s heritage, success and longevity. It demonstrates the strength, stability and protection which have defined over 100 years of our business.
@@ -214,40 +208,40 @@ const Logos = () => {
                   The Corporate Logo must remain legible and fully visible at all times. If legibility is in doubt, please use the Wordmark.
                 </p>
               </div>
-              <div className="flex items-center justify-center">
-                <img src="/assets/logo_std_transparent.png" alt="AIA Corporate Logo" className="h-44 logo-clean" />
-              </div>
-            </div>
-            <div className="mt-8 rounded-lg bg-gray-100 p-6 text-sm text-aia-charcoal/70">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div>
-                  <h4 className="font-semibold">Clear space</h4>
-                  <div className="mt-4 relative w-full max-w-[320px] h-40 mx-auto">
-                    <div className="absolute inset-6 border border-dashed border-aia-red/40" />
-                    <div className="absolute inset-10 border border-aia-red/30" />
-                    <img
-                      src="/assets/logo_std_transparent.png"
-                      alt="Corporate logo clear space"
-                      className="absolute inset-0 m-auto h-16 logo-clean"
-                    />
-                    <span className="absolute left-0 top-1/2 -translate-y-1/2 text-aia-red text-xs">0.25 Y</span>
-                    <span className="absolute right-0 top-1/2 -translate-y-1/2 text-aia-red text-xs">0.25 Y</span>
-                    <span className="absolute top-0 left-1/2 -translate-x-1/2 text-aia-red text-xs">0.25 Y</span>
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-aia-red text-xs">0.25 Y</span>
-                  </div>
+              <div>
+                <div className="flex items-center justify-start lg:justify-center">
+                  <img src="/assets/logo_std_transparent.png" alt="AIA Corporate Logo" className="h-32 logo-clean" />
                 </div>
-                <div>
-                  <h4 className="font-semibold">Minimum size</h4>
-                  <div className="mt-4 space-y-3">
-                    <div className="flex items-center gap-4">
-                      <span className="text-aia-red font-semibold">10mm</span>
-                      <img src="/assets/logo_std_transparent.png" alt="Print minimum size" className="h-7 logo-clean" />
+                <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-aia-charcoal/70">
+                  <div className="bg-gray-100 p-3 rounded">
+                    <h4 className="font-semibold">Clear space</h4>
+                    <div className="mt-2 relative w-full max-w-[200px] h-24 mx-auto">
+                      <div className="absolute inset-4 border border-dashed border-aia-red/40" />
+                      <div className="absolute inset-7 border border-aia-red/30" />
+                      <img
+                        src="/assets/logo_std_transparent.png"
+                        alt="Corporate logo clear space"
+                        className="absolute inset-0 m-auto h-10 logo-clean"
+                      />
+                      <span className="absolute left-0 top-1/2 -translate-y-1/2 text-aia-red text-[10px]">0.25 Y</span>
+                      <span className="absolute right-0 top-1/2 -translate-y-1/2 text-aia-red text-[10px]">0.25 Y</span>
+                      <span className="absolute top-0 left-1/2 -translate-x-1/2 text-aia-red text-[10px]">0.25 Y</span>
+                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-aia-red text-[10px]">0.25 Y</span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <span className="text-aia-red font-semibold">24px</span>
-                      <img src="/assets/logo_std_transparent.png" alt="Digital minimum size" className="h-6 logo-clean" />
+                  </div>
+                  <div className="bg-gray-100 p-3 rounded">
+                    <h4 className="font-semibold">Minimum size</h4>
+                    <div className="mt-3 space-y-3">
+                      <div className="flex items-center gap-4">
+                        <span className="text-aia-red font-semibold">10mm</span>
+                        <img src="/assets/logo_std_transparent.png" alt="Print minimum size" className="h-7 logo-clean" />
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <span className="text-aia-red font-semibold">24px</span>
+                        <img src="/assets/logo_std_transparent.png" alt="Digital minimum size" className="h-6 logo-clean" />
+                      </div>
+                      <p className="text-xs text-aia-charcoal/50">*Not to scale</p>
                     </div>
-                    <p className="text-xs text-aia-charcoal/50">*Not to scale</p>
                   </div>
                 </div>
               </div>
@@ -257,9 +251,9 @@ const Logos = () => {
 
       {/* Page 35: Wordmark */}
       <section id="wordmark" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">Wordmark</h2>
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
+        <div className="mx-auto max-w-[1320px] px-12 md:px-20 py-12">
+            <h2 className="text-aia-red font-bold uppercase text-3xl">Wordmark</h2>
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-8 items-start max-w-[1060px]">
               <div className="text-aia-charcoal/80 text-sm">
                 <p>
                   Our Wordmark was developed to address some visibility issues associated with the Corporate Logo.
@@ -275,40 +269,40 @@ const Logos = () => {
                 </p>
                 <p className="mt-4 text-aia-red font-semibold">See next page for detailed usage guidelines.</p>
               </div>
-              <div className="flex items-center justify-center">
-                <img src="/assets/logo_wordmark.svg" alt="AIA Wordmark" className="h-24" />
-              </div>
-            </div>
-            <div className="mt-8 rounded-lg bg-gray-100 p-6 text-sm text-aia-charcoal/70">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div>
-                  <h4 className="font-semibold">Clear space</h4>
-                  <div className="mt-4 relative w-full max-w-[320px] h-40 mx-auto">
-                    <div className="absolute inset-6 border border-dashed border-aia-red/40" />
-                    <div className="absolute inset-10 border border-aia-red/30" />
-                    <img
-                      src="/assets/logo_wordmark.svg"
-                      alt="Wordmark clear space"
-                      className="absolute inset-0 m-auto h-10"
-                    />
-                    <span className="absolute left-0 top-1/2 -translate-y-1/2 text-aia-red text-xs">0.35 Y</span>
-                    <span className="absolute right-0 top-1/2 -translate-y-1/2 text-aia-red text-xs">0.35 Y</span>
-                    <span className="absolute top-0 left-1/2 -translate-x-1/2 text-aia-red text-xs">0.35 Y</span>
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-aia-red text-xs">0.35 Y</span>
-                  </div>
+              <div>
+                <div className="flex items-center justify-start lg:justify-center">
+                  <img src="/assets/logo_wordmark.svg" alt="AIA Wordmark" className="h-20" />
                 </div>
-                <div>
-                  <h4 className="font-semibold">Minimum size</h4>
-                  <div className="mt-4 space-y-3">
-                    <div className="flex items-center gap-4">
-                      <span className="text-aia-red font-semibold">3mm</span>
-                      <img src="/assets/logo_wordmark.svg" alt="Print minimum size" className="h-5" />
+                <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-aia-charcoal/70">
+                  <div className="bg-gray-100 p-3 rounded">
+                    <h4 className="font-semibold">Clear space</h4>
+                    <div className="mt-2 relative w-full max-w-[200px] h-24 mx-auto">
+                      <div className="absolute inset-4 border border-dashed border-aia-red/40" />
+                      <div className="absolute inset-7 border border-aia-red/30" />
+                      <img
+                        src="/assets/logo_wordmark.svg"
+                        alt="Wordmark clear space"
+                        className="absolute inset-0 m-auto h-7"
+                      />
+                      <span className="absolute left-0 top-1/2 -translate-y-1/2 text-aia-red text-[10px]">0.35 Y</span>
+                      <span className="absolute right-0 top-1/2 -translate-y-1/2 text-aia-red text-[10px]">0.35 Y</span>
+                      <span className="absolute top-0 left-1/2 -translate-x-1/2 text-aia-red text-[10px]">0.35 Y</span>
+                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-aia-red text-[10px]">0.35 Y</span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <span className="text-aia-red font-semibold">15px</span>
-                      <img src="/assets/logo_wordmark.svg" alt="Digital minimum size" className="h-4" />
+                  </div>
+                  <div className="bg-gray-100 p-3 rounded">
+                    <h4 className="font-semibold">Minimum size</h4>
+                    <div className="mt-3 space-y-3">
+                      <div className="flex items-center gap-4">
+                        <span className="text-aia-red font-semibold">3mm</span>
+                        <img src="/assets/logo_wordmark.svg" alt="Print minimum size" className="h-5" />
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <span className="text-aia-red font-semibold">15px</span>
+                        <img src="/assets/logo_wordmark.svg" alt="Digital minimum size" className="h-4" />
+                      </div>
+                      <p className="text-xs text-aia-charcoal/50">*Not to scale</p>
                     </div>
-                    <p className="text-xs text-aia-charcoal/50">*Not to scale</p>
                   </div>
                 </div>
               </div>
@@ -318,9 +312,9 @@ const Logos = () => {
 
       {/* Page 36: Wordmark usage (use extracted images) */}
       <section id="wordmark-usage" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">Wordmark usage</h2>
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
+        <div className="mx-auto max-w-[1320px] px-12 md:px-20 py-12">
+            <h2 className="text-aia-red font-bold uppercase text-3xl">Wordmark usage</h2>
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1fr] gap-8 max-w-[1060px]">
               <div className="text-aia-charcoal/80 text-sm">
                 <p>There are only two instances in which the AIA Wordmark should be used.</p>
                 <p className="mt-4">
@@ -336,10 +330,16 @@ const Logos = () => {
                   All sub-brands that use the Wordmark must be approved by the Group Brand Team.
                 </p>
               </div>
-              <div className="space-y-6">
-                <img src="/guide/assets/logos/logos-wordmark-usage-000.png" alt="Spurs partnership" className="w-full rounded-lg" />
-                <img src="/guide/assets/logos/logos-wordmark-usage-001.png" alt="Branded pen" className="w-full rounded-lg" />
-                <img src="/guide/assets/logos/logos-wordmark-usage-003.png" alt="External signage" className="w-full rounded-lg" />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
+                <figure>
+                  <img src="/guide/assets/logos/logos-wordmark-usage-000.png" alt="Wordmark partnership usage" className="w-full max-w-[145px] h-auto" />
+                </figure>
+                <figure>
+                  <img src="/assets/applications/merchandise/branded-pen.png" alt="Wordmark on pen usage" className="w-full max-w-[150px] h-auto" />
+                </figure>
+                <figure>
+                  <img src="/assets/our-identity/logo-usage/use-wordmark.png" alt="Wordmark signage usage" className="w-full max-w-[120px] h-auto" />
+                </figure>
               </div>
             </div>
         </div>
@@ -347,9 +347,9 @@ const Logos = () => {
 
       {/* Page 37: Logo usage (flow) */}
       <section id="logo-usage" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">Logo usage</h2>
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
+        <div className="mx-auto max-w-[1320px] px-12 md:px-20 py-12">
+            <h2 className="text-aia-red font-bold uppercase text-3xl">Logo usage</h2>
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1fr] gap-8 max-w-[1060px]">
               <div className="text-aia-charcoal/80 text-sm">
                 <p className="text-aia-red font-semibold">
                   The HLBL Logo Lockup is the preferred version and the one you should reach for first.
@@ -367,38 +367,18 @@ const Logos = () => {
                   If you are unsure which logo you should use please contact the Group Brand Team for advice.
                 </p>
               </div>
-              <div className="space-y-6">
-                <div className="rounded-lg border border-gray-200 p-6 text-sm text-aia-charcoal/80">
-                  <p className="text-center font-semibold uppercase text-aia-charcoal/70">Are you able to use the HLBL Logo Lockup?</p>
-                  <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="rounded border border-aia-red/30 p-4 text-center">
-                      <p className="text-aia-red font-semibold">Yes</p>
-                      <p className="mt-2 text-xs">Great! This is our preferred version in almost all instances.</p>
-                      <div className="mx-auto mt-3 flex items-center justify-center">
-                        <LogoLockup logoClassName="h-6" />
-                      </div>
-                    </div>
-                    <div className="rounded border border-aia-red/30 p-4 text-center">
-                      <p className="text-aia-red font-semibold">No</p>
-                      <p className="mt-2 text-xs">Can you use the Corporate Logo?</p>
-                      <div className="mt-3 grid grid-cols-2 gap-3 text-xs">
-                        <div className="rounded border border-gray-200 p-2">
-                          <p className="text-aia-red font-semibold">Yes</p>
-                          <p className="mt-1">Use the Corporate Logo when space is limited.</p>
-                          <img src="/assets/logo_std_transparent.png" alt="Corporate logo" className="mx-auto mt-2 h-8 logo-clean" />
-                        </div>
-                        <div className="rounded border border-gray-200 p-2">
-                          <p className="text-aia-red font-semibold">No</p>
-                          <p className="mt-1">Use the Wordmark.</p>
-                          <img src="/assets/logo_wordmark.svg" alt="Wordmark" className="mx-auto mt-2 h-6" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <p className="text-xs text-aia-charcoal/60 mb-2">Use HLBL Logo Lockup (preferred)</p>
+                  <img src="/assets/our-identity/logo-usage/yes-logo.png" alt="Use HLBL logo lockup" className="w-full h-auto max-w-[145px]" />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <img src="/guide/assets/logos/logos-usage-002.png" alt="Corporate logo example" className="w-full rounded-lg" />
-                  <img src="/guide/assets/logos/logos-usage-004.png" alt="Wordmark signage" className="w-full rounded-lg" />
+                <div>
+                  <p className="text-xs text-aia-charcoal/60 mb-2">Use Corporate Logo when needed</p>
+                  <img src="/assets/our-identity/logo-usage/yes-corp-logo.png" alt="Use corporate logo" className="w-full h-auto max-w-[170px]" />
+                </div>
+                <div>
+                  <p className="text-xs text-aia-charcoal/60 mb-2">Use Wordmark for legibility limits</p>
+                  <img src="/assets/our-identity/logo-usage/use-wordmark.png" alt="Use wordmark for limited space" className="w-full h-auto max-w-[120px]" />
                 </div>
               </div>
             </div>
@@ -407,9 +387,9 @@ const Logos = () => {
 
       {/* Page 38: Placement */}
       <section id="logo-placement" className="border-t border-aia-red/10">
-        <div className="mx-auto max-w-[1680px] px-12 md:px-20 py-12">
-            <h2 className="text-aia-red font-bold uppercase">Placement</h2>
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
+        <div className="mx-auto max-w-[1320px] px-12 md:px-20 py-12">
+            <h2 className="text-aia-red font-bold uppercase text-3xl">Placement</h2>
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1fr] gap-8 max-w-[1060px]">
               <div className="text-aia-charcoal/80 text-sm">
                 <p>
                   For flexibility, the Corporate Logo and HLBL Logo Lockup can be used in the following positions in digital and print layouts:
@@ -427,33 +407,17 @@ const Logos = () => {
                 </p>
               </div>
               <div className="space-y-4">
-                <div className="rounded-lg border border-gray-200 p-4">
-                  <p className="text-xs uppercase text-aia-charcoal/60">General HLBL Logo Lockup placement options</p>
-                  <div className="mt-3 grid grid-cols-3 gap-3">
-                    {Array.from({ length: 6 }).map((_, idx) => (
-                      <div key={idx} className="h-16 border border-gray-100 rounded relative">
-                        <div className="absolute top-2 left-2">
-                          <LogoLockup logoClassName="h-3" />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                <div>
+                  <p className="text-xs uppercase text-aia-charcoal/60 mb-2">General HLBL Logo Lockup placement options</p>
+                  <img src="/assets/our-identity/placement/general-hlbl-placement.png" alt="General HLBL placement" className="w-full max-w-[260px] h-auto" />
                 </div>
-                <div className="rounded-lg border border-gray-200 p-4">
-                  <p className="text-xs uppercase text-aia-charcoal/60">General Corporate Logo placement options</p>
-                  <div className="mt-3 grid grid-cols-3 gap-3">
-                    {Array.from({ length: 6 }).map((_, idx) => (
-                      <div key={idx} className="h-16 border border-gray-100 rounded relative">
-                        <img src="/assets/logo_std_transparent.png" alt="Corporate placement" className="absolute top-2 left-2 h-5 logo-clean" />
-                      </div>
-                    ))}
-                  </div>
+                <div>
+                  <p className="text-xs uppercase text-aia-charcoal/60 mb-2">General Corporate Logo placement options</p>
+                  <img src="/assets/our-identity/placement/general-corp-logo.png" alt="General corporate logo placement" className="w-full max-w-[260px] h-auto" />
                 </div>
-                <div className="rounded-lg border border-gray-200 p-4">
-                  <p className="text-xs uppercase text-aia-charcoal/60">Corporate Logo placement – top left</p>
-                  <div className="h-32 border border-gray-100 rounded relative">
-                    <img src="/assets/logo_std_transparent.png" alt="Corporate placement top left" className="absolute top-3 left-3 h-6 logo-clean" />
-                  </div>
+                <div>
+                  <p className="text-xs uppercase text-aia-charcoal/60 mb-2">Corporate Logo placement – top left</p>
+                  <img src="/assets/our-identity/placement/corp-log-place.png" alt="Corporate logo top left placement" className="w-full max-w-[170px] h-auto" />
                 </div>
               </div>
             </div>
